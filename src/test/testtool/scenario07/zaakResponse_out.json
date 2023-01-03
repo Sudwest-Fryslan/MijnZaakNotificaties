@@ -1,0 +1,48 @@
+{
+    "url": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/zaken/6c0826a2-84a7-4351-af8d-76aaec02c5b8",
+    "uuid": "6c0826a2-84a7-4351-af8d-76aaec02c5b8",
+    "identificatie": "190010457",
+    "bronorganisatie": "823288444",
+    "omschrijving": "Dossiernummer GISVG OV190010457",
+    "toelichting": "Reguliere omgevingsvergunning",
+    "zaaktype": "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/zaaktypen/51cf0ec4-31b2-4bf1-93c9-53176bd5b00c",
+    "registratiedatum": "2021-01-04",
+    "verantwoordelijkeOrganisatie": "823288444",
+    "startdatum": "2021-01-01",
+    "einddatum": "2021-01-06",
+    "einddatumGepland": "2021-02-10",
+    "uiterlijkeEinddatumAfdoening": null,
+    "publicatiedatum": null,
+    "communicatiekanaal": "",
+    "productenOfDiensten": [],
+    "vertrouwelijkheidaanduiding": "vertrouwelijk",
+    "betalingsindicatie": "",
+    "betalingsindicatieWeergave": "",
+    "laatsteBetaaldatum": null,
+    "zaakgeometrie": null,
+    "verlenging": {
+        "reden": "",
+        "duur": null
+    },
+    "opschorting": {
+        "indicatie": false,
+        "reden": ""
+    },
+    "selectielijstklasse": "",
+    "hoofdzaak": null,
+    "deelzaken": [],
+    "relevanteAndereZaken": [],
+    "eigenschappen": [],
+    "status": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/statussen/94d2e03e-a0b4-4659-8852-212109e334c4",
+    "kenmerken": [
+        {
+            "kenmerk": "190010457",
+            "bron": "GISVG"
+        }
+    ],
+    "archiefnominatie": "vernietigen",
+    "archiefstatus": "nog_te_archiveren",
+    "archiefactiedatum": null,
+    "resultaat": "",
+    "opdrachtgevendeOrganisatie": ""
+}

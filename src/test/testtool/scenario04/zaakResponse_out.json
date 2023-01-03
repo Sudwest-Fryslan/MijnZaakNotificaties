@@ -1,0 +1,48 @@
+{
+    "url": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/zaken/61b266a8-97f9-4a80-bbbf-56555bf9cdf9",
+    "uuid": "61b266a8-97f9-4a80-bbbf-56555bf9cdf9",
+    "identificatie": "190010446",
+    "bronorganisatie": "823288444",
+    "omschrijving": "Aanvraag minimaregelingen (Z)",
+    "toelichting": "",
+    "zaaktype": "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/zaaktypen/dda6aad8-29b1-48a4-a78f-e38a83d04076",
+    "registratiedatum": "2022-10-31",
+    "verantwoordelijkeOrganisatie": "823288444",
+    "startdatum": "2022-10-31",
+    "einddatum": "2022-10-31",
+    "einddatumGepland": "2021-01-01",
+    "uiterlijkeEinddatumAfdoening": null,
+    "publicatiedatum": null,
+    "communicatiekanaal": "",
+    "productenOfDiensten": [],
+    "vertrouwelijkheidaanduiding": "vertrouwelijk",
+    "betalingsindicatie": "",
+    "betalingsindicatieWeergave": "",
+    "laatsteBetaaldatum": null,
+    "zaakgeometrie": null,
+    "verlenging": {
+        "reden": "Overig",
+        "duur": "P99D"
+    },
+    "opschorting": {
+        "indicatie": true,
+        "reden": "niet tijdig verstrekken inform"
+    },
+    "selectielijstklasse": "",
+    "hoofdzaak": null,
+    "deelzaken": [],
+    "relevanteAndereZaken": [],
+    "eigenschappen": [],
+    "status": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/statussen/db90a1be-a81f-44fb-aee7-f5b1d1471c79",
+    "kenmerken": [
+        {
+            "kenmerk": "273846",
+            "bron": "GWS4all"
+        }
+    ],
+    "archiefnominatie": "vernietigen",
+    "archiefstatus": "nog_te_archiveren",
+    "archiefactiedatum": "2027-10-31",
+    "resultaat": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/resultaten/c26659e2-d8b3-48f0-97dc-81bf9d4c8121",
+    "opdrachtgevendeOrganisatie": ""
+}

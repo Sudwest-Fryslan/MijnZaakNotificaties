@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="kanaal" type="kanaal" />
+        <xs:element name="hoofdObject" type="httpURI" />
+        <xs:element name="resource" type="resource" />
+        <xs:element name="resourceUrl" type="httpURI" />
+        <xs:element name="actie" type="xs:string" />
+        <xs:element name="aanmaakdatum" type="xs:dateTime" />
+        <xs:element name="kenmerken" type="kenmerken" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="httpURI">
+    <xs:restriction base="xs:anyURI">
+      <xs:pattern value="https://open-zaak.test.swf.opengem.nl/.*" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="kanaal">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="zaken" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="resource">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="status" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="kenmerken">
+    <xs:sequence>
+      <xs:element name="bronorganisatie" type="xs:integer" />
+      <xs:element name="zaaktype" type="httpURI" />
+      <xs:element name="vertrouwelijkheidaanduiding" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema> 

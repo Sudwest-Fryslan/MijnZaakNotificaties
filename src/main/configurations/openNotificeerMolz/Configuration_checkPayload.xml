@@ -1,0 +1,173 @@
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../FrankConfig.xsd">
+    <Adapter name="checkPayload">
+        <Receiver name="checkPayload">
+            <ApiListener
+                name="checkPayload"
+                method="POST"
+                uriPattern="/callback/lopendezaken" />
+        </Receiver>
+
+        <Pipeline firstPipe="checkPayload">
+            <Exits>
+                <Exit name="Exit" state="SUCCESS" />
+                <Exit name="Error" state="ERROR" code="400" />
+                <Exit name="BadRequest" state="ERROR" code="202" />
+            </Exits>
+
+            <Json2XmlValidatorPipe
+                name="checkPayload"
+                root="root"
+                schema="checkPayload.xsd"
+                storeResultInSessionKey="payload">
+                <Forward name="success" path="zaakResponse" />
+                <Forward name="failure" path="Error" />
+            </Json2XmlValidatorPipe>
+
+            <SenderPipe name="zaakResponse">
+                <HttpSender
+                    name="zaakResponse"
+                    headersParams="Accept-Crs,Authorization">
+                    <Param name="Authorization" pattern="Bearer ${access_token}" />
+                    <Param name="url" xpathExpression="/root/hoofdObject" />
+                    <Param name="Accept-Crs" value="EPSG:4326" />
+                </HttpSender>
+            </SenderPipe>
+
+            <JsonPipe name="zaakResponseJsonToXml" storeResultInSessionKey="storeInputXml" />
+
+            <SenderPipe name="zaakTypeResponse">
+                <HttpSender name="zaakTypeResponse"
+                    headersParams="Accept-Crs,Authorization">
+                    <Param name="Authorization" pattern="Bearer ${access_token}" />
+                    <Param name="url" xpathExpression="/root/zaaktype" />
+                    <Param name="Accept-Crs" value="EPSG:4326" />
+                </HttpSender>
+            </SenderPipe>
+
+            <JsonPipe name="zaakTypeResponseJsonToXml"
+                storeResultInSessionKey="storeZaakTypeResponse" />
+
+            <XsltPipe name="actie" getInputFromSessionKey="storeZaakTypeResponse"
+                styleSheetName="xsl/checkZaakType.xsl">
+                <Param name="active_zaaktypes" value="${active_zaaktypes}" />
+            </XsltPipe>
+
+            <XmlIfPipe name="CheckZaakType"
+                xpathExpression="string-length(identificatie) &gt; 0">
+                <Forward name="then" path="checkResultaat" />
+                <Forward name="else" path="zaakTypeException" />
+            </XmlIfPipe>
+
+            <ExceptionPipe name="zaakTypeException"
+                getInputFromFixedValue="verkeerde zaaktype, active zaaktypes ${active_zaaktypes} verwacht">
+                <Param name="identificatie" sessionKey="identificatie" />
+                <Forward name="then" path="BadRequest" />
+            </ExceptionPipe>
+
+            <XsltPipe name="checkResultaat" getInputFromSessionKey="storeInputXml"
+                styleSheetName="xsl/checkResultaat.xsl">
+                <Forward name="success" path="checkResultaatResult" />
+            </XsltPipe>
+
+            <XmlIfPipe name="checkResultaatResult" xpathExpression="string-length(resultaat) &gt; 0">
+                <Forward name="then" path="resultaat" />
+                <Forward name="else" path="checkResultaatException" />
+            </XmlIfPipe>
+
+            <EchoPipe name="checkResultaatException"
+                getInputFromFixedValue="NO resultaattoelichting">
+                <Forward name="else" path="resultaat" />
+            </EchoPipe>
+
+            <SenderPipe name="resultaat" getInputFromSessionKey="storeInputXml">
+                <HttpSender name="resultaat"
+                    headersParams="Accept-Crs,Authorization">
+                    <Param name="Authorization" pattern="Bearer ${access_token}" />
+                    <Param name="url" xpathExpression="/root/resultaat" />
+                    <Param name="Accept-Crs" value="EPSG:4326" />
+                </HttpSender>
+            </SenderPipe>
+            <JsonPipe name="resultaatJsonToXml" storeResultInSessionKey="storeResultaat" />
+
+            <SenderPipe name="statusResponse" getInputFromSessionKey="payload">
+                <HttpSender name="statusResponse"
+                    headersParams="Accept-Crs,Authorization">
+                    <Param name="Authorization" pattern="Bearer ${access_token}" />
+                    <Param name="url" xpathExpression="/root/resourceUrl" />
+                    <Param name="Accept-Crs" value="EPSG:4326" />
+                </HttpSender>
+            </SenderPipe>
+
+            <JsonPipe name="statusResponseJsonToXml" storeResultInSessionKey="storeStatusResponse" />
+
+            <SenderPipe name="rollenJson" getInputFromSessionKey="storeInputXml">
+                <HttpSender name="rollenJson"
+                    headersParams="Accept-Crs,Authorization"
+                    url="https://open-zaak.test.swf.opengem.nl/zaken/api/v1/rollen">
+                    <Param name="Authorization" pattern="Bearer ${access_token}" />
+                    <Param name="zaak" xpathExpression="root/url" />
+                    <Param name="betrokkeneType" value="natuurlijk_persoon" />
+                    <Param name="omschrijvingGeneriek" value="initiator" />
+                </HttpSender>
+            </SenderPipe>
+
+            <JsonPipe name="rollenJsonresultJsonToXml" />
+
+            <PutInSessionPipe name="storerollenJsonresult">
+                <Param name="storeRollenJson" />
+                <Param name="uuid" pattern="{uuid}" />
+            </PutInSessionPipe>
+
+            <XsltPipe name="checkRollen" styleSheetName="xsl/checkRollen.xsl">
+                <Forward name="success" path="checkRollenResult" />
+            </XsltPipe>
+
+            <XmlIfPipe name="checkRollenResult" xpathExpression="string-length(count) &gt; 0">
+                <Forward name="then" path="checkInpbsn" />
+                <Forward name="else" path="checkRollenException" />
+            </XmlIfPipe>
+
+            <ExceptionPipe name="checkRollenException"
+                getInputFromFixedValue="zaak had niet 1 natuurlijk-persoon initiator rol">
+                <Forward name="then" path="Error" />
+            </ExceptionPipe>
+
+            <XsltPipe name="checkInpbsn" getInputFromSessionKey="storeRollenJson"
+                styleSheetName="xsl/checkInpbsn.xsl">
+                <Forward name="success" path="checkInpbsnResult" />
+            </XsltPipe>
+
+            <XmlIfPipe name="checkInpbsnResult" xpathExpression="string-length(inpBsn) &gt; 0">
+                <Forward name="then" path="result" />
+                <Forward name="else" path="checkInpbsnException" />
+            </XmlIfPipe>
+
+            <ExceptionPipe name="checkInpbsnException"
+                getInputFromFixedValue="zaak bevat geen bsn nummer">
+                <Forward name="then" path="Error" />
+            </ExceptionPipe>
+
+            <XsltPipe name="result" getInputFromSessionKey="storeInputXml"
+                omitXmlDeclaration="true"
+                styleSheetName="xsl/result.xsl">
+                <Param name="storeResultaat" sessionKey="storeResultaat" type="DOMDOC" />
+                <Param name="storeRollenJson" sessionKey="storeRollenJson" type="DOMDOC" />
+                <Param name="storeZaakTypeResponse" sessionKey="storeZaakTypeResponse" type="DOMDOC" />
+                <Param name="storeStatusResponse" sessionKey="storeStatusResponse" type="DOMDOC" />
+                <Param name="uuid" sessionKey="uuid" />
+                <Forward name="success" path="storeResult" />
+            </XsltPipe>
+
+            <LocalFileSystemPipe name="storeResult"
+                action="write"
+                overwrite="true">
+                <Param name="filename"
+                    xpathExpression="concat('${configurations.directory}\openNotificeerMolz\results\', '{', upper-case($uuid), '}', '.xml')">
+                    <Param name="uuid" sessionKey="uuid" />
+                </Param>
+                <Forward name="success" path="Exit" />
+            </LocalFileSystemPipe>
+        </Pipeline>
+    </Adapter>
+</Configuration>

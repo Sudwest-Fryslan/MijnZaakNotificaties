@@ -1,0 +1,7 @@
+{
+    "url": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/resultaten/c26659e2-d8b3-48f0-97dc-81bf9d4c8121",
+    "uuid": "c26659e2-d8b3-48f0-97dc-81bf9d4c8121",
+    "zaak": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/zaken/61b266a8-97f9-4a80-bbbf-56555bf9cdf9",
+    "resultaattype": "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/resultaattypen/73f6a351-6a0d-4e3f-b5a7-6880125e131f",
+    "toelichting": "Buiten behandeling gesteld"
+}

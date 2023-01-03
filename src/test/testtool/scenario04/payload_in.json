@@ -1,0 +1,13 @@
+{
+    "kanaal": "zaken",
+    "hoofdObject": "https://open-zaak.test.swf.opengem.nl/zaken/api/v1/zaken/61b266a8-97f9-4a80-bbbf-56555bf9cdf9",
+    "resource": "status",
+    "resourceUrl": "https://open-zaak.test.swf.opengem.nl/zaken/api/v1/statussen/f90f7965-0558-48bb-bbea-3ffe79addf15",
+    "actie": "create",
+    "aanmaakdatum": "2022-10-31T21:34:44Z",
+    "kenmerken": {
+        "bronorganisatie": "823288444",
+        "zaaktype": "https://open-zaak.test.swf.opengem.nl/catalogi/api/v1/zaaktypen/dda6aad8-29b1-48a4-a78f-e38a83d04076",
+        "vertrouwelijkheidaanduiding": "vertrouwelijk"
+    }
+}

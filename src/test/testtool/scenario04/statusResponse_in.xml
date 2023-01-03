@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <kanaal>zaken</kanaal>
+    <hoofdObject>
+        https://open-zaak.test.swf.opengem.nl/zaken/api/v1/zaken/61b266a8-97f9-4a80-bbbf-56555bf9cdf9</hoofdObject>
+    <resource>status</resource>
+    <resourceUrl>
+        https://open-zaak.test.swf.opengem.nl/zaken/api/v1/statussen/f90f7965-0558-48bb-bbea-3ffe79addf15</resourceUrl>
+    <actie>create</actie>
+    <aanmaakdatum>2022-10-31T21:34:44Z</aanmaakdatum>
+    <kenmerken>
+        <bronorganisatie>823288444</bronorganisatie>
+        <zaaktype>
+            https://open-zaak.test.swf.opengem.nl/catalogi/api/v1/zaaktypen/dda6aad8-29b1-48a4-a78f-e38a83d04076</zaaktype>
+        <vertrouwelijkheidaanduiding>vertrouwelijk</vertrouwelijkheidaanduiding>
+    </kenmerken>
+</root>

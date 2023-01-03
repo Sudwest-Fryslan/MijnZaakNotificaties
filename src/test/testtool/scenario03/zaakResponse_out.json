@@ -1,0 +1,43 @@
+{
+    "url": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/zaken/2ba72fdf-4753-4cad-83dc-c1548e6d691a",
+    "uuid": "2ba72fdf-4753-4cad-83dc-c1548e6d691a",
+    "identificatie": "1900593",
+    "bronorganisatie": "823288444",
+    "omschrijving": "Bezwaar , M.G. Thielen, 2017",
+    "toelichting": "",
+    "zaaktype": "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/zaaktypen/074fa738-9603-4573-83a1-3f7b01295087",
+    "registratiedatum": "2022-11-01",
+    "verantwoordelijkeOrganisatie": "823288444",
+    "startdatum": "2022-11-01",
+    "einddatum": null,
+    "einddatumGepland": null,
+    "uiterlijkeEinddatumAfdoening": null,
+    "publicatiedatum": null,
+    "communicatiekanaal": "",
+    "productenOfDiensten": [],
+    "vertrouwelijkheidaanduiding": "intern",
+    "betalingsindicatie": "",
+    "betalingsindicatieWeergave": "",
+    "laatsteBetaaldatum": null,
+    "zaakgeometrie": null,
+    "verlenging": {
+        "reden": "",
+        "duur": null
+    },
+    "opschorting": {
+        "indicatie": false,
+        "reden": ""
+    },
+    "selectielijstklasse": "",
+    "hoofdzaak": null,
+    "deelzaken": [],
+    "relevanteAndereZaken": [],
+    "eigenschappen": [],
+    "status": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/statussen/4381227b-7176-48b0-b3cd-1b26370952f4",
+    "kenmerken": [],
+    "archiefnominatie": null,
+    "archiefstatus": "nog_te_archiveren",
+    "archiefactiedatum": null,
+    "resultaat": null,
+    "opdrachtgevendeOrganisatie": ""
+}

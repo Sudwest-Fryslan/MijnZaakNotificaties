@@ -1,0 +1,43 @@
+<root>
+    <url>https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/zaken/61b266a8-97f9-4a80-bbbf-56555bf9cdf9</url>
+    <uuid>61b266a8-97f9-4a80-bbbf-56555bf9cdf9</uuid>
+    <identificatie>190010446</identificatie>
+    <bronorganisatie>823288444</bronorganisatie>
+    <omschrijving>Aanvraag minimaregelingen (Z)</omschrijving>
+    <toelichting/>
+    <zaaktype>https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/zaaktypen/dda6aad8-29b1-48a4-a78f-e38a83d04076</zaaktype>
+    <registratiedatum>2022-10-31</registratiedatum>
+    <verantwoordelijkeOrganisatie>823288444</verantwoordelijkeOrganisatie>
+    <startdatum>2022-10-31</startdatum>
+    <einddatum>2022-10-31</einddatum>
+    <einddatumGepland>2021-01-01</einddatumGepland>
+    <uiterlijkeEinddatumAfdoening nil="true"/>
+    <publicatiedatum nil="true"/>
+    <communicatiekanaal/>
+    <vertrouwelijkheidaanduiding>vertrouwelijk</vertrouwelijkheidaanduiding>
+    <betalingsindicatie/>
+    <betalingsindicatieWeergave/>
+    <laatsteBetaaldatum nil="true"/>
+    <zaakgeometrie nil="true"/>
+    <verlenging>
+    <reden>Overig</reden>
+    <duur>P99D</duur>
+    </verlenging>
+    <opschorting>
+    <indicatie>true</indicatie>
+    <reden>niet tijdig verstrekken inform</reden>
+    </opschorting>
+    <selectielijstklasse/>
+    <hoofdzaak nil="true"/>
+    <status>https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/statussen/db90a1be-a81f-44fb-aee7-f5b1d1471c79</status>
+    <kenmerken>
+    <kenmerk>273846</kenmerk>
+    <bron>GWS4all</bron>
+    </kenmerken>
+    <archiefnominatie>vernietigen</archiefnominatie>
+    <archiefstatus>nog_te_archiveren</archiefstatus>
+    <archiefactiedatum>2027-10-31</archiefactiedatum>
+    <resultaat>https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/resultaten/c26659e2-d8b3-48f0-97dc-81bf9d4c8121</resultaat>
+    <opdrachtgevendeOrganisatie/>
+    </root>
+    

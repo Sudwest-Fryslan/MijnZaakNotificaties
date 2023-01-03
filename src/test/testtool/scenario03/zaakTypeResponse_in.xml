@@ -1,0 +1,42 @@
+<root>
+  <url>
+    https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/zaken/2ba72fdf-4753-4cad-83dc-c1548e6d691a</url>
+  <uuid>2ba72fdf-4753-4cad-83dc-c1548e6d691a</uuid>
+  <identificatie>1900593</identificatie>
+  <bronorganisatie>823288444</bronorganisatie>
+  <omschrijving>Bezwaar , M.G. Thielen, 2017</omschrijving>
+  <toelichting />
+  <zaaktype>
+    https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/zaaktypen/074fa738-9603-4573-83a1-3f7b01295087</zaaktype>
+  <registratiedatum>2022-11-01</registratiedatum>
+  <verantwoordelijkeOrganisatie>823288444</verantwoordelijkeOrganisatie>
+  <startdatum>2022-11-01</startdatum>
+  <einddatum nil="true" />
+  <einddatumGepland nil="true" />
+  <uiterlijkeEinddatumAfdoening nil="true" />
+  <publicatiedatum nil="true" />
+  <communicatiekanaal />
+  <vertrouwelijkheidaanduiding>intern</vertrouwelijkheidaanduiding>
+  <betalingsindicatie />
+  <betalingsindicatieWeergave />
+  <laatsteBetaaldatum nil="true" />
+  <zaakgeometrie nil="true" />
+  <verlenging>
+    <reden />
+    <duur nil="true" />
+  </verlenging>
+  <opschorting>
+    <indicatie>false</indicatie>
+    <reden />
+  </opschorting>
+  <selectielijstklasse />
+  <hoofdzaak nil="true" />
+  <status>
+    https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/statussen/4381227b-7176-48b0-b3cd-1b26370952f4</status>
+  <archiefnominatie nil="true" />
+  <archiefstatus>nog_te_archiveren</archiefstatus>
+  <archiefactiedatum nil="true" />
+  <resultaat nil="true" />
+  <opdrachtgevendeOrganisatie />
+</root>
+  

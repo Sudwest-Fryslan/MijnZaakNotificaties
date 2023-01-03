@@ -1,0 +1,67 @@
+{
+    "url": "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/zaaktypen/dda6aad8-29b1-48a4-a78f-e38a83d04076",
+    "identificatie": "B1026",
+    "omschrijving": "Minimaregeling aanvraag",
+    "omschrijvingGeneriek": "Minimaregeling aanvraag",
+    "vertrouwelijkheidaanduiding": "vertrouwelijk",
+    "doel": "Het beoordelen van een aanvraag minimaregelingen",
+    "aanleiding": "Dit werkproces wordt extern getriggerd door een inkomende aanvraag.",
+    "toelichting": "Dit werkproces betreft het beoordelen van een aanvraag voor een minimaregeling. Een minimaregeling is een inkomensondersteunende voorziening voor mensen met een inkomen dat niet hoger is dan 110% van het sociaal minimum. De gemeente kan deze (gedeeltelijke) vergoeding toekennen voor kosten van witgoedapparatuur, kosten voor kinderen en kosten in verband met ouderdom, een handicap of chronische ziekte. Zie voor de minimaregeling voor de kosten in verband met een ziektekostenverzekering werkproces B1261 'Collectieve aanvullende zorgverzekering'.",
+    "indicatieInternOfExtern": "extern",
+    "handelingInitiator": "Aanvragen",
+    "onderwerp": "Minimaregeling",
+    "handelingBehandelaar": "Beoordelen",
+    "doorlooptijd": null,
+    "servicenorm": null,
+    "opschortingEnAanhoudingMogelijk": true,
+    "verlengingMogelijk": false,
+    "verlengingstermijn": null,
+    "trefwoorden": [
+        "Minimaregeling"
+    ],
+    "publicatieIndicatie": false,
+    "publicatietekst": "",
+    "verantwoordingsrelatie": [],
+    "productenOfDiensten": [
+        "https://referentielijsten-api.vng.cloud/api/v1/procestypen/77453a2e-9c1a-4930-a96a-52aaeb26a288"
+    ],
+    "selectielijstProcestype": "https://selectielijst.openzaak.nl/api/v1/procestypen/f4603775-5a08-4829-85c8-28017dfeee1f",
+    "referentieproces": {
+        "naam": "Behandelen verzoek ondersteuningsproduct",
+        "link": "https://www.gemmaonline.nl/index.php/GEMMA2/0.9/id-1b8adc39-0288-4f7a-a0b9-c53ad4e348f5"
+    },
+    "catalogus": "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/catalogussen/7ad3b88e-6db7-4235-9114-ad9fbbccbf5d",
+    "statustypen": [
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/statustypen/f29b65d7-9c24-4376-9999-b60e72273c9e",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/statustypen/4fb974b6-92ae-47d7-9d99-69279a51d7a8",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/statustypen/9a1c30e7-c47a-4bfa-8153-b70777169a0a",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/statustypen/4976a379-5b52-46ad-b609-a0c4803d289f",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/statustypen/40fc55d1-f592-46d3-b9a5-cf78fdaed70f"
+    ],
+    "resultaattypen": [
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/resultaattypen/d7f63505-dbc9-4775-8bbe-e471ba8ef494",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/resultaattypen/73f6a351-6a0d-4e3f-b5a7-6880125e131f",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/resultaattypen/9a8501b1-0109-4507-9273-c4af21423912",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/resultaattypen/3da4f312-8456-4c77-a11e-bd6c92b0b514"
+    ],
+    "eigenschappen": [],
+    "informatieobjecttypen": [
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/informatieobjecttypen/082adfae-9dd9-46f3-b785-d291c1f5035a"
+    ],
+    "roltypen": [
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/roltypen/aacf38f1-6021-4ef6-8522-c5afd13b5898",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/roltypen/8542253b-2e43-42d6-8f94-a28d14dc88f6",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/roltypen/84fabb11-8402-4acb-8660-b0016fcf47c7",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/roltypen/e752d893-27d7-4175-9bf6-1878a825504b",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/roltypen/6bb2ce56-5024-4059-aa14-c67a527cc78c",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/roltypen/eb0cbb78-a35f-42a0-8fd9-55f24930d473",
+        "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/roltypen/a266d3b8-0ead-4d36-b8da-2cfc378853ae"
+    ],
+    "besluittypen": [],
+    "deelzaaktypen": [],
+    "gerelateerdeZaaktypen": [],
+    "beginGeldigheid": "2022-10-30",
+    "eindeGeldigheid": null,
+    "versiedatum": "2022-10-30",
+    "concept": false
+}

@@ -1,0 +1,42 @@
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "url": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/rollen/74adb041-f5cd-49d5-aed0-b5ad6a78ea9f",
+            "uuid": "74adb041-f5cd-49d5-aed0-b5ad6a78ea9f",
+            "zaak": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/zaken/6c0826a2-84a7-4351-af8d-76aaec02c5b8",
+            "betrokkene": "",
+            "betrokkeneType": "natuurlijk_persoon",
+            "roltype": "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/roltypen/32a32f15-ec8b-4a2d-8a7a-68c4f7f8819c",
+            "omschrijving": "Initiator",
+            "omschrijvingGeneriek": "initiator",
+            "roltoelichting": "Initiator: Precies",
+            "registratiedatum": "2022-10-31T22:21:39.771027Z",
+            "indicatieMachtiging": "",
+            "betrokkeneIdentificatie": {
+                "inpBsn": "900198424",
+                "anpIdentificatie": "",
+                "inpA_nummer": "",
+                "geslachtsnaam": "Precies",
+                "voorvoegselGeslachtsnaam": "",
+                "voorletters": "P.J.",
+                "voornamen": "Piet Je",
+                "geslachtsaanduiding": "v",
+                "geboortedatum": "1950-01-01",
+                "verblijfsadres": {
+                    "aoaIdentificatie": "0091200000046730",
+                    "wplWoonplaatsNaam": "Sneek",
+                    "gorOpenbareRuimteNaam": "Marktstraat",
+                    "aoaPostcode": "8601CR",
+                    "aoaHuisnummer": 15,
+                    "aoaHuisletter": "",
+                    "aoaHuisnummertoevoeging": "",
+                    "inpLocatiebeschrijving": ""
+                },
+                "subVerblijfBuitenland": null
+            }
+        }
+    ]
+}

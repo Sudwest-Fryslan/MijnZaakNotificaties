@@ -1,0 +1,8 @@
+<!DOCTYPE configuration [
+    <!ENTITY checkPayload SYSTEM "./Configuration_checkPayload.xml">
+]>
+
+
+<Configuration name="openNotificeerMolz">
+    &checkPayload;
+</Configuration>
