@@ -7,10 +7,12 @@ services:
       - ./context.xml:/usr/local/tomcat/conf/context.xml
       - ../src/test/testtool/:/opt/frank/testtool/
       - ../src/main/configurations/:/opt/frank/configurations/
-      - ../src/main/resources/DeploymentSpecifics.properties:/usr/local/tomcat/lib/DeploymentSpecifics.properties
+      - ../src/main/configurations/openNotificeerMolz/DeploymentSpecifics.properties:/usr/local/tomcat/lib/DeploymentSpecifics.properties
     ports:
       - "8080:8080"
     environment:
       - dtap.stage=LOC
       - instance.name=Frank2OpenNotificeerMolz
       - database.instance.name=frank2opennotificeermolz
+      - configurations.openNotificeerMolz.classLoaderType=DirectoryClassLoader
+      - configurations.names=openNotificeerMolz
