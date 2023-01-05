@@ -1,8 +1,10 @@
 version: "3"
 
 services:
-  frank:
-    image: nexus.frankframework.org/frank-framework:latest
+  frank2opennotificeermolz:
+    # image: nexus.frankframework.org/frank-framework:latest
+    build: .
+    container_name: frank2opennotificeermolz
     volumes:
       - ./context.xml:/usr/local/tomcat/conf/context.xml
       - ../src/test/testtool/:/opt/frank/testtool/

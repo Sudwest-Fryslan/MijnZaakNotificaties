@@ -1,8 +1,0 @@
-{
-    "url": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/statussen/19496640-b9fd-4ee6-a3c1-ea71481b8b26",
-    "uuid": "19496640-b9fd-4ee6-a3c1-ea71481b8b26",
-    "zaak": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/zaken/6c0826a2-84a7-4351-af8d-76aaec02c5b8",
-    "statustype": "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/statustypen/22f58e80-d007-4edb-ae7a-dc8cdb383a49",
-    "datumStatusGezet": "2021-01-04T05:56:52Z",
-    "statustoelichting": "Geregistreerd"
-}

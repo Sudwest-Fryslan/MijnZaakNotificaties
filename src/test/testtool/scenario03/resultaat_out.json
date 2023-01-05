@@ -1,7 +1,0 @@
-{
-    "url": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/resultaten/33f6a956-b0e6-4b88-b172-3cd64419d076",
-    "uuid": "33f6a956-b0e6-4b88-b172-3cd64419d076",
-    "zaak": "https://open-zaak.test.swf.opengem.nl:443/zaken/api/v1/zaken/6c0826a2-84a7-4351-af8d-76aaec02c5b8",
-    "resultaattype": "https://open-zaak.test.swf.opengem.nl:443/catalogi/api/v1/resultaattypen/27469733-372e-430d-a4e5-19d7d9e71934",
-    "toelichting": "Verleend"
-}
