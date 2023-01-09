@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file docker/Dockerfile --tag frank2opennotificeermolz:$(date +%s)
     - name: Docker push
-      run: docker push docker.io/rayetsena/frank2opennotificeermolz:latest
+      run: docker push rayetsena/frank2opennotificeermolz && docker rayetsena/frank2opennotificeermolz
