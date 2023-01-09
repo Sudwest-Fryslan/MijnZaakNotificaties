@@ -2,7 +2,7 @@ version: "3"
 
 services:
   notificeer:
-    build: .
+    image: docker.io/rayetsena/frank2opennotificeermolz:latest
     volumes:
       - ./context.xml:/usr/local/tomcat/conf/context.xml
       - ../src/test/testtool/:/opt/frank/testtool/
