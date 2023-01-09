@@ -1,0 +1,8 @@
+<!DOCTYPE configuration [
+    <!ENTITY LopendeZaken SYSTEM "./Configuration_LopendeZaken.xml">
+]>
+
+
+<Configuration>
+    &LopendeZaken;
+</Configuration>

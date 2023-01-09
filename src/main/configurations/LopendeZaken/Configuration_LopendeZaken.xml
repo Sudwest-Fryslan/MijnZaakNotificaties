@@ -1,14 +1,14 @@
-<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<Module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../FrankConfig.xsd">
-    <Adapter name="checkPayload">
-        <Receiver name="checkPayload">
+    <Adapter name="NotificeerLopendeZaken">
+        <Receiver name="NotificeerLopendeZaken">
             <ApiListener
-                name="checkPayload"
+                name="NotificeerLopendeZaken"
                 method="POST"
                 uriPattern="/callback/lopendezaken" />
         </Receiver>
 
-        <Pipeline firstPipe="checkPayload">
+        <Pipeline>
             <Exits>
                 <Exit name="Exit" state="SUCCESS" />
                 <Exit name="Error" state="ERROR" code="400" />
@@ -16,14 +16,15 @@
             </Exits>
 
             <Json2XmlValidatorPipe
-                name="checkPayload"
+                name="CheckInput"
                 root="root"
-                schema="checkPayload.xsd"
-                storeResultInSessionKey="payload">
+                schema="CheckInput.xsd"
+                storeResultInSessionKey="FirstInput">
                 <Forward name="success" path="zaakResponse" />
                 <Forward name="failure" path="Error" />
             </Json2XmlValidatorPipe>
 
+            <!-- retrieve the case -->
             <SenderPipe name="zaakResponse">
                 <HttpSender
                     name="zaakResponse"
@@ -61,7 +62,6 @@
 
             <ExceptionPipe name="zaakTypeException"
                 getInputFromFixedValue="verkeerde zaaktype, active zaaktypes ${active_zaaktypes} verwacht">
-                <Param name="identificatie" sessionKey="identificatie" />
                 <Forward name="then" path="BadRequest" />
             </ExceptionPipe>
 
@@ -90,7 +90,7 @@
             </SenderPipe>
             <JsonPipe name="resultaatJsonToXml" storeResultInSessionKey="storeResultaat" />
 
-            <SenderPipe name="statusResponse" getInputFromSessionKey="payload">
+            <SenderPipe name="statusResponse" getInputFromSessionKey="FirstInput">
                 <HttpSender name="statusResponse"
                     headersParams="Accept-Crs,Authorization">
                     <Param name="Authorization" pattern="Bearer ${access_token}" />
@@ -104,7 +104,7 @@
             <SenderPipe name="rollenJson" getInputFromSessionKey="storeInputXml">
                 <HttpSender name="rollenJson"
                     headersParams="Accept-Crs,Authorization"
-                    url="https://open-zaak.test.swf.opengem.nl/zaken/api/v1/rollen">
+                    url="concat('${open_baseurl}','${rollenUrl}')">
                     <Param name="Authorization" pattern="Bearer ${access_token}" />
                     <Param name="zaak" xpathExpression="root/url" />
                     <Param name="betrokkeneType" value="natuurlijk_persoon" />
@@ -128,10 +128,10 @@
                 <Forward name="else" path="checkRollenException" />
             </XmlIfPipe>
 
-            <ExceptionPipe name="checkRollenException"
+            <EchoPipe name="checkRollenException"
                 getInputFromFixedValue="zaak had niet 1 natuurlijk-persoon initiator rol">
                 <Forward name="then" path="Error" />
-            </ExceptionPipe>
+            </EchoPipe>
 
             <XsltPipe name="checkInpbsn" getInputFromSessionKey="storeRollenJson"
                 styleSheetName="xsl/checkInpbsn.xsl">
@@ -143,10 +143,10 @@
                 <Forward name="else" path="checkInpbsnException" />
             </XmlIfPipe>
 
-            <ExceptionPipe name="checkInpbsnException"
+            <EchoPipe name="checkInpbsnException"
                 getInputFromFixedValue="zaak bevat geen bsn nummer">
                 <Forward name="then" path="Error" />
-            </ExceptionPipe>
+            </EchoPipe>
 
             <XsltPipe name="result" getInputFromSessionKey="storeInputXml"
                 omitXmlDeclaration="true"
@@ -163,11 +163,11 @@
                 action="write"
                 overwrite="true">
                 <Param name="filename"
-                    xpathExpression="concat('${configurations.directory}\openNotificeerMolz\results\', '{', upper-case($uuid), '}', '.xml')">
+                    xpathExpression="concat('${configurations.directory}\LopendeZaken\results\', '{', upper-case($uuid), '}', '.xml')">
                     <Param name="uuid" sessionKey="uuid" />
                 </Param>
                 <Forward name="success" path="Exit" />
             </LocalFileSystemPipe>
         </Pipeline>
     </Adapter>
-</Configuration>
+</Module>

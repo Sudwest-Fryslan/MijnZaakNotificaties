@@ -1,8 +1,0 @@
-<!DOCTYPE configuration [
-    <!ENTITY checkPayload SYSTEM "./Configuration_checkPayload.xml">
-]>
-
-
-<Configuration>
-    &checkPayload;
-</Configuration>
