@@ -21,5 +21,5 @@ jobs:
       with:
          severurl: https://index.docker.io/v1
          username: ${DOCKERHUB_USERNAME}
-         password: ${FRANK2NOTIFICEER}
+         password: ${DOCKERHUB_PASSWORD}
 
