@@ -32,4 +32,4 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/frank2opennotificeermolz:$(date +%s)
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/frank2opennotificeermolz:asas
