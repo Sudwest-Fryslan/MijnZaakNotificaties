@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file docker/Dockerfile --tag 
+      run: docker build . --file docker/Dockerfile --tag frank2opennotificeermolz:$(date +%s)
+    - name: Push the Docker image
+      run: docker push rayetsena/frank2opennotificeermolz
