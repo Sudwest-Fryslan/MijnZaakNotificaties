@@ -32,4 +32,4 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: ${{ github.event_name == 'push'}}
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/frank2opennotificeermolz:${{ inputs.version }}
+          tags: ${{ inputs.version }}
