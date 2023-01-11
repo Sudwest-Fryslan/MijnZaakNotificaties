@@ -32,4 +32,4 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: true
-          tags: type=raw,value=${{ github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/') }}
+          tags: ${{ github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/') }}
