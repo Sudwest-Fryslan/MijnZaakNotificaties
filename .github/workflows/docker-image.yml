@@ -26,13 +26,10 @@ jobs:
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
      -
-        name: Build and push Docker image
+        name: Build and push
         uses: docker/build-push-action@v3
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          file: docker/Dockerfile
+          push: ${{ github.event_name == 'push'}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/frank2opennotificeermolz:latest
