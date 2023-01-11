@@ -15,19 +15,20 @@
                 <Exit name="BadRequest" state="ERROR" code="202" />
             </Exits>
 
+            <!-- check input format -->
             <Json2XmlValidatorPipe
-                name="CheckInput"
+                name="CheckFirstInput"
                 root="root"
-                schema="CheckInput.xsd"
+                schema="CheckFirstInput.xsd"
                 storeResultInSessionKey="FirstInput">
-                <Forward name="success" path="zaakResponse" />
+                <Forward name="success" path="Call Open Zaak to get the zaak" />
                 <Forward name="failure" path="Error" />
             </Json2XmlValidatorPipe>
 
             <!-- retrieve the case -->
-            <SenderPipe name="zaakResponse">
+            <SenderPipe name="Call Open Zaak to get the zaak">
                 <HttpSender
-                    name="zaakResponse"
+                    name="getZaak"
                     headersParams="Accept-Crs,Authorization">
                     <Param name="Authorization" pattern="Bearer ${access_token}" />
                     <Param name="url" xpathExpression="/root/hoofdObject" />
@@ -35,9 +36,10 @@
                 </HttpSender>
             </SenderPipe>
 
-            <JsonPipe name="zaakResponseJsonToXml" storeResultInSessionKey="storeInputXml" />
+            <JsonPipe name="getZaakJsonToXml" storeResultInSessionKey="getZaakXml" />
 
-            <SenderPipe name="zaakTypeResponse">
+            <!-- retrieve casetype -->
+            <SenderPipe name="Call Open Zaak to get the zaakType">
                 <HttpSender name="zaakTypeResponse"
                     headersParams="Accept-Crs,Authorization">
                     <Param name="Authorization" pattern="Bearer ${access_token}" />
@@ -46,41 +48,41 @@
                 </HttpSender>
             </SenderPipe>
 
-            <JsonPipe name="zaakTypeResponseJsonToXml"
-                storeResultInSessionKey="storeZaakTypeResponse" />
+            <JsonPipe name="zaakTypeResponseJsonToXml" storeResultInSessionKey="storeZaakTypeResponse" />
 
-            <XsltPipe name="actie" getInputFromSessionKey="storeZaakTypeResponse"
+            <!-- only supported zaaktypes -->
+            <XsltPipe name="Check zaakType Identificatie" getInputFromSessionKey="storeZaakTypeResponse"
                 styleSheetName="xsl/checkZaakType.xsl">
                 <Param name="active_zaaktypes" value="${active_zaaktypes}" />
             </XsltPipe>
 
-            <XmlIfPipe name="CheckZaakType"
+            <XmlIfPipe name="Check if zaakType identificatie is in supported zaakTypes"
                 xpathExpression="string-length(identificatie) &gt; 0">
-                <Forward name="then" path="checkResultaat" />
-                <Forward name="else" path="zaakTypeException" />
+                <Forward name="then" path="Check resultaat in zaak" />
+                <Forward name="else" path="exception message for ZaakType" />
             </XmlIfPipe>
 
-            <ExceptionPipe name="zaakTypeException"
+            <ExceptionPipe name="exception message for ZaakType"
                 getInputFromFixedValue="verkeerde zaaktype, active zaaktypes ${active_zaaktypes} verwacht">
                 <Forward name="then" path="BadRequest" />
             </ExceptionPipe>
 
-            <XsltPipe name="checkResultaat" getInputFromSessionKey="storeInputXml"
+            <XsltPipe name="Check resultaat in zaak" getInputFromSessionKey="getZaakXml"
                 styleSheetName="xsl/checkResultaat.xsl">
-                <Forward name="success" path="checkResultaatResult" />
+                <Forward name="success" path="Check if resultaat exists" />
             </XsltPipe>
 
-            <XmlIfPipe name="checkResultaatResult" xpathExpression="string-length(resultaat) &gt; 0">
-                <Forward name="then" path="resultaat" />
-                <Forward name="else" path="checkResultaatException" />
+            <XmlIfPipe name="Check if resultaat exists" xpathExpression="string-length(resultaat) &gt; 0">
+                <Forward name="then" path="Call Open Zaak to get resultat in zaak" />
+                <Forward name="else" path="exception message for resultaat" />
             </XmlIfPipe>
 
-            <EchoPipe name="checkResultaatException"
+            <EchoPipe name="exception message for resultaat"
                 getInputFromFixedValue="NO resultaattoelichting">
-                <Forward name="else" path="resultaat" />
+                <Forward name="else" path="Call Open Zaak to get resultat in zaak" />
             </EchoPipe>
 
-            <SenderPipe name="resultaat" getInputFromSessionKey="storeInputXml">
+            <SenderPipe name="Call Open Zaak to get resultat in zaak" getInputFromSessionKey="getZaakXml">
                 <HttpSender name="resultaat"
                     headersParams="Accept-Crs,Authorization">
                     <Param name="Authorization" pattern="Bearer ${access_token}" />
@@ -90,7 +92,8 @@
             </SenderPipe>
             <JsonPipe name="resultaatJsonToXml" storeResultInSessionKey="storeResultaat" />
 
-            <SenderPipe name="statusResponse" getInputFromSessionKey="FirstInput">
+            <!-- retrieve the status -->
+            <SenderPipe name="Call Open Zaak to get status in zaak" getInputFromSessionKey="FirstInput">
                 <HttpSender name="statusResponse"
                     headersParams="Accept-Crs,Authorization">
                     <Param name="Authorization" pattern="Bearer ${access_token}" />
@@ -101,7 +104,7 @@
 
             <JsonPipe name="statusResponseJsonToXml" storeResultInSessionKey="storeStatusResponse" />
 
-            <SenderPipe name="rollenJson" getInputFromSessionKey="storeInputXml">
+            <SenderPipe name="Call Open Zaak to get rollen" getInputFromSessionKey="getZaakXml">
                 <HttpSender name="rollenJson"
                     headersParams="Accept-Crs,Authorization"
                     url="concat('${open_baseurl}','${rollenUrl}')">
@@ -119,36 +122,36 @@
                 <Param name="uuid" pattern="{uuid}" />
             </PutInSessionPipe>
 
-            <XsltPipe name="checkRollen" styleSheetName="xsl/checkRollen.xsl">
-                <Forward name="success" path="checkRollenResult" />
+            <XsltPipe name="check Rollen count" styleSheetName="xsl/checkRollen.xsl">
+                <Forward name="success" path="check if rollen count!=1" />
             </XsltPipe>
 
-            <XmlIfPipe name="checkRollenResult" xpathExpression="string-length(count) &gt; 0">
-                <Forward name="then" path="checkInpbsn" />
-                <Forward name="else" path="checkRollenException" />
+            <XmlIfPipe name="check if rollen count!=1" xpathExpression="string-length(count) &gt; 0">
+                <Forward name="then" path="check Inpbsn" />
+                <Forward name="else" path="exception message for rollen" />
             </XmlIfPipe>
 
-            <EchoPipe name="checkRollenException"
+            <EchoPipe name="exception message for rollen"
                 getInputFromFixedValue="zaak had niet 1 natuurlijk-persoon initiator rol">
                 <Forward name="then" path="Error" />
             </EchoPipe>
 
-            <XsltPipe name="checkInpbsn" getInputFromSessionKey="storeRollenJson"
+            <XsltPipe name="check Inpbsn" getInputFromSessionKey="storeRollenJson"
                 styleSheetName="xsl/checkInpbsn.xsl">
-                <Forward name="success" path="checkInpbsnResult" />
+                <Forward name="success" path="check if Inpbsn is None" />
             </XsltPipe>
 
-            <XmlIfPipe name="checkInpbsnResult" xpathExpression="string-length(inpBsn) &gt; 0">
-                <Forward name="then" path="result" />
-                <Forward name="else" path="checkInpbsnException" />
+            <XmlIfPipe name="check if Inpbsn is None" xpathExpression="string-length(inpBsn) &gt; 0">
+                <Forward name="then" path="Create result file" />
+                <Forward name="else" path="exception message for Inpbsn" />
             </XmlIfPipe>
 
-            <EchoPipe name="checkInpbsnException"
+            <EchoPipe name="exception message for Inpbsn"
                 getInputFromFixedValue="zaak bevat geen bsn nummer">
                 <Forward name="then" path="Error" />
             </EchoPipe>
 
-            <XsltPipe name="result" getInputFromSessionKey="storeInputXml"
+            <XsltPipe name="Create result file" getInputFromSessionKey="getZaakXml"
                 omitXmlDeclaration="true"
                 styleSheetName="xsl/result.xsl">
                 <Param name="storeResultaat" sessionKey="storeResultaat" type="DOMDOC" />
@@ -156,10 +159,10 @@
                 <Param name="storeZaakTypeResponse" sessionKey="storeZaakTypeResponse" type="DOMDOC" />
                 <Param name="storeStatusResponse" sessionKey="storeStatusResponse" type="DOMDOC" />
                 <Param name="uuid" sessionKey="uuid" />
-                <Forward name="success" path="storeResult" />
+                <Forward name="success" path="Store result file" />
             </XsltPipe>
 
-            <LocalFileSystemPipe name="storeResult"
+            <LocalFileSystemPipe name="Store result file"
                 action="write"
                 overwrite="true">
                 <Param name="filename"
