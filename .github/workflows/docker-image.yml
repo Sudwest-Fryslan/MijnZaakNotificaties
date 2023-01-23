@@ -32,4 +32,9 @@ jobs:
           context: .
           file: docker/Dockerfile
           push: ${{ github.event_name == 'push'}}
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/frank2opennotificeermolz:latest
+          tags: |
+            type=schedule
+            type=ref,event=branch
+            type=ref,event=tag
+            type=ref,event=pr
+            type=sha
