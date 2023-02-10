@@ -64,7 +64,7 @@
 
             <ExceptionPipe name="exception message for ZaakType"
                 getInputFromFixedValue="verkeerde zaaktype, active zaaktypes ${active_zaaktypes} verwacht">
-                <Forward name="then" path="BadRequest" />
+                <Forward name="success" path="BadRequest" />
             </ExceptionPipe>
 
             <XsltPipe name="Check resultaat in zaak" getInputFromSessionKey="getZaakXml"
@@ -79,7 +79,7 @@
 
             <EchoPipe name="exception message for resultaat"
                 getInputFromFixedValue="NO resultaattoelichting">
-                <Forward name="else" path="Call Open Zaak to get resultat in zaak" />
+                <Forward name="success" path="Call Open Zaak to get resultat in zaak" />
             </EchoPipe>
 
             <SenderPipe name="Call Open Zaak to get resultat in zaak" getInputFromSessionKey="getZaakXml">
@@ -133,7 +133,7 @@
 
             <EchoPipe name="exception message for rollen"
                 getInputFromFixedValue="zaak had niet 1 natuurlijk-persoon initiator rol">
-                <Forward name="then" path="Error" />
+                <Forward name="success" path="Error" />
             </EchoPipe>
 
             <XsltPipe name="check Inpbsn" getInputFromSessionKey="storeRollenJson"
@@ -148,7 +148,7 @@
 
             <EchoPipe name="exception message for Inpbsn"
                 getInputFromFixedValue="zaak bevat geen bsn nummer">
-                <Forward name="then" path="Error" />
+                <Forward name="success" path="Error" />
             </EchoPipe>
 
             <XsltPipe name="Create result file" getInputFromSessionKey="getZaakXml"
