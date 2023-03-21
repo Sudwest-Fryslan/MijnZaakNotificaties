@@ -15,7 +15,7 @@
   </xs:element>
   <xs:simpleType name="httpURI">
     <xs:restriction base="xs:anyURI">
-      <xs:pattern value="https://open-zaak.test.swf.opengem.nl/.*" />
+      <xs:pattern value="https://.*" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="kanaal">
