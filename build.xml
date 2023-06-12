@@ -1,5 +1,5 @@
-<project default="restart-frank2opennotificeermolz">
-    <target name="restart-frank2opennotificeermolz">
+<project default="restart-MijnZaakNotificaties">
+    <target name="restart-MijnZaakNotificaties">
         <basename property="project.dir" file="${basedir}" />
         <exec executable="../frank-runner/restart.bat" vmlauncher="false" failonerror="true">
             <arg value="-Dproject.dir=${project.dir}" />
