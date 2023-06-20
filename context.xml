@@ -2,7 +2,7 @@
 <Context>
 	<JarScanner scanClassPath="false" scanAllFiles="false" scanAllDirectories="false" />
 	<Resource
-		name="jdbc/${database.instance.name}"
+		name="jdbc/lopendezaken"
 		factory="org.apache.naming.factory.BeanFactory"
 		type="org.h2.jdbcx.JdbcDataSource"
 		URL="jdbc:h2:mem:ibis4test;NON_KEYWORDS=VALUE;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;TRACE_LEVEL_FILE=0;"
