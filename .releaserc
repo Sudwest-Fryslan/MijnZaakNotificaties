@@ -82,7 +82,7 @@
       {
         "assets": [
           "CHANGELOG.md",
-          "classes/BuildInfo.properties"
+          "src/main/configurations/LopendeZaken/BuildInfo.properties"
         ],
         "message": "chore(<%= nextRelease.type %>): release <%= nextRelease.version %> <%= nextRelease.channel !== null ? `on ${nextRelease.channel} channel ` : '' %>[skip ci]\n\n<%= nextRelease.notes %>"
       }
