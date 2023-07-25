@@ -3,8 +3,8 @@
     <xsl:output method="xml" />
     <xsl:template match="/">
         <inpBsn>
-            <xsl:if test="exists(/root/results/betrokkeneIdentificatie/inpBsn)">               
-                <xsl:value-of select="/root/results/betrokkeneIdentificatie/inpBsn"/>                 
+            <xsl:if test="exists(/root/results/betrokkeneIdentificatie/inpBsn)">
+                <xsl:value-of select="/root/results/betrokkeneIdentificatie/inpBsn" />
             </xsl:if>
         </inpBsn>
     </xsl:template>

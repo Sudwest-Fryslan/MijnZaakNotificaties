@@ -3,9 +3,9 @@
     <xsl:output method="xml" />
     <xsl:template match="/">
         <count>
-                <xsl:if test="/root/count = 1">
-                    <xsl:value-of select="/root/count" />
-                </xsl:if>
+            <xsl:if test="/root/count = 1">
+                <xsl:value-of select="/root/count" />
+            </xsl:if>
         </count>
     </xsl:template>
 </xsl:stylesheet>

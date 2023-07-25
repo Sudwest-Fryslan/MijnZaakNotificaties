@@ -48,10 +48,12 @@
                 </HttpSender>
             </SenderPipe>
 
-            <JsonPipe name="zaakTypeResponseJsonToXml" storeResultInSessionKey="storeZaakTypeResponse" />
+            <JsonPipe name="zaakTypeResponseJsonToXml"
+                storeResultInSessionKey="storeZaakTypeResponse" />
 
             <!-- only supported zaaktypes -->
-            <XsltPipe name="Check zaakType Identificatie" getInputFromSessionKey="storeZaakTypeResponse"
+            <XsltPipe name="Check zaakType Identificatie"
+                getInputFromSessionKey="storeZaakTypeResponse"
                 styleSheetName="xsl/checkZaakType.xsl">
                 <Param name="active_zaaktypes" value="${active_zaaktypes}" />
             </XsltPipe>
@@ -72,7 +74,8 @@
                 <Forward name="success" path="Check if resultaat exists" />
             </XsltPipe>
 
-            <XmlIfPipe name="Check if resultaat exists" xpathExpression="string-length(resultaat) &gt; 0">
+            <XmlIfPipe name="Check if resultaat exists"
+                xpathExpression="string-length(resultaat) &gt; 0">
                 <Forward name="then" path="Call Open Zaak to get resultat in zaak" />
                 <Forward name="else" path="exception message for resultaat" />
             </XmlIfPipe>
@@ -82,7 +85,8 @@
                 <Forward name="success" path="Call Open Zaak to get resultat in zaak" />
             </EchoPipe>
 
-            <SenderPipe name="Call Open Zaak to get resultat in zaak" getInputFromSessionKey="getZaakXml">
+            <SenderPipe name="Call Open Zaak to get resultat in zaak"
+                getInputFromSessionKey="getZaakXml">
                 <HttpSender name="resultaat"
                     headersParams="Accept-Crs,Authorization">
                     <Param name="Authorization" pattern="Bearer ${access_token}" />
@@ -93,7 +97,8 @@
             <JsonPipe name="resultaatJsonToXml" storeResultInSessionKey="storeResultaat" />
 
             <!-- retrieve the status -->
-            <SenderPipe name="Call Open Zaak to get status in zaak" getInputFromSessionKey="FirstInput">
+            <SenderPipe name="Call Open Zaak to get status in zaak"
+                getInputFromSessionKey="FirstInput">
                 <HttpSender name="statusResponse"
                     headersParams="Accept-Crs,Authorization">
                     <Param name="Authorization" pattern="Bearer ${access_token}" />
