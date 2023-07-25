@@ -5,7 +5,7 @@
             <ApiListener
                 name="NotificeerLopendeZaken"
                 method="POST"
-                uriPattern="/callback/lopendezaken" />
+                uriPattern="${mijnzaaknotificaties.endpoint}" />
         </Receiver>
 
         <Pipeline>
