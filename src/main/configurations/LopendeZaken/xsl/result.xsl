@@ -50,13 +50,13 @@
         <ns0:toelichting>
           <xsl:value-of select="root/toelichting" />
         </ns0:toelichting>
-          <xsl:if test="exists($storeResultaat/root/toelichting)">
-            <ns0:resultaat>
-              <ns0:omschrijving>
-                <xsl:value-of select="$storeResultaat/root/toelichting" />
-              </ns0:omschrijving>
-            </ns0:resultaat>
-          </xsl:if>
+        <xsl:if test="exists($storeResultaat/root/toelichting)">
+          <ns0:resultaat>
+            <ns0:omschrijving>
+              <xsl:value-of select="$storeResultaat/root/toelichting" />
+            </ns0:omschrijving>
+          </ns0:resultaat>
+        </xsl:if>
         <ns0:startdatum>
           <xsl:value-of select="format-date(root/startdatum,'[Y0001][M01][D01]')" />
         </ns0:startdatum>
