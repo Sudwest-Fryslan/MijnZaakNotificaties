@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.2.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.1.3...v1.2.0) (2023-08-01)
+
+
+### 📝 Documentation
+
+* Add documentation ([c622cf0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/c622cf0f33f28a3dda081907d94def1ab927dec9))
+
 ## [1.1.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.1.2...v1.1.3) (2023-07-27)
 
 
