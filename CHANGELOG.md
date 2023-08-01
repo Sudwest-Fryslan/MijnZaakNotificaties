@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.2.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.2.0...v1.2.1) (2023-08-01)
+
+
+### 🐛 Bug Fixes
+
+* add deployment files to project and add resource to context.xml ([8d9b08e](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/8d9b08ed438fac9e65b3a0d7304dda869f01c44a))
+
 ## [1.2.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.1.3...v1.2.0) (2023-08-01)
 
 
