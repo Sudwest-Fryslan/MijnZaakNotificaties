@@ -1,3 +1,7 @@
 FrankConfig.xsd
 .vscode/
 target/
+.idea/
+
+# Environment specific properties
+.env
