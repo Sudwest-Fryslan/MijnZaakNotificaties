@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.2.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.2.2...v1.2.3) (2023-08-03)
+
+
+### ⏩ Reverts
+
+* Revert "refactor: change T resultFolder" ([0d08da9](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/0d08da9ed3b75d3c7778c6ff2d2bee85116d8cb9))
+
 ## [1.2.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.2.1...v1.2.2) (2023-08-03)
 
 
