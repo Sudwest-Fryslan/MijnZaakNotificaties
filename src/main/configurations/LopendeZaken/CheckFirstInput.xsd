@@ -3,9 +3,9 @@
   <xs:element name="root">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="kanaal" type="kanaal" />
+        <xs:element name="kanaal" type="xs:string" />
         <xs:element name="hoofdObject" type="httpURI" />
-        <xs:element name="resource" type="resource" />
+        <xs:element name="resource" type="xs:string" />
         <xs:element name="resourceUrl" type="httpURI" />
         <xs:element name="actie" type="xs:string" />
         <xs:element name="aanmaakdatum" type="xs:dateTime" />
@@ -16,16 +16,6 @@
   <xs:simpleType name="httpURI">
     <xs:restriction base="xs:anyURI">
       <xs:pattern value="https://.*" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="kanaal">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="zaken" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="resource">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="status" />
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="kenmerken">
