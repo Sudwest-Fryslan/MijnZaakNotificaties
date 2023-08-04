@@ -111,8 +111,8 @@
 
             <SenderPipe name="Call Open Zaak to get rollen" getInputFromSessionKey="getZaakXml">
                 <HttpSender name="rollenJson"
-                    headersParams="Accept-Crs,Authorization"
-                    url="concat('${open_baseurl}','${rollenUrl}')">
+                    headersParams="Accept-Crs,Authorization">
+                    <Param name="url" xpathExpression="concat(${openzaak_baseurl},'${rollenUrl})'"/>
                     <Param name="Authorization" pattern="Bearer ${access_token}" />
                     <Param name="zaak" xpathExpression="root/url" />
                     <Param name="betrokkeneType" value="natuurlijk_persoon" />
