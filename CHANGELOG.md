@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.2.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.2.3...v1.2.4) (2023-08-04)
+
+
+### 🐛 Bug Fixes
+
+* correct URL definition ([1122b7d](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/1122b7dd1a4c4eeac1435c789d4cfd7baca6aaec))
+
 ## [1.2.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.2.2...v1.2.3) (2023-08-03)
 
 
