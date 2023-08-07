@@ -30,7 +30,7 @@
                 <HttpSender
                     name="getZaak"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization" pattern="Bearer ${access_token}" />
+                    <Param name="Authorization" pattern="Bearer @@mijnzaaknotificaties.jtw@@" />
                     <Param name="url" xpathExpression="/root/hoofdObject" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                 </HttpSender>
@@ -42,7 +42,7 @@
             <SenderPipe name="Call Open Zaak to get the zaakType">
                 <HttpSender name="zaakTypeResponse"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization" pattern="Bearer ${access_token}" />
+                    <Param name="Authorization" pattern="Bearer @@mijnzaaknotificaties.jtw@@" />
                     <Param name="url" xpathExpression="/root/zaaktype" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                 </HttpSender>
@@ -89,7 +89,7 @@
                 getInputFromSessionKey="getZaakXml">
                 <HttpSender name="resultaat"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization" pattern="Bearer ${access_token}" />
+                    <Param name="Authorization" pattern="Bearer @@mijnzaaknotificaties.jtw@@" />
                     <Param name="url" xpathExpression="/root/resultaat" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                 </HttpSender>
@@ -101,7 +101,7 @@
                 getInputFromSessionKey="FirstInput">
                 <HttpSender name="statusResponse"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization" pattern="Bearer ${access_token}" />
+                    <Param name="Authorization" pattern="Bearer @@mijnzaaknotificaties.jtw@@" />
                     <Param name="url" xpathExpression="/root/resourceUrl" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                 </HttpSender>
@@ -113,7 +113,7 @@
                 <HttpSender name="rollenJson"
                     headersParams="Accept-Crs,Authorization">
                     <Param name="url" xpathExpression="concat(${openzaak_baseurl},'${rollenUrl}')"/>
-                    <Param name="Authorization" pattern="Bearer ${access_token}" />
+                    <Param name="Authorization" pattern="Bearer @@mijnzaaknotificaties.jtw@@" />
                     <Param name="zaak" xpathExpression="root/url" />
                     <Param name="betrokkeneType" value="natuurlijk_persoon" />
                     <Param name="omschrijvingGeneriek" value="initiator" />
