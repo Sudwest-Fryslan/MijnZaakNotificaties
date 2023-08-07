@@ -1,5 +1,17 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.3.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.2.5...v1.3.0) (2023-08-07)
+
+
+### 🍕 Features
+
+* add bearer token generation ([a8869e1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/a8869e1cf5fee6896c0d32a3ae4a737b5d8c6e2e))
+
+
+### 🐛 Bug Fixes
+
+* missing imports ([5420779](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/5420779302ab180893d8353ba0e2e393259dea57))
+
 ## [1.2.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.2.4...v1.2.5) (2023-08-04)
 
 
