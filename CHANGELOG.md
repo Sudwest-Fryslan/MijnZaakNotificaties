@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.3.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.0...v1.3.1) (2023-08-07)
+
+
+### 🧑‍💻 Code Refactoring
+
+* change param type ([a5d08c6](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/a5d08c627c3f80b0f005c4a4ec60dace18b90f60))
+
 ## [1.3.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.2.5...v1.3.0) (2023-08-07)
 
 
