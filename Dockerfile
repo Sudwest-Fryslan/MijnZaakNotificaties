@@ -16,6 +16,10 @@ COPY --chown=tomcat src/test/testtool/ /opt/frank/testtool/
 COPY --chown=tomcat src/main/configurations/ /opt/frank/configurations/
 COPY --chown=tomcat src/main/resources/ /opt/frank/resources/
 
+# Copy dependencies
+COPY --chown=tomcat lib/server/ /usr/local/tomcat/lib/
+COPY --chown=tomcat lib/webapp/ /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
+
 # Compile custom class, this should be changed to a buildstep in the future
 COPY --chown=tomcat src/main/java /tmp/java
 RUN javac \
