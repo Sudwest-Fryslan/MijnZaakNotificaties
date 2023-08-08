@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.3.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.3...v1.3.4) (2023-08-08)
+
+
+### 🧑‍💻 Code Refactoring
+
+* authType correction ([acf081b](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/acf081b382249478f194e91f0a7626f9821fccef))
+
 ## [1.3.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.2...v1.3.3) (2023-08-08)
 
 
