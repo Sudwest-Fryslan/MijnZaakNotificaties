@@ -547,7 +547,7 @@ public class Parameter implements IConfigurable, IWithParameters {
 					// is already resolved at this point (being an empty string when property JwtToken isn't found)
 
 					AppConstants appConstants = AppConstants.getInstance(getConfigurationClassLoader());
-					String authType = "jtw";
+					String authType = "jwt";
 					String authAlias = "mijnzaaknotificaties.jwt";	
 
 					CredentialFactory credentialFactory = new CredentialFactory(authAlias);
