@@ -548,7 +548,7 @@ public class Parameter implements IConfigurable, IWithParameters {
 
 					AppConstants appConstants = AppConstants.getInstance(getConfigurationClassLoader());
 					String authType = "jtw";
-					String authAlias = "mijnzaaknotificaties.jtw";	
+					String authAlias = "mijnzaaknotificaties.jwt";	
 
 					CredentialFactory credentialFactory = new CredentialFactory(authAlias);
 					String username = credentialFactory.getUsername();
