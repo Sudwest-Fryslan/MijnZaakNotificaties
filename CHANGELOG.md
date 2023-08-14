@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.3.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.4...v1.3.5) (2023-08-14)
+
+
+### 🧑‍💻 Code Refactoring
+
+* change active_zaaktypes ([bbcb901](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/bbcb90142278052d9dac33addd68f1e9871b73f7))
+
 ## [1.3.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.3...v1.3.4) (2023-08-08)
 
 
