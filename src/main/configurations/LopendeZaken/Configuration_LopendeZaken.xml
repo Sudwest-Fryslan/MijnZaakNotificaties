@@ -12,7 +12,7 @@
             <Exits>
                 <Exit name="Exit" state="SUCCESS" />
                 <Exit name="Error" state="ERROR" code="400" />
-                <Exit name="BadRequest" state="ERROR" code="202" />
+                <Exit name="BadRequest" state="REJECTED" code="202" />
             </Exits>
 
             <!-- check input format -->
