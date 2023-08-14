@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.3.7](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.6...v1.3.7) (2023-08-14)
+
+
+### 🧑‍💻 Code Refactoring
+
+* change exit state ([84d4b9d](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/84d4b9d0e4ce3bc6c410f89ece6192d1c411ae51))
+
 ## [1.3.6](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.5...v1.3.6) (2023-08-14)
 
 
