@@ -82,7 +82,7 @@
 
             <EchoPipe name="exception message for resultaat"
                 getInputFromFixedValue="NO resultaattoelichting">
-                <Forward name="success" path="Call Open Zaak to get resultat in zaak" />
+                <Forward name="success" path="Error" />
             </EchoPipe>
 
             <SenderPipe name="Call Open Zaak to get resultat in zaak"
