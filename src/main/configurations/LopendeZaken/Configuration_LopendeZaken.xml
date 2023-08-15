@@ -112,7 +112,7 @@
             <SenderPipe name="Call Open Zaak to get rollen" getInputFromSessionKey="getZaakXml">
                 <HttpSender name="rollenJson"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="url" xpathExpression="concat('https://testtsjinstbus.sudwestfryslan.nl/','${rollenUrl}')"/>
+                    <Param name="url" xpathExpression="concat('https://testtsjinstbus.sudwestfryslan.nl/zgw/','${rollenUrl}')"/>
                     <Param name="Authorization" value="Bearer @@mijnzaaknotificaties.jwt@@" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                     <Param name="zaak" xpathExpression="root/url" />
