@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.3.11](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.10...v1.3.11) (2023-08-15)
+
+
+### 🧑‍💻 Code Refactoring
+
+* change error exits to rejected ([569cbb4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/569cbb4b2b2c41abc2b03791adf7c3ea7d891ba7))
+
 ## [1.3.10](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.9...v1.3.10) (2023-08-15)
 
 
