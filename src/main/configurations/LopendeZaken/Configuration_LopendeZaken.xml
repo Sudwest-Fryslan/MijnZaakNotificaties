@@ -12,7 +12,7 @@
             <Exits>
                 <Exit name="Exit" state="SUCCESS" />
                 <Exit name="Error" state="ERROR" code="400" />
-                <Exit name="Rejected" state="REJECTED" code="202" />
+                <Exit name="Rejected" state="SUCCESS" code="202" />
             </Exits>
 
             <!-- check input format -->
@@ -66,7 +66,7 @@
 
             <ExceptionPipe name="exception message for ZaakType"
                 getInputFromFixedValue="verkeerde zaaktype, active zaaktypes ${active_zaaktypes} verwacht">
-                <Forward name="success" path="Rejected" />
+                <Forward name="success" path="Exit" />
             </ExceptionPipe>
 
             <XsltPipe name="Check resultaat in zaak" getInputFromSessionKey="getZaakXml"
@@ -82,7 +82,7 @@
 
             <EchoPipe name="exception message for resultaat"
                 getInputFromFixedValue="NO resultaattoelichting">
-                <Forward name="success" path="Rejected" />
+                <Forward name="success" path="Exit" />
             </EchoPipe>
 
             <SenderPipe name="Call Open Zaak to get resultat in zaak"
@@ -139,7 +139,7 @@
 
             <EchoPipe name="exception message for rollen"
                 getInputFromFixedValue="zaak had niet 1 natuurlijk-persoon initiator rol">
-                <Forward name="success" path="Rejected" />
+                <Forward name="success" path="Exit" />
             </EchoPipe>
 
             <XsltPipe name="check Inpbsn" getInputFromSessionKey="storeRollenJson"
@@ -154,7 +154,7 @@
 
             <EchoPipe name="exception message for Inpbsn"
                 getInputFromFixedValue="zaak bevat geen bsn nummer">
-                <Forward name="success" path="Rejected" />
+                <Forward name="success" path="Exit" />
             </EchoPipe>
 
             <XsltPipe name="Create result file" getInputFromSessionKey="getZaakXml"
