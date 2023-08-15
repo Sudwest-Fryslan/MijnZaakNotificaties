@@ -61,7 +61,7 @@
           <xsl:value-of select="format-date(root/startdatum,'[Y0001][M01][D01]')" />
         </ns0:startdatum>
         <xsl:choose>
-          <xsl:when test="exists(root/einddatum)">
+          <xsl:when test="not(root/einddatum/@xsl:nil)">
             <ns0:einddatum>
               <xsl:value-of select="format-date(root/einddatum,'[Y0001][M01][D01]')" />
             </ns0:einddatum>
