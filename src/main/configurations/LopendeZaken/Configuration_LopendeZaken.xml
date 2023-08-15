@@ -64,10 +64,10 @@
                 <Forward name="else" path="exception message for ZaakType" />
             </XmlIfPipe>
 
-            <ExceptionPipe name="exception message for ZaakType"
+            <EchoPipe name="exception message for ZaakType"
                 getInputFromFixedValue="verkeerde zaaktype, active zaaktypes ${active_zaaktypes} verwacht">
                 <Forward name="success" path="Exit" />
-            </ExceptionPipe>
+            </EchoPipe>
 
             <XsltPipe name="Check resultaat in zaak" getInputFromSessionKey="getZaakXml"
                 styleSheetName="xsl/checkResultaat.xsl">
