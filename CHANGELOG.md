@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.3.8](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.7...v1.3.8) (2023-08-15)
+
+
+### 🐛 Bug Fixes
+
+* add missing param ([7c81819](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/7c818192afbd031db9a710efdae89a817e04a7fb))
+
 ## [1.3.7](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.6...v1.3.7) (2023-08-14)
 
 
