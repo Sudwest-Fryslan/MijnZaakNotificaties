@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.3.14](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.13...v1.3.14) (2023-08-15)
+
+
+### 🐛 Bug Fixes
+
+* correct XSLT test ([835664b](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/835664b5bb4e417aaad436e2a8f5531e092c2d63))
+
 ## [1.3.13](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.12...v1.3.13) (2023-08-15)
 
 
