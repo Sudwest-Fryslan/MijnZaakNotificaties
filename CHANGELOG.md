@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.3.16](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.15...v1.3.16) (2023-08-16)
+
+
+### 🧑‍💻 Code Refactoring
+
+* link correct and custom class update ([436285a](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/436285a6bc124f75816b86e442b082a7cf3ed3bc))
+
 ## [1.3.15](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.14...v1.3.15) (2023-08-15)
 
 
