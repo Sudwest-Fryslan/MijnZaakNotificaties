@@ -1,0 +1,1 @@
+verkeerde zaaktype, active zaaktypes {'B1210', 'B1026', 'ANDER-ZAAKTYPE-IDENTIFICATIE'} verwacht
