@@ -1,5 +1,17 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.3.17](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.16...v1.3.17) (2023-08-17)
+
+
+### 🐛 Bug Fixes
+
+* remove date too short issue ([d68ddcd](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/d68ddcd383cda99643fbd851e20a877a249ba376))
+
+
+### ✅ Tests
+
+* fix larva tests ([c870215](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/c8702154a10502714178fcd032c91569518a5c08))
+
 ## [1.3.16](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.15...v1.3.16) (2023-08-16)
 
 
