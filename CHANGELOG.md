@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.5.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.5.0...v1.5.1) (2023-08-31)
+
+
+### 🧑‍💻 Code Refactoring
+
+* xpathexpression change to change location ([5f17c2c](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/5f17c2cf2f9540291dc3c22dc50b037be0a40356))
+
 ## [1.5.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.4.0...v1.5.0) (2023-08-31)
 
 
