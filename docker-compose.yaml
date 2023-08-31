@@ -14,5 +14,6 @@ services:
       - .env
     volumes:
       - ${SECRETS_PATH:-./secrets}:/opt/frank/secrets
+      - ${VOLUME_LOPENDEZAKEN_RESULTATEN:-lopendezaken-resultaten}:/opt/frank/configurations/LopendeZaken/results 
     restart: unless-stopped
 
