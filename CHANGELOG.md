@@ -1,5 +1,17 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.4.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.17...v1.4.0) (2023-08-31)
+
+
+### 📝 Documentation
+
+* Update documentation ([f816fd9](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/f816fd91531b6c1dc70bbf902c36845e633de46c))
+
+
+### 🤖 Build System
+
+* Update ci-build.yml ([9364be1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/9364be1c1df9ca476265f9b971652a3863877637))
+
 ## [1.3.17](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.3.16...v1.3.17) (2023-08-17)
 
 
