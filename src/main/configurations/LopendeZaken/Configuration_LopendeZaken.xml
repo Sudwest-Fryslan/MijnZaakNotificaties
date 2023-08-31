@@ -172,7 +172,7 @@
                 action="write"
                 overwrite="true">
                 <Param name="filename"
-                    xpathExpression="concat('${configurations.directory}\LopendeZaken\results\', '{', upper-case($uuid), '}', '.xml')">
+                    xpathExpression="concat('${configurations.directory}/LopendeZaken/results/', '{', upper-case($uuid), '}', '.xml')">
                     <Param name="uuid" sessionKey="uuid" />
                 </Param>
                 <Forward name="success" path="Exit" />
