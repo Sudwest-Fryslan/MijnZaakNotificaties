@@ -1,5 +1,17 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.5.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.5.1...v1.5.2) (2023-09-12)
+
+
+### 🐛 Bug Fixes
+
+* missing character in XSLT ([6740a0b](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/6740a0b496e04dffc946d24dfb2d4627c7bfd82d))
+
+
+### 🧑‍💻 Code Refactoring
+
+* change XSLT for datumStatusGezet ([cb479d6](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/cb479d64debe28dd2344ee07b15812810ae3b751))
+
 ## [1.5.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.5.0...v1.5.1) (2023-08-31)
 
 
