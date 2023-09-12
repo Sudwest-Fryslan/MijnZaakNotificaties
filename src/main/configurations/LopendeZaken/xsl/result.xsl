@@ -145,7 +145,7 @@
           </ns0:gerelateerde>
           <ns0:datumStatusGezet>
             <xsl:value-of
-              select="substring(replace(replace(replace(replace($storeStatusResponse/root/datumStatusGezet,'T',''),'Z',''),':',''),'-','')0, 13)" />
+              select="substring(replace(replace(replace(replace($storeStatusResponse/root/datumStatusGezet,'T',''),'Z',''),':',''),'-',''), 0, 13)" />
           </ns0:datumStatusGezet>
         </ns0:heeft>
       </ns0:object>
