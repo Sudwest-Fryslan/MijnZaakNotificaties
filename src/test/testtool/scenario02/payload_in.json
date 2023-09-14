@@ -4,7 +4,6 @@
     "resource": "status",
     "resourceUrl": "https://open-zaak.test.swf.opengem.nl/zaken/api/v1/statussen/19496640-b9fd-4ee6-a3c1-ea71481b8b26",
     "actie": "create",
-    "aanmaakdatum": "2002-05-30T09:30:10Z",
     "kenmerken": {
     "bronorganisatie": "823288444",
     "zaaktype": "https://open-zaak.test.swf.opengem.nl/catalogi/api/v1/zaaktypen/51cf0ec4-31b2-4bf1-93c9-53176bd5b00c",
