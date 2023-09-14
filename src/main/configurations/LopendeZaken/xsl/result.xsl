@@ -10,14 +10,20 @@
   <xsl:param name="storeStatusResponse" />
   <xsl:param name="storeResultaat" />
   <xsl:param name="uuid" />
+  <xsl:param name="organisationId" />
+  <xsl:param name="administrationId" />
   <xsl:template match="/">
     <zakLk01>
       <stuurgegevens>
         <StUF:berichtcode>Lk01</StUF:berichtcode>
         <StUF:zender>
-          <StUF:organisatie>00000001823288444000</StUF:organisatie>
-          <StUF:applicatie>OpenNotificeerMolz</StUF:applicatie>
-          <StUF:administratie>S&#250;dwest-Frysl&#226;n</StUF:administratie>
+          <StUF:organisatie>
+            <xsl:value-of select="$organisationId" />
+          </StUF:organisatie>
+          <StUF:applicatie>MijnZaakNotificaties</StUF:applicatie>
+          <StUF:administratie>
+            <xsl:value-of select="$administrationId" />
+          </StUF:administratie>
         </StUF:zender>
         <StUF:ontvanger>
           <StUF:organisatie>00000004003214345001</StUF:organisatie>

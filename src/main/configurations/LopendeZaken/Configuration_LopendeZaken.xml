@@ -165,6 +165,8 @@
                 <Param name="storeZaakTypeResponse" sessionKey="storeZaakTypeResponse" type="DOMDOC" />
                 <Param name="storeStatusResponse" sessionKey="storeStatusResponse" type="DOMDOC" />
                 <Param name="uuid" sessionKey="uuid" />
+                <Param name="organisationId" value="${organisation}" />
+                <Param name="administrationId" value="${administration}" />
                 <Forward name="success" path="Store result file" />
             </XsltPipe>
 
