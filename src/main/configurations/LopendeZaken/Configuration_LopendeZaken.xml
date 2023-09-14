@@ -172,8 +172,9 @@
                 action="write"
                 overwrite="true">
                 <Param name="filename"
-                    xpathExpression="concat('${configurations.directory}/LopendeZaken/results/', '{', upper-case($uuid), '}', '.xml')">
+                    xpathExpression="concat('${configurations.directory}/LopendeZaken/results/', '{', upper-case($uuid), '}', '_', $date, '.xml')">
                     <Param name="uuid" sessionKey="uuid" />
+                    <Param name="date" type="DATE" formatString="yyyyMMdd-hhmmss" pattern="{now}"></Param>
                 </Param>
                 <Forward name="success" path="Exit" />
             </LocalFileSystemPipe>
