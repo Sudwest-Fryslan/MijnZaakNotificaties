@@ -1,8 +1,8 @@
 <xsl:stylesheet version="2.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:ns0="http://www.egem.nl/StUF/sector/zkn/0310"
-  xmlns:ns1="http://www.egem.nl/StUF/StUF0301"
-  xmlns:ns3="http://www.egem.nl/StUF/sector/bg/0310"
+  xmlns="http://www.egem.nl/StUF/sector/zkn/0310"
+  xmlns:StUF="http://www.egem.nl/StUF/StUF0301"
+  xmlns:BG="http://www.egem.nl/StUF/sector/bg/0310"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" />
   <xsl:param name="storeRollenJson" />
@@ -11,144 +11,144 @@
   <xsl:param name="storeResultaat" />
   <xsl:param name="uuid" />
   <xsl:template match="/">
-    <ns0:zakLk01>
-      <ns0:stuurgegevens>
-        <ns1:berichtcode>Lk01</ns1:berichtcode>
-        <ns1:zender>
-          <ns1:organisatie>00000001823288444000</ns1:organisatie>
-          <ns1:applicatie>OpenNotificeerMolz</ns1:applicatie>
-          <ns1:administratie>S&#250;dwest-Frysl&#226;n</ns1:administratie>
-        </ns1:zender>
-        <ns1:ontvanger>
-          <ns1:organisatie>00000004003214345001</ns1:organisatie>
-          <ns1:applicatie>MijnOverheid</ns1:applicatie>
-          <ns1:administratie>Lopende zaken</ns1:administratie>
-        </ns1:ontvanger>
-        <ns1:referentienummer>
+    <zakLk01>
+      <stuurgegevens>
+        <StUF:berichtcode>Lk01</StUF:berichtcode>
+        <StUF:zender>
+          <StUF:organisatie>00000001823288444000</StUF:organisatie>
+          <StUF:applicatie>OpenNotificeerMolz</StUF:applicatie>
+          <StUF:administratie>S&#250;dwest-Frysl&#226;n</StUF:administratie>
+        </StUF:zender>
+        <StUF:ontvanger>
+          <StUF:organisatie>00000004003214345001</StUF:organisatie>
+          <StUF:applicatie>MijnOverheid</StUF:applicatie>
+          <StUF:administratie>Lopende zaken</StUF:administratie>
+        </StUF:ontvanger>
+        <StUF:referentienummer>
           <xsl:value-of select="$uuid" />
-        </ns1:referentienummer>
-        <ns1:tijdstipBericht>
+        </StUF:referentienummer>
+        <StUF:tijdstipBericht>
           <xsl:value-of
             select="format-dateTime(current-dateTime(), '[Y0001][M01][D01][h01][m01][s01][f001]')" />
-        </ns1:tijdstipBericht>
-        <ns1:entiteittype>ZAK</ns1:entiteittype>
-      </ns0:stuurgegevens>
-      <ns0:parameters>
-        <ns1:mutatiesoort>T</ns1:mutatiesoort>
-        <ns1:indicatorOvername>V</ns1:indicatorOvername>
-      </ns0:parameters>
-      <ns0:object ns1:entiteittype="ZAK" ns1:verwerkingssoort="T">
-        <xsl:attribute name="ns1:sleutelVerzendend">
+        </StUF:tijdstipBericht>
+        <StUF:entiteittype>ZAK</StUF:entiteittype>
+      </stuurgegevens>
+      <parameters>
+        <StUF:mutatiesoort>T</StUF:mutatiesoort>
+        <StUF:indicatorOvername>V</StUF:indicatorOvername>
+      </parameters>
+      <object StUF:entiteittype="ZAK" StUF:verwerkingssoort="T">
+        <xsl:attribute name="StUF:sleutelVerzendend">
           <xsl:value-of select="root/identificatie" />
         </xsl:attribute>
-        <ns0:identificatie>
+        <identificatie>
           <xsl:value-of select="root/identificatie" />
-        </ns0:identificatie>
-        <ns0:omschrijving>
+        </identificatie>
+        <omschrijving>
           <xsl:value-of select="root/omschrijving" />
-        </ns0:omschrijving>
-        <ns0:toelichting>
+        </omschrijving>
+        <toelichting>
           <xsl:value-of select="root/toelichting" />
-        </ns0:toelichting>
+        </toelichting>
         <xsl:if test="exists($storeResultaat/root/toelichting)">
-          <ns0:resultaat>
-            <ns0:omschrijving>
+          <resultaat>
+            <omschrijving>
               <xsl:value-of select="$storeResultaat/root/toelichting" />
-            </ns0:omschrijving>
-          </ns0:resultaat>
+            </omschrijving>
+          </resultaat>
         </xsl:if>
-        <ns0:startdatum>
+        <startdatum>
           <xsl:value-of select="format-date(root/startdatum,'[Y0001][M01][D01]')" />
-        </ns0:startdatum>
+        </startdatum>
         <xsl:choose>
           <xsl:when test="string-length(root/einddatum) &gt; 0">
-            <ns0:einddatum>
+            <einddatum>
               <xsl:value-of select="format-date(root/einddatum,'[Y0001][M01][D01]')" />
-            </ns0:einddatum>
+            </einddatum>
           </xsl:when>
           <xsl:otherwise>
-            <ns0:einddatum>
+            <einddatum>
               <xsl:attribute name="xsi:nil">
                 <xsl:value-of select="true" />
               </xsl:attribute>
-              <xsl:attribute name="ns1:noValue">
+              <xsl:attribute name="StUF:noValue">
                 <xsl:value-of select="geenWaarde" />
               </xsl:attribute>
-            </ns0:einddatum>
+            </einddatum>
           </xsl:otherwise>
         </xsl:choose>
-        <ns0:isVan xsi:nil="true" ns1:noValue="waardeOnbekend" ns1:entiteittype="ZAKZKT"
-          ns1:verwerkingssoort="T" />
-        <ns0:heeftAlsInitiator ns1:entiteittype="ZAKBTRINI" ns1:verwerkingssoort="T">
-          <ns0:gerelateerde>
-            <ns0:natuurlijkPersoon ns1:entiteittype="NPS" ns1:verwerkingssoort="I">
-              <ns3:inp.bsn>
+        <isVan xsi:nil="true" StUF:noValue="waardeOnbekend" StUF:entiteittype="ZAKZKT"
+          StUF:verwerkingssoort="T" />
+        <heeftAlsInitiator StUF:entiteittype="ZAKBTRINI" StUF:verwerkingssoort="T">
+          <gerelateerde>
+            <natuurlijkPersoon StUF:entiteittype="NPS" StUF:verwerkingssoort="I">
+              <BG:inp.bsn>
                 <xsl:value-of select="$storeRollenJson/root/results/betrokkeneIdentificatie/inpBsn" />
-              </ns3:inp.bsn>
-              <ns3:authentiek ns1:metagegeven="true">J</ns3:authentiek>
-              <ns3:geslachtsnaam>
+              </BG:inp.bsn>
+              <BG:authentiek StUF:metagegeven="true">J</BG:authentiek>
+              <BG:geslachtsnaam>
                 <xsl:value-of
                   select="$storeRollenJson/root/results/betrokkeneIdentificatie/geslachtsnaam" />
-              </ns3:geslachtsnaam>
-              <ns3:voorvoegselGeslachtsnaam>
+              </BG:geslachtsnaam>
+              <BG:voorvoegselGeslachtsnaam>
                 <xsl:value-of
                   select="$storeRollenJson/root/results/betrokkeneIdentificatie/voorvoegselGeslachtsnaam" />
-              </ns3:voorvoegselGeslachtsnaam>
-              <ns3:voorletters>
+              </BG:voorvoegselGeslachtsnaam>
+              <BG:voorletters>
                 <xsl:value-of
                   select="$storeRollenJson/root/results/betrokkeneIdentificatie/voorletters" />
-              </ns3:voorletters>
-              <ns3:voornamen>
+              </BG:voorletters>
+              <BG:voornamen>
                 <xsl:value-of
                   select="$storeRollenJson/root/results/betrokkeneIdentificatie/voornamen" />
-              </ns3:voornamen>
-              <ns3:geslachtsaanduiding>
+              </BG:voornamen>
+              <BG:geslachtsaanduiding>
                 <xsl:value-of
                   select="upper-case($storeRollenJson/root/results/betrokkeneIdentificatie/geslachtsaanduiding)" />
-              </ns3:geslachtsaanduiding>
-              <ns3:geboortedatum>
+              </BG:geslachtsaanduiding>
+              <BG:geboortedatum>
                 <xsl:value-of
                   select="format-date($storeRollenJson/root/results/betrokkeneIdentificatie/geboortedatum,'[Y0001][M01][D01]')" />
-              </ns3:geboortedatum>
-            </ns0:natuurlijkPersoon>
-          </ns0:gerelateerde>
-          <ns0:code xsi:nil="true" ns1:noValue="geenWaarde" />
-          <ns0:omschrijving>Initiator</ns0:omschrijving>
-          <ns0:toelichting xsi:nil="true" ns1:noValue="geenWaarde" />
-          <ns0:heeftAlsAanspreekpunt ns1:entiteittype="ZAKBTRINICTP" ns1:verwerkingssoort="T">
-            <ns0:gerelateerde ns1:entiteittype="CTP" ns1:verwerkingssoort="I">
-              <ns0:identificatie></ns0:identificatie>
-              <ns0:isAanspreekpuntNamens ns1:entiteittype="CTPSUB" ns1:verwerkingssoort="T">
-                <ns0:gerelateerde />
-              </ns0:isAanspreekpuntNamens>
-            </ns0:gerelateerde>
-          </ns0:heeftAlsAanspreekpunt>
-        </ns0:heeftAlsInitiator>
-        <ns0:heeft ns1:entiteittype="ZAKSTT" ns1:verwerkingssoort="T">
-          <ns0:gerelateerde ns1:entiteittype="STT" ns1:verwerkingssoort="I">
-            <ns0:zkt.code>
+              </BG:geboortedatum>
+            </natuurlijkPersoon>
+          </gerelateerde>
+          <code xsi:nil="true" StUF:noValue="geenWaarde" />
+          <omschrijving>Initiator</omschrijving>
+          <toelichting xsi:nil="true" StUF:noValue="geenWaarde" />
+          <heeftAlsAanspreekpunt StUF:entiteittype="ZAKBTRINICTP" StUF:verwerkingssoort="T">
+            <gerelateerde StUF:entiteittype="CTP" StUF:verwerkingssoort="I">
+              <identificatie></identificatie>
+              <isAanspreekpuntNamens StUF:entiteittype="CTPSUB" StUF:verwerkingssoort="T">
+                <gerelateerde />
+              </isAanspreekpuntNamens>
+            </gerelateerde>
+          </heeftAlsAanspreekpunt>
+        </heeftAlsInitiator>
+        <heeft StUF:entiteittype="ZAKSTT" StUF:verwerkingssoort="T">
+          <gerelateerde StUF:entiteittype="STT" StUF:verwerkingssoort="I">
+            <zkt.code>
               <xsl:value-of select="$storeZaakTypeResponse/root/identificatie" />
-            </ns0:zkt.code>
-            <ns0:zkt.omschrijving>
+            </zkt.code>
+            <zkt.omschrijving>
               <xsl:value-of select="$storeZaakTypeResponse/root/omschrijving" />
-            </ns0:zkt.omschrijving>
-            <ns0:volgnummer xsi:nil="true" ns1:noValue="waardeOnbekend" />
-            <ns0:code xsi:nil="true" ns1:noValue="waardeOnbekend" />
+            </zkt.omschrijving>
+            <volgnummer xsi:nil="true" StUF:noValue="waardeOnbekend" />
+            <code xsi:nil="true" StUF:noValue="waardeOnbekend" />
             <xsl:if
               test="exists($storeResultaat/root/toelichting) and $storeResultaat/root/toelichting!=''">
-              <ns0:omschrijving>
+              <omschrijving>
                 <xsl:value-of
                   select="concat($storeResultaat/root/toelichting,'(', $storeStatusResponse/root/statustoelichting,')')" />
-              </ns0:omschrijving>
+              </omschrijving>
             </xsl:if>
-            <ns0:ingangsdatumObject xsi:nil="true" ns1:noValue="waardeOnbekend" />
-          </ns0:gerelateerde>
-          <ns0:datumStatusGezet>
+            <ingangsdatumObject xsi:nil="true" StUF:noValue="waardeOnbekend" />
+          </gerelateerde>
+          <datumStatusGezet>
             <xsl:value-of
               select="substring(replace(replace(replace(replace($storeStatusResponse/root/datumStatusGezet,'T',''),'Z',''),':',''),'-',''), 0, 13)" />
-          </ns0:datumStatusGezet>
-        </ns0:heeft>
-      </ns0:object>
-    </ns0:zakLk01>
+          </datumStatusGezet>
+        </heeft>
+      </object>
+    </zakLk01>
   </xsl:template>
 </xsl:stylesheet>
