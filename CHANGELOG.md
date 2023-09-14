@@ -1,5 +1,23 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.6.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.5.2...v1.6.0) (2023-09-14)
+
+
+### 🍕 Features
+
+* add date to filename ([c6a68d8](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/c6a68d801719b351ee1147d6bd66159ff8adb64c))
+* make organisation and administration configurable ([b7231b4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/b7231b411aa811bfc01443ef3da329b1ea0b43ed))
+
+
+### 🧑‍💻 Code Refactoring
+
+* improve namespace readability ([9f76945](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/9f769451326a01160ec186d45eabf3426106314b))
+
+
+### ✅ Tests
+
+* fix test scenario 02 ([3386e4f](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/3386e4f4940d570c0eae1f62a91fdf6d737d67d7))
+
 ## [1.5.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.5.1...v1.5.2) (2023-09-12)
 
 
