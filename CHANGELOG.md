@@ -1,5 +1,17 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.7.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.6.0...v1.7.0) (2023-09-18)
+
+
+### 🍕 Features
+
+* add date to filename ([51ca873](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/51ca8731adb48dc0ae926a494a3e9a70f915ce92))
+
+
+### 🧑‍💻 Code Refactoring
+
+* adjust XSLT for datum and verwijzing ([9b8ba89](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/9b8ba89e9820070a898954bcec8419df80e62267))
+
 ## [1.6.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.5.2...v1.6.0) (2023-09-14)
 
 
