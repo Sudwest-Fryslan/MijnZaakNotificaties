@@ -12,6 +12,7 @@
   <xsl:param name="uuid" />
   <xsl:param name="organisationId" />
   <xsl:param name="administrationId" />
+  <xsl:param name="endpointVerwijzing" />
   <xsl:template match="/">
     <zakLk01>
       <stuurgegevens>
@@ -72,17 +73,19 @@
               <xsl:value-of select="format-date(root/einddatum,'[Y0001][M01][D01]')" />
             </einddatum>
           </xsl:when>
-          <xsl:otherwise>
-            <einddatum>
-              <xsl:attribute name="xsi:nil">
-                <xsl:value-of select="true" />
-              </xsl:attribute>
-              <xsl:attribute name="StUF:noValue">
-                <xsl:value-of select="geenWaarde" />
-              </xsl:attribute>
-            </einddatum>
-          </xsl:otherwise>
         </xsl:choose>
+        <xsl:choose>
+          <xsl:when test="string-length(root/einddatumGepland) &gt; 0">
+            <einddatumGepland>
+              <xsl:value-of select="format-date(root/einddatumGepland,'[Y0001][M01][D01]')" />
+            </einddatumGepland>
+          </xsl:when>
+        </xsl:choose>
+        <StUF:extraElementen>
+          <StUF:extraElement naam="verwijzing">
+            <xsl:value-of select="concat($endpointVerwijzing, root/identificatie)" />
+          </StUF:extraElement>
+        </StUF:extraElementen>
         <isVan xsi:nil="true" StUF:noValue="waardeOnbekend" StUF:entiteittype="ZAKZKT"
           StUF:verwerkingssoort="T" />
         <heeftAlsInitiator StUF:entiteittype="ZAKBTRINI" StUF:verwerkingssoort="T">
