@@ -15,12 +15,15 @@
                 <Exit name="Rejected" state="SUCCESS" code="202" />
             </Exits>
 
+            <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss"/>
+
             <!-- check input format -->
             <Json2XmlValidatorPipe
                 name="CheckFirstInput"
                 root="root"
                 schema="CheckFirstInput.xsd"
-                storeResultInSessionKey="FirstInput">
+                storeResultInSessionKey="FirstInput"
+                getInputFromSessionKey="originalMessage">
                 <Forward name="success" path="Call Open Zaak to get the zaak" />
                 <Forward name="failure" path="Error" />
             </Json2XmlValidatorPipe>
@@ -167,6 +170,7 @@
                 <Param name="uuid" sessionKey="uuid" />
                 <Param name="organisationId" value="${organisation}" />
                 <Param name="administrationId" value="${administration}" />
+                <Param name="endpointVerwijzing" value="${endpointVerwijzing}" />
                 <Forward name="success" path="Store result file" />
             </XsltPipe>
 
@@ -176,7 +180,7 @@
                 <Param name="filename"
                     xpathExpression="concat('${configurations.directory}/LopendeZaken/results/', '{', upper-case($uuid), '}', '_', $date, '.xml')">
                     <Param name="uuid" sessionKey="uuid" />
-                    <Param name="date" type="DATE" formatString="yyyyMMdd-hhmmss" pattern="{now}"></Param>
+                    <Param name="date" sessionKey="systemDate" />
                 </Param>
                 <Forward name="success" path="Exit" />
             </LocalFileSystemPipe>
