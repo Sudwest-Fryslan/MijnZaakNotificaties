@@ -14,6 +14,6 @@ services:
       - .env
     volumes:
       - ${SECRETS_PATH:-./secrets}:/opt/frank/secrets
-      - ${VOLUME_LOPENDEZAKEN_RESULTATEN:-lopendezaken-resultaten}:/opt/frank/configurations/LopendeZaken/results 
+      - ${VOLUME_LOPENDEZAKEN_RESULTATEN:-lopendezaken-resultaten}://swfeu02/MijnOverheid/SWF/Lopende Zaken/Outbox 
     restart: unless-stopped
 
