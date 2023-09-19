@@ -178,7 +178,7 @@
                 action="write"
                 overwrite="true">
                 <Param name="filename"
-                    xpathExpression="concat('${configurations.directory}/LopendeZaken/results/', '{', upper-case($uuid), '}', '_', $date, '.xml')">
+                    xpathExpression="concat('${mijnzaaknotificaties.resultFolder}/', '{', upper-case($uuid), '}', '_', $date, '.xml')">
                     <Param name="uuid" sessionKey="uuid" />
                     <Param name="date" sessionKey="systemDate" />
                 </Param>
