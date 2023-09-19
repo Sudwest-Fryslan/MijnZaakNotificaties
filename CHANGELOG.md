@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.7.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.7.3...v1.7.4) (2023-09-19)
+
+
+### 🧑‍💻 Code Refactoring
+
+* remove hardcoded results path ([d4b38d5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/d4b38d5ae17e6ec207f7c8325804c0722d68ae63))
+
 ## [1.7.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.7.2...v1.7.3) (2023-09-19)
 
 
