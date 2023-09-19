@@ -81,11 +81,13 @@
             </einddatumGepland>
           </xsl:when>
         </xsl:choose>
-        <StUF:extraElementen>
-          <StUF:extraElement naam="verwijzing">
-            <xsl:value-of select="concat($endpointVerwijzing, root/identificatie)" />
-          </StUF:extraElement>
-        </StUF:extraElementen>
+        <xsl:if test="string-length($endpointVerwijzing) &gt; 0">
+          <StUF:extraElementen>
+            <StUF:extraElement naam="verwijzing">
+              <xsl:value-of select="concat($endpointVerwijzing, root/identificatie)" />
+            </StUF:extraElement>
+          </StUF:extraElementen>
+        </xsl:if>
         <isVan xsi:nil="true" StUF:noValue="waardeOnbekend" StUF:entiteittype="ZAKZKT"
           StUF:verwerkingssoort="T" />
         <heeftAlsInitiator StUF:entiteittype="ZAKBTRINI" StUF:verwerkingssoort="T">
