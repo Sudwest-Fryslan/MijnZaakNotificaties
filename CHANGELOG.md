@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.7.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.7.2...v1.7.3) (2023-09-19)
+
+
+### 🧑‍💻 Code Refactoring
+
+* move results folder ([25569d5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/25569d5cae644d64181838d8694105b1397146bb))
+
 ## [1.7.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.7.1...v1.7.2) (2023-09-19)
 
 
