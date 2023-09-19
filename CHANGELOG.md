@@ -1,5 +1,13 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.7.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.7.0...v1.7.1) (2023-09-19)
+
+
+### 🧑‍💻 Code Refactoring
+
+* make verwijzing element optional ([2b77e5e](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/2b77e5eab91155d068561f6c913d07207a02bd60))
+* no longer include verwijzing by default ([a7d73fc](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/a7d73fc9507da88937cc95fa6e2a19e584b642a2))
+
 ## [1.7.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.6.0...v1.7.0) (2023-09-18)
 
 
