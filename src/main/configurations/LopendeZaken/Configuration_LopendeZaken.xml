@@ -174,6 +174,11 @@
                 <Forward name="success" path="Store result file" />
             </XsltPipe>
 
+            <XmlIfPipe name="StageCheck" xpathExpression="'${dtap.stage}' = 'TST'">
+                <Forward name="then" path="Store result file" />
+                <Forward name="else" path="Send result file" />
+            </XmlIfPipe>
+
             <LocalFileSystemPipe name="Store result file"
                 action="write"
                 overwrite="true">
@@ -184,6 +189,15 @@
                 </Param>
                 <Forward name="success" path="Exit" />
             </LocalFileSystemPipe>
+
+            <Samba2Pipe name="Send result file" action="write" overwrite="true" authAlias="share.connect" share="mijnzaaknotificaties.resultFolder">
+                <Param name="filename"
+                    xpathExpression="concat('${mijnzaaknotificaties.resultFolder}/', '{', upper-case($uuid), '}', '_', $date, '.xml')">
+                    <Param name="uuid" sessionKey="uuid" />
+                    <Param name="date" sessionKey="systemDate" />
+                </Param>
+                <Forward name="success" path="Exit" />
+            </Samba2Pipe>
         </Pipeline>
     </Adapter>
 </Module>
