@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.8.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.7.4...v1.8.0) (2023-09-20)
+
+
+### 🍕 Features
+
+* add Samba2Pipe for connection ([71dee73](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/71dee73d3c7d6c63eecec803f955b018c29c17bd))
+
 ## [1.7.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.7.3...v1.7.4) (2023-09-19)
 
 
