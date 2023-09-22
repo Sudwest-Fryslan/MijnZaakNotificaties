@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.8.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.8.0...v1.8.1) (2023-09-22)
+
+
+### 🐛 Bug Fixes
+
+* set auth type ([afda394](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/afda39422ba9748ff923c07d8a04b80c37dff081))
+
 ## [1.8.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.7.4...v1.8.0) (2023-09-20)
 
 
