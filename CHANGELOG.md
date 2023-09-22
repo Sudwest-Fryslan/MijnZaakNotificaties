@@ -1,5 +1,13 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.8.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.8.1...v1.8.2) (2023-09-22)
+
+
+### ⏩ Reverts
+
+* Revert "feat: add Samba2Pipe for connection" ([2baba99](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/2baba99bf67405901d9db076c34f1a35efc294dd))
+* Revert "fix: set auth type" ([b762960](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/b762960d3b1b27fd8c3f045e9acf45dcce66f69c))
+
 ## [1.8.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.8.0...v1.8.1) (2023-09-22)
 
 
