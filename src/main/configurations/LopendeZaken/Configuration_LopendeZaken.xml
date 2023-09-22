@@ -190,7 +190,7 @@
                 <Forward name="success" path="Exit" />
             </LocalFileSystemPipe>
 
-            <Samba2Pipe name="Send result file" action="write" overwrite="true" authAlias="share.connect" share="mijnzaaknotificaties.resultFolder">
+            <Samba2Pipe name="Send result file" action="write" overwrite="true" authAlias="share.connect" authType="NTLM" share="mijnzaaknotificaties.resultFolder">
                 <Param name="filename"
                     xpathExpression="concat('${mijnzaaknotificaties.resultFolder}/', '{', upper-case($uuid), '}', '_', $date, '.xml')">
                     <Param name="uuid" sessionKey="uuid" />
