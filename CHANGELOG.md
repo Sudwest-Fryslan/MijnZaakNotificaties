@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.9.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.9.0...v1.9.1) (2023-10-05)
+
+
+### 🧑‍💻 Code Refactoring
+
+* change results volume path for clarity ([349d11d](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/349d11d1b50b7d16e716a8f6ff8689954c75820f))
+
 ## [1.9.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.8.3...v1.9.0) (2023-10-05)
 
 
