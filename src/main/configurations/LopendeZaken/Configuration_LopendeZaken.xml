@@ -182,7 +182,7 @@
                 action="write"
                 overwrite="true" getInputFromSessionKey="resultDocumentXML">
                 <Param name="filename"
-                    xpathExpression="concat('${mijnzaaknotificaties.resultFolder}/', $identificatie', '-', $tijdstipBericht, '-', $referentienummer, '.xml')">
+                    xpathExpression="concat('${mijnzaaknotificaties.resultFolder}/', $identificatie, '-', $tijdstipBericht, '-', $referentienummer, '.xml')">
                     <Param name="identificatie" sessionKey="identificatie" />
                     <Param name="referentienummer" sessionKey="referentienummer" />
                     <Param name="tijdstipBericht" sessionKey="tijdstipBericht" />
