@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.10.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.10.0...v1.10.1) (2023-10-10)
+
+
+### 🐛 Bug Fixes
+
+* empty identificatie and referentienummer ([a75c632](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/a75c632d6485f358d9c2abf22b6afdc90dcce3a4))
+
 ## [1.10.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.9.1...v1.10.0) (2023-10-10)
 
 
