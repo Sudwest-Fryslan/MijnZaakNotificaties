@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.11.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.10.3...v1.11.0) (2023-10-10)
+
+
+### 🍕 Features
+
+* censor private info ([c75abee](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/c75abeea5cdfa0651fc7ef89f9581d0c781af3b5))
+
 ## [1.10.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.10.2...v1.10.3) (2023-10-10)
 
 
