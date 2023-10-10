@@ -177,7 +177,7 @@
 
             <XsltPipe name="storeTijdstipBericht" getInputFromSessionKey="resultDocumentXML" xpathExpression="//*[local-name()='tijdstipBericht']" storeResultInSessionKey="tijdstipBericht"/>
 
-            <XsltPipe name="StoreIdentificatie" getInputFromSessionKey="resultDocumentXML" xpathExpression="//*[local-name()='identificatie']" storeResultInSessionKey="identificatie"/>
+            <XsltPipe name="StoreIdentificatie" getInputFromSessionKey="resultDocumentXML" xpathExpression="//object[1]/identificatie[1]" storeResultInSessionKey="identificatie"/>
 
             <XsltPipe name="StoreReferentienummer" getInputFromSessionKey="resultDocumentXML" xpathExpression="//*[local-name()='referentienummer']" storeResultInSessionKey="referentienummer"/>
 
