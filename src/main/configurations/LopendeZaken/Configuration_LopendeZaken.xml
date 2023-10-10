@@ -173,8 +173,9 @@
                 <Param name="organisationId" value="${organisation}" />
                 <Param name="administrationId" value="${administration}" />
                 <Param name="endpointVerwijzing" value="${endpointVerwijzing}" />
-                <Forward name="success" path="Store result file" />
             </XsltPipe>
+
+            <XsltPipe name="MakeAnonymous" omitXmlDeclaration="true" styleSheetName="xsl/anonymize.xsl"/>
 
             <XsltPipe name="storeTijdstipBericht" xpathExpression="//*[local-name()='tijdstipBericht']" storeResultInSessionKey="tijdstipBericht"/>
 
