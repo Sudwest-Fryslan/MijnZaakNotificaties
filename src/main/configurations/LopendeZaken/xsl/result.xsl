@@ -74,9 +74,17 @@
             </einddatum>
           </xsl:when>
           <xsl:otherwise>
+            <einddatum xsi:nil="true" />
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:choose>
+          <xsl:when test="string-length(root/einddatumGepland) &gt; 0">
             <einddatumGepland>
               <xsl:value-of select="format-date(root/einddatumGepland,'[Y0001][M01][D01]')" />
             </einddatumGepland>
+          </xsl:when>
+          <xsl:otherwise>
+            <einddatumGepland xsi:nil="true" />
           </xsl:otherwise>
         </xsl:choose>
         <xsl:if test="string-length($endpointVerwijzing) &gt; 0">
