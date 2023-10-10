@@ -73,13 +73,11 @@
               <xsl:value-of select="format-date(root/einddatum,'[Y0001][M01][D01]')" />
             </einddatum>
           </xsl:when>
-        </xsl:choose>
-        <xsl:choose>
-          <xsl:when test="string-length(root/einddatumGepland) &gt; 0">
+          <xsl:otherwise>
             <einddatumGepland>
               <xsl:value-of select="format-date(root/einddatumGepland,'[Y0001][M01][D01]')" />
             </einddatumGepland>
-          </xsl:when>
+          </xsl:otherwise>
         </xsl:choose>
         <xsl:if test="string-length($endpointVerwijzing) &gt; 0">
           <StUF:extraElementen>
