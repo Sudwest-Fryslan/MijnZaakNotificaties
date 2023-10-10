@@ -1,5 +1,19 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.10.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.9.1...v1.10.0) (2023-10-10)
+
+
+### 🍕 Features
+
+* make stored information anonymous ([12eb2df](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/12eb2df653600753a36c457712d05236031ef24f))
+* new result file name format ([9cb9f43](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/9cb9f43f06543dcc5937dba72103d3d76882081b))
+
+
+### 🐛 Bug Fixes
+
+* incorrext xpathexpression ([531ebfd](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/531ebfd50b9fce197853af73110abde6fb3a9225))
+* prevent soap unwrap error ([b221b72](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/b221b72885847397d54d8a5df58c50ed35c7e4ec))
+
 ## [1.9.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.9.0...v1.9.1) (2023-10-05)
 
 
