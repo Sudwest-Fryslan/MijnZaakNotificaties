@@ -13,23 +13,23 @@
   </xsl:template>
 
   <xsl:template match="//BG:geslachtsnaam">
-    <BG:geslachtsnaam></BG:geslachtsnaam>
+    <BG:geslachtsnaam>XXX</BG:geslachtsnaam>
   </xsl:template>
 
   <xsl:template match="//BG:voorvoegselGeslachtsnaam">
-    <BG:voorvoegselGeslachtsnaam></BG:voorvoegselGeslachtsnaam>
+    <BG:voorvoegselGeslachtsnaam>XXX</BG:voorvoegselGeslachtsnaam>
   </xsl:template>
 
   <xsl:template match="//BG:voorletters">
-    <BG:voorletters></BG:voorletters>
+    <BG:voorletters>XXX</BG:voorletters>
   </xsl:template>
 
   <xsl:template match="//BG:voornamen">
-    <BG:voornamen></BG:voornamen>
+    <BG:voornamen>XXX</BG:voornamen>
   </xsl:template>
 
   <xsl:template match="//BG:geslachtsaanduiding">
-    <BG:geslachtsaanduiding></BG:geslachtsaanduiding>
+    <BG:geslachtsaanduiding>XXX</BG:geslachtsaanduiding>
   </xsl:template>
 
 </xsl:stylesheet>
