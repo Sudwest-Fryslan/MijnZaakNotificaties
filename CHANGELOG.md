@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.10.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.10.2...v1.10.3) (2023-10-10)
+
+
+### 🐛 Bug Fixes
+
+* remove whitespace from identificatie ([37ded99](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/37ded99ddface6d24743b31f19ae3afab7dcccb2))
+
 ## [1.10.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.10.1...v1.10.2) (2023-10-10)
 
 
