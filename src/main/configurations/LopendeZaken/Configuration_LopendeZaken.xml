@@ -67,8 +67,6 @@
                 <Forward name="else" path="exception message for ZaakType" />
             </XmlIfPipe>
 
-            <XsltPipe name="StoreIdentificatie" xpathExpression="//identificatie" storeResultInSessionKey="identificatie"/>
-
             <EchoPipe name="exception message for ZaakType"
                 getInputFromFixedValue="verkeerde zaaktype, active zaaktypes ${active_zaaktypes} verwacht">
                 <Forward name="success" path="Exit" />
@@ -164,7 +162,7 @@
 
             <XsltPipe name="Create result file" getInputFromSessionKey="getZaakXml"
                 omitXmlDeclaration="true"
-                styleSheetName="xsl/result.xsl" storeResultInSessionKey="resultDocumentXML">
+                styleSheetName="xsl/result.xsl">
                 <Param name="storeResultaat" sessionKey="storeResultaat" type="DOMDOC" />
                 <Param name="storeRollenJson" sessionKey="storeRollenJson" type="DOMDOC" />
                 <Param name="storeZaakTypeResponse" sessionKey="storeZaakTypeResponse" type="DOMDOC" />
@@ -175,9 +173,13 @@
                 <Param name="endpointVerwijzing" value="${endpointVerwijzing}" />
             </XsltPipe>
 
-            <XsltPipe name="MakeAnonymous" omitXmlDeclaration="true" styleSheetName="xsl/anonymize.xsl"/>
+            <XsltPipe name="MakeAnonymous" omitXmlDeclaration="true" styleSheetName="xsl/anonymize.xsl"  storeResultInSessionKey="resultDocumentXML"/>
 
-            <XsltPipe name="storeTijdstipBericht" xpathExpression="//*[local-name()='tijdstipBericht']" storeResultInSessionKey="tijdstipBericht"/>
+            <XsltPipe name="storeTijdstipBericht" getInputFromSessionKey="resultDocumentXML" xpathExpression="//*[local-name()='tijdstipBericht']" storeResultInSessionKey="tijdstipBericht"/>
+
+            <XsltPipe name="StoreIdentificatie" getInputFromSessionKey="resultDocumentXML" xpathExpression="//*[local-name()='identificatie']" storeResultInSessionKey="identificatie"/>
+
+            <XsltPipe name="StoreReferentienummer" getInputFromSessionKey="resultDocumentXML" xpathExpression="//*[local-name()='referentienummer']" storeResultInSessionKey="referentienummer"/>
 
             <LocalFileSystemPipe name="Store result file"
                 action="write"
