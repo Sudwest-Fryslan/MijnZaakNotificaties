@@ -1,5 +1,24 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.12.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.11.2...v1.12.0) (2023-10-12)
+
+
+### 🍕 Features
+
+* add columns to ladybug ([b81e397](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/b81e397dd4bb06d64e46ff084a3544f04be4ddb6))
+* add Ladybug columns ([3fb82c3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/3fb82c3c73b683dfa0ca8ee2834ca46331e20634))
+
+
+### 🐛 Bug Fixes
+
+* incorrect status order ([36d2a62](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/36d2a62880db8c5ac29ddc9c29f16cd58545eb04))
+* prevent null errors on empty session keys ([1401be8](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/1401be89570eb9d996d9a9a87abf3d9abdf30edc))
+
+
+### 🧑‍💻 Code Refactoring
+
+* change anonymous gender value ([e12b6ac](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/e12b6acaab21cd7427738b5ef725a10b12e1d1ff))
+
 ## [1.11.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.11.1...v1.11.2) (2023-10-12)
 
 
