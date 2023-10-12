@@ -80,13 +80,8 @@
             <XmlIfPipe name="Check if resultaat exists"
                 xpathExpression="string-length(resultaat) &gt; 0">
                 <Forward name="then" path="Call Open Zaak to get resultat in zaak" />
-                <Forward name="else" path="exception message for resultaat" />
+                <Forward name="else" path="Call Open Zaak to get status in zaak" />
             </XmlIfPipe>
-
-            <EchoPipe name="exception message for resultaat"
-                getInputFromFixedValue="NO resultaattoelichting">
-                <Forward name="success" path="Exit" />
-            </EchoPipe>
 
             <SenderPipe name="Call Open Zaak to get resultat in zaak"
                 getInputFromSessionKey="getZaakXml">
