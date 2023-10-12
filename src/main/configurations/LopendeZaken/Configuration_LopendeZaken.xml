@@ -15,6 +15,11 @@
                 <Exit name="Rejected" state="SUCCESS" code="202" />
             </Exits>
 
+            <!-- Preventing null values -->
+            <PutInSessionPipe name="fillResultaatKey" sessionKey="storeResultaat" value="/" />
+            <PutInSessionPipe name="fillEndpointVerwijzingKey" sessionKey="endpointVerwijzing"
+                value="/" />
+
             <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss" />
 
             <!-- check input format -->
@@ -154,10 +159,6 @@
                 getInputFromFixedValue="zaak bevat geen bsn nummer">
                 <Forward name="success" path="Exit" />
             </EchoPipe>
-
-            <!-- Preventing null values -->
-            <PutInSessionPipe name="storeResultaat" value="/" />
-            <PutInSessionPipe name="endpointVerwijzing" value="/" />
 
             <XsltPipe name="Create result file" getInputFromSessionKey="getZaakXml"
                 omitXmlDeclaration="true"
