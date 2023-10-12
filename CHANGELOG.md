@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.12.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.12.0...v1.12.1) (2023-10-12)
+
+
+### 🐛 Bug Fixes
+
+* incorrect pipe order ([acf81e1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/acf81e107d69df96ca1f4efd9e47f68875080a61))
+
 ## [1.12.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.11.2...v1.12.0) (2023-10-12)
 
 
