@@ -15,6 +15,10 @@
                 <Exit name="Rejected" state="SUCCESS" code="202" />
             </Exits>
 
+            <!-- Preventing null values -->
+            <PutInSessionPipe name="storeResultaat" value="/" />
+            <PutInSessionPipe name="endpointVerwijzing" value="/" />
+
             <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss"/>
 
             <!-- check input format -->
