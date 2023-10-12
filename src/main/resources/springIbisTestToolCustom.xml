@@ -3,28 +3,28 @@
     xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-    >
+>
 
-    <import resource="springIbisTestTool.xml"/>
+    <import resource="springIbisTestTool.xml" />
 
     <bean name="metadataExtractor" class="nl.nn.testtool.MetadataExtractor">
         <property name="extraMetadataFieldExtractors">
             <list>
-                <bean class="nl.nn.testtool.metadata.StatusMetadataFieldExtractor"/>
-                <bean class="nl.nn.testtool.metadata.XpathMetadataFieldExtractor">
-                    <property name="name" value="Zaaktype"/>
-                    <property name="label" value="Zaaktype"/>
-                    <property name="xpath" value="root/zaaktype" />
+                <bean class="nl.nn.testtool.metadata.StatusMetadataFieldExtractor" />
+                <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
+                    <property name="name" value="Zaaktype" />
+                    <property name="sessionKey" value="storeZaakTypeResponse" />
+                    <property name="regex" value="&lt;identificatie>(.*)&lt;\/identificatie>" />
                 </bean>
-                <bean class="nl.nn.testtool.metadata.XpathMetadataFieldExtractor">
-                    <property name="name" value="Identificatie"/>
-                    <property name="label" value="Identificatie"/>
-                    <property name="xpath" value="root/identificatie" />
+                <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
+                    <property name="name" value="Identificatie" />
+                    <property name="sessionKey" value="getZaakXml" />
+                    <property name="regex" value="&lt;identificatie>(.*)&lt;\/identificatie>" />
                 </bean>
-                <bean class="nl.nn.testtool.metadata.XpathMetadataFieldExtractor">
-                    <property name="name" value="Omschrijving"/>
-                    <property name="label" value="Omschrijving"/>
-                    <property name="xpath" value="root/omschrijving" />
+                <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
+                    <property name="name" value="Toelichting" />
+                    <property name="sessionKey" value="storeStatusResponse" />
+                    <property name="regex" value="&lt;toelichting>(.*)&lt;\/toelichting>" />
                 </bean>
             </list>
         </property>
@@ -35,13 +35,12 @@
             <list>
                 <value>storageId</value>
                 <value>endTime</value>
-                <value>duration</value>
-                <value>name</value>
+                <value>status</value>
                 <value>Zaaktype</value>
                 <value>Identificatie</value>
-                <value>Omschrijving</value>
+                <value>Toelichting</value>
                 <value>correlationId</value>
-                <value>status</value>
+                <value>duration</value>
                 <value>numberOfCheckpoints</value>
                 <value>estimatedMemoryUsage</value>
                 <value>storageSize</value>
