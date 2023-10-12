@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.12.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.12.2...v1.12.3) (2023-10-12)
+
+
+### 🧑‍💻 Code Refactoring
+
+* assign value session keys correctly ([b29d5e2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/b29d5e22d2f0a29f13cf3bf743a50dafcd814d24))
+
 ## [1.12.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.12.1...v1.12.2) (2023-10-12)
 
 
