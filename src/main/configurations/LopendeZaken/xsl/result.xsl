@@ -153,10 +153,20 @@
             <code xsi:nil="true" StUF:noValue="waardeOnbekend" />
             <xsl:if
               test="exists($storeResultaat/root/toelichting) and $storeResultaat/root/toelichting!=''">
-              <omschrijving>
-                <xsl:value-of
-                  select="concat($storeResultaat/root/toelichting,'(', $storeStatusResponse/root/statustoelichting,')')" />
-              </omschrijving>
+              <xsl:choose>
+                <xsl:when test="string-length($storeStatusResponse/root/statustoelichting) &gt; 0">
+                  <omschrijving>
+                    <xsl:value-of
+                      select="concat($storeResultaat/root/toelichting,'(', $storeStatusResponse/root/statustoelichting,')')" />
+                  </omschrijving>
+                </xsl:when>
+                <xsl:otherwise>
+                  <omschrijving>
+                    <xsl:value-of
+                      select="$storeResultaat/root/toelichting" />
+                  </omschrijving>
+                </xsl:otherwise>
+              </xsl:choose>
             </xsl:if>
             <ingangsdatumObject xsi:nil="true" StUF:noValue="waardeOnbekend" />
           </gerelateerde>
