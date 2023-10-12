@@ -15,11 +15,7 @@
                 <Exit name="Rejected" state="SUCCESS" code="202" />
             </Exits>
 
-            <!-- Preventing null values -->
-            <PutInSessionPipe name="storeResultaat" value="/" />
-            <PutInSessionPipe name="endpointVerwijzing" value="/" />
-
-            <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss"/>
+            <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss" />
 
             <!-- check input format -->
             <Json2XmlValidatorPipe
@@ -114,7 +110,7 @@
             <SenderPipe name="Call Open Zaak to get rollen" getInputFromSessionKey="getZaakXml">
                 <HttpSender name="rollenJson"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="url" xpathExpression="concat('${openzaak_baseurl}','${rollenUrl}')"/>
+                    <Param name="url" xpathExpression="concat('${openzaak_baseurl}','${rollenUrl}')" />
                     <Param name="Authorization" value="Bearer @@mijnzaaknotificaties.jwt@@" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                     <Param name="zaak" xpathExpression="root/url" />
@@ -150,7 +146,7 @@
             </XsltPipe>
 
             <XmlIfPipe name="check if Inpbsn is None" xpathExpression="string-length(inpBsn) &gt; 0">
-                <Forward name="then" path="Create result file" />
+                <Forward name="then" path="storeResultaat" />
                 <Forward name="else" path="exception message for Inpbsn" />
             </XmlIfPipe>
 
@@ -158,6 +154,10 @@
                 getInputFromFixedValue="zaak bevat geen bsn nummer">
                 <Forward name="success" path="Exit" />
             </EchoPipe>
+
+            <!-- Preventing null values -->
+            <PutInSessionPipe name="storeResultaat" value="/" />
+            <PutInSessionPipe name="endpointVerwijzing" value="/" />
 
             <XsltPipe name="Create result file" getInputFromSessionKey="getZaakXml"
                 omitXmlDeclaration="true"
@@ -172,13 +172,20 @@
                 <Param name="endpointVerwijzing" value="${endpointVerwijzing}" />
             </XsltPipe>
 
-            <XsltPipe name="MakeAnonymous" omitXmlDeclaration="true" styleSheetName="xsl/anonymize.xsl"  storeResultInSessionKey="resultDocumentXML"/>
+            <XsltPipe name="MakeAnonymous" omitXmlDeclaration="true"
+                styleSheetName="xsl/anonymize.xsl" storeResultInSessionKey="resultDocumentXML" />
 
-            <XsltPipe name="storeTijdstipBericht" getInputFromSessionKey="resultDocumentXML" xpathExpression="//*[local-name()='tijdstipBericht']" storeResultInSessionKey="tijdstipBericht"/>
+            <XsltPipe name="storeTijdstipBericht" getInputFromSessionKey="resultDocumentXML"
+                xpathExpression="//*[local-name()='tijdstipBericht']"
+                storeResultInSessionKey="tijdstipBericht" />
 
-            <XsltPipe name="StoreIdentificatie" getInputFromSessionKey="resultDocumentXML" xpathExpression="//object[1]/identificatie[1]" storeResultInSessionKey="identificatie"/>
+            <XsltPipe name="StoreIdentificatie" getInputFromSessionKey="resultDocumentXML"
+                xpathExpression="//object[1]/identificatie[1]"
+                storeResultInSessionKey="identificatie" />
 
-            <XsltPipe name="StoreReferentienummer" getInputFromSessionKey="resultDocumentXML" xpathExpression="//*[local-name()='referentienummer']" storeResultInSessionKey="referentienummer"/>
+            <XsltPipe name="StoreReferentienummer" getInputFromSessionKey="resultDocumentXML"
+                xpathExpression="//*[local-name()='referentienummer']"
+                storeResultInSessionKey="referentienummer" />
 
             <LocalFileSystemPipe name="Store result file"
                 action="write"
