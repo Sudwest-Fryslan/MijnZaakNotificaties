@@ -151,7 +151,7 @@
             </XsltPipe>
 
             <XmlIfPipe name="check if Inpbsn is None" xpathExpression="string-length(inpBsn) &gt; 0">
-                <Forward name="then" path="storeResultaat" />
+                <Forward name="then" path="Create result file" />
                 <Forward name="else" path="exception message for Inpbsn" />
             </XmlIfPipe>
 
