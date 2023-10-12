@@ -29,7 +29,7 @@
   </xsl:template>
 
   <xsl:template match="//BG:geslachtsaanduiding">
-    <BG:geslachtsaanduiding>XXX</BG:geslachtsaanduiding>
+    <BG:geslachtsaanduiding>M</BG:geslachtsaanduiding>
   </xsl:template>
 
 </xsl:stylesheet>
