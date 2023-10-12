@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.11.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.11.1...v1.11.2) (2023-10-12)
+
+
+### ⏩ Reverts
+
+* Revert "fix: support unfinished cases" ([8911da9](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/8911da9f3a03398de104a7828a2647ec55dfbd73))
+
 ## [1.11.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.11.0...v1.11.1) (2023-10-12)
 
 
