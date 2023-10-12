@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.11.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.11.0...v1.11.1) (2023-10-12)
+
+
+### 🐛 Bug Fixes
+
+* support unfinished cases ([24b4e56](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/24b4e56ab56810e9ec57315395d40e4e4230a02a))
+
 ## [1.11.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.10.3...v1.11.0) (2023-10-10)
 
 
