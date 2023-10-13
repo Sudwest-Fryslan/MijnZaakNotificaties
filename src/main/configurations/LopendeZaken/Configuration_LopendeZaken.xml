@@ -119,10 +119,21 @@
                 <Forward name="else" path="Call Open Zaak to get rollen" />
             </XmlIfPipe>
 
-            <XsltPipe name="replaceResourceURL" styleSheetName="xsl/ReplaceResourceURL.xsl">
-                <Param name="URL" xpathExpression="//status" />
+            <XsltPipe name="replaceResourceURL" styleSheetName="xsl/ReplaceResourceURL.xsl" getInputFromSessionKey="FirstInput">
+                <Param name="URL" sessionKey="storeStatusResponse" xpathExpression="//status" />
                 <Forward name="success" path="Call Open Zaak to get status in zaak" />
             </XsltPipe>
+
+            <SenderPipe name="Call Open Zaak to get new status in zaak">
+                <HttpSender name="statusResponse"
+                    headersParams="Accept-Crs,Authorization">
+                    <Param name="Authorization" value="Bearer @@mijnzaaknotificaties.jwt@@" />
+                    <Param name="url" xpathExpression="/root/resourceUrl" />
+                    <Param name="Accept-Crs" value="EPSG:4326" />
+                </HttpSender>
+            </SenderPipe>
+
+            <JsonPipe name="statusResponseJsonToXml" storeResultInSessionKey="storeStatusResponse" />
 
             <SenderPipe name="Call Open Zaak to get rollen" getInputFromSessionKey="getZaakXml">
                 <HttpSender name="rollenJson"
