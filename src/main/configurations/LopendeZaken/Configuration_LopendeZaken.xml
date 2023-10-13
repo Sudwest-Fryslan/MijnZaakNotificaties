@@ -114,7 +114,7 @@
 
             <!-- If Status element in response, add it to the firstInput sessionkey as a resourceURL element
             and then call status again. -->
-            <XmlIfPipe name="lookForStatus" xpathExpression="boolean(//status)">
+            <XmlIfPipe name="lookForStatus" xpathExpression="boolean(//status) and string-length(//status) &gt; 0">
                 <Forward name="then" path="replaceResourceURL" />
                 <Forward name="else" path="Call Open Zaak to get rollen" />
             </XmlIfPipe>
