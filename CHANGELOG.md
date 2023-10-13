@@ -1,5 +1,17 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.12.6](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.12.5...v1.12.6) (2023-10-13)
+
+
+### 🧑‍💻 Code Refactoring
+
+* better zaak status representation ([0215fef](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/0215fefb72775f5a852fa4b36b636a2de060c74e))
+
+
+### ✅ Tests
+
+* fix Larva tests ([e513529](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/e5135294d05475520d73f67119cca41aa2a807e3))
+
 ## [1.12.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.12.4...v1.12.5) (2023-10-13)
 
 
