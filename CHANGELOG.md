@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.13.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.13.1...v1.13.2) (2023-10-13)
+
+
+### 🧑‍💻 Code Refactoring
+
+* add extra bypass condition ([15cc0e4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/15cc0e4f8aa43d5281a35c1b8d70cf19a785cbca))
+
 ## [1.13.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.13.0...v1.13.1) (2023-10-13)
 
 
