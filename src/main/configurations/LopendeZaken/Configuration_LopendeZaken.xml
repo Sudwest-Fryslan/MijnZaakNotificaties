@@ -112,6 +112,18 @@
 
             <JsonPipe name="statusResponseJsonToXml" storeResultInSessionKey="storeStatusResponse" />
 
+            <!-- If Status element in response, add it to the firstInput sessionkey as a resourceURL element
+            and then call status again. -->
+            <XmlIfPipe name="lookForStatus" xpathExpression="boolean(//status)">
+                <Forward name="then" path="replaceResourceURL" />
+                <Forward name="else" path="Call Open Zaak to get rollen" />
+            </XmlIfPipe>
+
+            <XsltPipe name="replaceResourceURL" styleSheetName="xsl/ReplaceResourceURL.xsl">
+                <Param name="URL" xpathExpression="//status" />
+                <Forward name="success" path="Call Open Zaak to get status in zaak" />
+            </XsltPipe>
+
             <SenderPipe name="Call Open Zaak to get rollen" getInputFromSessionKey="getZaakXml">
                 <HttpSender name="rollenJson"
                     headersParams="Accept-Crs,Authorization">
