@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.13.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.13.2...v1.13.3) (2023-10-13)
+
+
+### 🐛 Bug Fixes
+
+* correct Ladybug column values ([dd44f76](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/dd44f76a82758a35b851815850a588293c5b8dee))
+
 ## [1.13.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.13.1...v1.13.2) (2023-10-13)
 
 
