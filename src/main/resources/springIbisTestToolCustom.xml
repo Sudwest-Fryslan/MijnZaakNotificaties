@@ -24,7 +24,7 @@
                 <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
                     <property name="name" value="Toelichting" />
                     <property name="sessionKey" value="storeStatusResponse" />
-                    <property name="regex" value="&lt;toelichting>(.*)&lt;\/toelichting>" />
+                    <property name="regex" value="&lt;toelichting>(.*)&lt;\/toelichting>|&lt;statustoelichting>(.*)&lt;\/statustoelichting>" />
                 </bean>
             </list>
         </property>
