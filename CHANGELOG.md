@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.12.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.12.4...v1.12.5) (2023-10-13)
+
+
+### 🐛 Bug Fixes
+
+* remove non-xml values ([eafedc7](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/eafedc736e55b3ee50dbb7b0645157a361f34830))
+
 ## [1.12.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.12.3...v1.12.4) (2023-10-12)
 
 
