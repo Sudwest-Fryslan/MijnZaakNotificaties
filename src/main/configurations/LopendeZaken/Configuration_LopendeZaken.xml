@@ -16,9 +16,9 @@
             </Exits>
 
             <!-- Preventing null values -->
-            <PutInSessionPipe name="fillResultaatKey" sessionKey="storeResultaat" value="/" />
+            <PutInSessionPipe name="fillResultaatKey" sessionKey="storeResultaat" value="&lt;Empty/>" />
             <PutInSessionPipe name="fillEndpointVerwijzingKey" sessionKey="endpointVerwijzing"
-                value="/" />
+                value="&lt;Empty/>" />
 
             <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss" />
 
