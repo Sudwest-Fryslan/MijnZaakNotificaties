@@ -151,23 +151,33 @@
             </zkt.omschrijving>
             <volgnummer xsi:nil="true" StUF:noValue="waardeOnbekend" />
             <code xsi:nil="true" StUF:noValue="waardeOnbekend" />
-            <xsl:if
-              test="exists($storeResultaat/root/toelichting) and $storeResultaat/root/toelichting!=''">
-              <xsl:choose>
-                <xsl:when test="string-length($storeStatusResponse/root/statustoelichting) &gt; 0">
+            <xsl:choose>
+              <xsl:when
+                test="exists($storeResultaat/root/toelichting) and $storeResultaat/root/toelichting!=''">
+                <xsl:choose>
+                  <xsl:when test="string-length($storeStatusResponse/root/statustoelichting) &gt; 0">
+                    <omschrijving>
+                      <xsl:value-of
+                        select="$storeStatusResponse/root/statustoelichting,'(', concat($storeResultaat/root/toelichting,')')" />
+                    </omschrijving>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <omschrijving>
+                      <xsl:value-of
+                        select="$storeResultaat/root/toelichting" />
+                    </omschrijving>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:if test="exists($storeStatusResponse/root/statustoelichting)">
                   <omschrijving>
                     <xsl:value-of
-                      select="concat($storeResultaat/root/toelichting,'(', $storeStatusResponse/root/statustoelichting,')')" />
+                      select="$storeStatusResponse/root/statustoelichting" />
                   </omschrijving>
-                </xsl:when>
-                <xsl:otherwise>
-                  <omschrijving>
-                    <xsl:value-of
-                      select="$storeResultaat/root/toelichting" />
-                  </omschrijving>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:if>
+                </xsl:if>
+              </xsl:otherwise>
+            </xsl:choose>
             <ingangsdatumObject xsi:nil="true" StUF:noValue="waardeOnbekend" />
           </gerelateerde>
           <datumStatusGezet>
