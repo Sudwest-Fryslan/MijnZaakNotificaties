@@ -121,7 +121,6 @@
 
             <XsltPipe name="replaceResourceURL" styleSheetName="xsl/ReplaceResourceURL.xsl" getInputFromSessionKey="FirstInput">
                 <Param name="URL" sessionKey="storeStatusResponse" xpathExpression="//status" />
-                <Forward name="success" path="Call Open Zaak to get status in zaak" />
             </XsltPipe>
 
             <SenderPipe name="Call Open Zaak to get new status in zaak">
