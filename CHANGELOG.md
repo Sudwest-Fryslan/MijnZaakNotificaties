@@ -1,5 +1,14 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.13.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.13.0...v1.13.1) (2023-10-13)
+
+
+### 🐛 Bug Fixes
+
+* duplicate pipe name ([8d1ae1d](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/8d1ae1d35b001c38108384f0b702e3e7296643ef))
+* prevent infinite loop ([fed5539](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/fed55399f670e5cb314053572ca998c107bc125b))
+* remove incorrect flow ([7f674ef](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/7f674ef41d4a9f85a34a55e3d8ae33d12e75016c))
+
 ## [1.13.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.12.6...v1.13.0) (2023-10-13)
 
 
