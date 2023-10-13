@@ -133,7 +133,7 @@
                 </HttpSender>
             </SenderPipe>
 
-            <JsonPipe name="statusResponseJsonToXml" storeResultInSessionKey="storeStatusResponse" />
+            <JsonPipe name="newStatusResponseJsonToXml" storeResultInSessionKey="storeStatusResponse" />
 
             <SenderPipe name="Call Open Zaak to get rollen" getInputFromSessionKey="getZaakXml">
                 <HttpSender name="rollenJson"
