@@ -29,9 +29,19 @@
                 schema="CheckFirstInput.xsd"
                 storeResultInSessionKey="FirstInput"
                 getInputFromSessionKey="originalMessage">
-                <Forward name="success" path="Call Open Zaak to get the zaak" />
+                <Forward name="success" path="checkResource" />
                 <Forward name="failure" path="Error" />
             </Json2XmlValidatorPipe>
+
+            <XmlIfPipe name="checkResource" xpathExpression="//resource = 'status'">
+                <Forward name="then" path="Call Open Zaak to get the zaak" />
+                <Forward name="then" path="exception message for Resource" />
+            </XmlIfPipe>
+
+            <EchoPipe name="exception message for Resource"
+                getInputFromFixedValue="verkeerde resource. Resource waarde 'status' verwacht.">
+                <Forward name="success" path="Exit" />
+            </EchoPipe>
 
             <!-- retrieve the case -->
             <SenderPipe name="Call Open Zaak to get the zaak">
