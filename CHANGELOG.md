@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.14.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.13.3...v1.14.0) (2023-10-16)
+
+
+### 🍕 Features
+
+* filter on status messages only ([9b5e204](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/9b5e2049e4bdbcbb7bee2c4c1cdd969d75bbb4c9))
+
 ## [1.13.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.13.2...v1.13.3) (2023-10-13)
 
 
