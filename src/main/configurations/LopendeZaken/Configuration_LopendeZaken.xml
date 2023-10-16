@@ -35,7 +35,7 @@
 
             <XmlIfPipe name="checkResource" xpathExpression="//resource = 'status'">
                 <Forward name="then" path="Call Open Zaak to get the zaak" />
-                <Forward name="then" path="exception message for Resource" />
+                <Forward name="else" path="exception message for Resource" />
             </XmlIfPipe>
 
             <EchoPipe name="exception message for Resource"
