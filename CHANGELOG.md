@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.14.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.14.0...v1.14.1) (2023-10-16)
+
+
+### 🐛 Bug Fixes
+
+* incorrect path name ([3ddcab1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/3ddcab18dd42649f7b949133653d87fd55299f5c))
+
 ## [1.14.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.13.3...v1.14.0) (2023-10-16)
 
 
