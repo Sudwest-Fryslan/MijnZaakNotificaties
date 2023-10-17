@@ -1,5 +1,18 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.15.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.14.1...v1.15.0) (2023-10-17)
+
+
+### 🍕 Features
+
+* display rejection reason in ladybug ([8fac187](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/8fac18724e363b8671ea7a8a0e0440480eacd1d6))
+* make addition of datum elements optional ([9af825f](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/9af825ff7d18ca3d16000559392ecd15051bee13))
+
+
+### 🐛 Bug Fixes
+
+* remove whitespace ([abeda6b](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/abeda6bedac21d2d80755cb057a387970d5a6fa7))
+
 ## [1.14.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.14.0...v1.14.1) (2023-10-16)
 
 
