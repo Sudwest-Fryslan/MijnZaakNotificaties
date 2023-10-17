@@ -67,26 +67,16 @@
         <startdatum>
           <xsl:value-of select="format-date(root/startdatum,'[Y0001][M01][D01]')" />
         </startdatum>
-        <xsl:choose>
-          <xsl:when test="string-length(root/einddatum) &gt; 0">
-            <einddatum>
-              <xsl:value-of select="format-date(root/einddatum,'[Y0001][M01][D01]')" />
-            </einddatum>
-          </xsl:when>
-          <xsl:otherwise>
-            <einddatum xsi:nil="true" />
-          </xsl:otherwise>
-        </xsl:choose>
-        <xsl:choose>
-          <xsl:when test="string-length(root/einddatumGepland) &gt; 0">
-            <einddatumGepland>
-              <xsl:value-of select="format-date(root/einddatumGepland,'[Y0001][M01][D01]')" />
-            </einddatumGepland>
-          </xsl:when>
-          <xsl:otherwise>
-            <einddatumGepland xsi:nil="true" />
-          </xsl:otherwise>
-        </xsl:choose>
+        <xsl:if test="string-length(root/einddatum) &gt; 0">
+          <einddatum>
+            <xsl:value-of select="format-date(root/einddatum,'[Y0001][M01][D01]')" />
+          </einddatum>
+        </xsl:if>
+        <xsl:if test="string-length(root/einddatumGepland) &gt; 0">
+          <einddatumGepland>
+            <xsl:value-of select="format-date(root/einddatumGepland,'[Y0001][M01][D01]')" />
+          </einddatumGepland>
+        </xsl:if>
         <xsl:if test="string-length($endpointVerwijzing) &gt; 0">
           <StUF:extraElementen>
             <StUF:extraElement naam="verwijzing">
