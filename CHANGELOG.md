@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.15.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.15.1...v1.15.2) (2023-10-17)
+
+
+### 🐛 Bug Fixes
+
+* correct flow ([b823606](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/b823606804f38d4f15a39f27c6d0b99bad2a9d6e))
+
 ## [1.15.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.15.0...v1.15.1) (2023-10-17)
 
 
