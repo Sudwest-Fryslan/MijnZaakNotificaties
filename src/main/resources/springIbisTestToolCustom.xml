@@ -26,6 +26,10 @@
                     <property name="sessionKey" value="storeStatusResponse" />
                     <property name="regex" value="&lt;toelichting>(.*)&lt;\/toelichting>|&lt;statustoelichting>(.*)&lt;\/statustoelichting>" />
                 </bean>
+                <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
+                    <property name="name" value="Reden Afwijzing" />
+                    <property name="sessionKey" value="rejectionReason" />
+                </bean>
             </list>
         </property>
     </bean>
@@ -39,6 +43,7 @@
                 <value>Zaaktype</value>
                 <value>Identificatie</value>
                 <value>Toelichting</value>
+                <value>Reden Afwijzing</value>
                 <value>correlationId</value>
                 <value>duration</value>
                 <value>numberOfCheckpoints</value>

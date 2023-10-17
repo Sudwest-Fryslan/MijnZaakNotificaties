@@ -16,9 +16,14 @@
             </Exits>
 
             <!-- Preventing null values -->
-            <PutInSessionPipe name="fillResultaatKey" sessionKey="storeResultaat" value="&lt;Empty/>" />
+            <PutInSessionPipe name="fillResultaatKey" sessionKey="storeResultaat"
+                value="&lt;Empty/>" />
             <PutInSessionPipe name="fillEndpointVerwijzingKey" sessionKey="endpointVerwijzing"
                 value="&lt;Empty/>" />
+            <PutInSessionPipe name="fillStatusResponse" sessionKey="storeStatusResponse"
+                value="-" />
+            <PutInSessionPipe name="storeRejectionDefault" sessionKey="rejectionReason"
+                value="-" />
 
             <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss" />
 
@@ -35,8 +40,11 @@
 
             <XmlIfPipe name="checkResource" xpathExpression="//resource = 'status'">
                 <Forward name="then" path="Call Open Zaak to get the zaak" />
-                <Forward name="else" path="exception message for Resource" />
+                <Forward name="else" path="storeRejectionResource" />
             </XmlIfPipe>
+
+            <PutInSessionPipe name="storeRejectionResource" sessionKey="rejectionReason"
+                value="Resource incorrect" />
 
             <EchoPipe name="exception message for Resource"
                 getInputFromFixedValue="verkeerde resource. Resource waarde 'status' verwacht.">
@@ -79,8 +87,11 @@
             <XmlIfPipe name="Check if zaakType identificatie is in supported zaakTypes"
                 xpathExpression="string-length(identificatie) &gt; 0">
                 <Forward name="then" path="Check resultaat in zaak" />
-                <Forward name="else" path="exception message for ZaakType" />
+                <Forward name="else" path="storeRejectionZaakType" />
             </XmlIfPipe>
+
+            <PutInSessionPipe name="storeRejectionZaakType" sessionKey="rejectionReason"
+                value="ZaakType incorrect" />
 
             <EchoPipe name="exception message for ZaakType"
                 getInputFromFixedValue="verkeerde zaaktype, active zaaktypes ${active_zaaktypes} verwacht">
@@ -122,14 +133,17 @@
 
             <JsonPipe name="statusResponseJsonToXml" storeResultInSessionKey="storeStatusResponse" />
 
-            <!-- If Status element in response, add it to the firstInput sessionkey as a resourceURL element
+            <!-- If Status element in response, add it to the firstInput sessionkey as a resourceURL
+            element
             and then call status again. -->
-            <XmlIfPipe name="lookForStatus" xpathExpression="boolean(//status) and string-length(//status) &gt; 0">
+            <XmlIfPipe name="lookForStatus"
+                xpathExpression="boolean(//status) and string-length(//status) &gt; 0">
                 <Forward name="then" path="replaceResourceURL" />
                 <Forward name="else" path="Call Open Zaak to get rollen" />
             </XmlIfPipe>
 
-            <XsltPipe name="replaceResourceURL" styleSheetName="xsl/ReplaceResourceURL.xsl" getInputFromSessionKey="FirstInput">
+            <XsltPipe name="replaceResourceURL" styleSheetName="xsl/ReplaceResourceURL.xsl"
+                getInputFromSessionKey="FirstInput">
                 <Param name="URL" sessionKey="storeStatusResponse" xpathExpression="//status" />
             </XsltPipe>
 
@@ -142,7 +156,8 @@
                 </HttpSender>
             </SenderPipe>
 
-            <JsonPipe name="newStatusResponseJsonToXml" storeResultInSessionKey="storeStatusResponse" />
+            <JsonPipe name="newStatusResponseJsonToXml"
+                storeResultInSessionKey="storeStatusResponse" />
 
             <SenderPipe name="Call Open Zaak to get rollen" getInputFromSessionKey="getZaakXml">
                 <HttpSender name="rollenJson"
@@ -169,8 +184,11 @@
 
             <XmlIfPipe name="check if rollen count!=1" xpathExpression="string-length(count) &gt; 0">
                 <Forward name="then" path="check Inpbsn" />
-                <Forward name="else" path="exception message for rollen" />
+                <Forward name="else" path="storeRejectionRollen" />
             </XmlIfPipe>
+
+            <PutInSessionPipe name="storeRejectionRollen" sessionKey="rejectionReason"
+                value="Rollen incorrect" />
 
             <EchoPipe name="exception message for rollen"
                 getInputFromFixedValue="zaak had niet 1 natuurlijk-persoon initiator rol">
@@ -184,8 +202,11 @@
 
             <XmlIfPipe name="check if Inpbsn is None" xpathExpression="string-length(inpBsn) &gt; 0">
                 <Forward name="then" path="Create result file" />
-                <Forward name="else" path="exception message for Inpbsn" />
+                <Forward name="else" path="storeRejectionInpbsn" />
             </XmlIfPipe>
+
+            <PutInSessionPipe name="storeRejectionInpbsn" sessionKey="rejectionReason"
+                value="BSN incorrect" />
 
             <EchoPipe name="exception message for Inpbsn"
                 getInputFromFixedValue="zaak bevat geen bsn nummer">
