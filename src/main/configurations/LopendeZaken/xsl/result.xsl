@@ -158,7 +158,7 @@
                   <xsl:when test="string-length($storeStatusResponse/root/statustoelichting) &gt; 0">
                     <omschrijving>
                       <xsl:value-of
-                        select="$storeStatusResponse/root/statustoelichting,'(', concat($storeResultaat/root/toelichting,')')" />
+                        select="concat($storeStatusResponse/root/statustoelichting,'(', $storeResultaat/root/toelichting,')')" />
                     </omschrijving>
                   </xsl:when>
                   <xsl:otherwise>
