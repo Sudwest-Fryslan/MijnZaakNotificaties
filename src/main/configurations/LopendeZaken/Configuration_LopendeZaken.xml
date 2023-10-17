@@ -20,10 +20,6 @@
                 value="&lt;Empty/>" />
             <PutInSessionPipe name="fillEndpointVerwijzingKey" sessionKey="endpointVerwijzing"
                 value="&lt;Empty/>" />
-            <PutInSessionPipe name="fillStatusResponse" sessionKey="storeStatusResponse"
-                value="-" />
-            <PutInSessionPipe name="storeRejectionDefault" sessionKey="rejectionReason"
-                value="-" />
 
             <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss" />
 
@@ -48,7 +44,7 @@
 
             <EchoPipe name="exception message for Resource"
                 getInputFromFixedValue="verkeerde resource. Resource waarde 'status' verwacht.">
-                <Forward name="success" path="Exit" />
+                <Forward name="success" path="storeDefaultStatusResponse" />
             </EchoPipe>
 
             <!-- retrieve the case -->
@@ -95,7 +91,7 @@
 
             <EchoPipe name="exception message for ZaakType"
                 getInputFromFixedValue="verkeerde zaaktype, active zaaktypes ${active_zaaktypes} verwacht">
-                <Forward name="success" path="Exit" />
+                <Forward name="success" path="storeDefaultStatusResponse" />
             </EchoPipe>
 
             <XsltPipe name="Check resultaat in zaak" getInputFromSessionKey="getZaakXml"
@@ -192,7 +188,7 @@
 
             <EchoPipe name="exception message for rollen"
                 getInputFromFixedValue="zaak had niet 1 natuurlijk-persoon initiator rol">
-                <Forward name="success" path="Exit" />
+                <Forward name="success" path="storeDefaultStatusResponse" />
             </EchoPipe>
 
             <XsltPipe name="check Inpbsn" getInputFromSessionKey="storeRollenJson"
@@ -210,7 +206,7 @@
 
             <EchoPipe name="exception message for Inpbsn"
                 getInputFromFixedValue="zaak bevat geen bsn nummer">
-                <Forward name="success" path="Exit" />
+                <Forward name="success" path="storeDefaultStatusResponse" />
             </EchoPipe>
 
             <XsltPipe name="Create result file" getInputFromSessionKey="getZaakXml"
@@ -240,6 +236,14 @@
             <XsltPipe name="StoreReferentienummer" getInputFromSessionKey="resultDocumentXML"
                 xpathExpression="//*[local-name()='referentienummer']"
                 storeResultInSessionKey="referentienummer" />
+
+            <PutInSessionPipe name="storeRejectionDefault" sessionKey="rejectionReason"
+                value="-" unlessSessionKey="rejectionReason" />
+
+            <PutInSessionPipe name="storeDefaultStatusResponse" sessionKey="storeStatusResponse"
+                value="-" unlessSessionKey="storeStatusResponse">
+                <Forward name="success" path="Exit" />
+            </PutInSessionPipe>
 
             <LocalFileSystemPipe name="Store result file"
                 action="write"
