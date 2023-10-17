@@ -235,7 +235,9 @@
 
             <XsltPipe name="StoreReferentienummer" getInputFromSessionKey="resultDocumentXML"
                 xpathExpression="//*[local-name()='referentienummer']"
-                storeResultInSessionKey="referentienummer" />
+                storeResultInSessionKey="referentienummer">
+                <Forward name="success" path="Store result file" />
+            </XsltPipe>
 
             <PutInSessionPipe name="storeRejectionDefault" sessionKey="rejectionReason"
                 value="-" unlessSessionKey="rejectionReason" />
