@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.15.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.15.0...v1.15.1) (2023-10-17)
+
+
+### 🐛 Bug Fixes
+
+* sessionkey correction ([34e6b93](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/34e6b9383e1ad472c8fa8ed99dff0df0677a0111))
+
 ## [1.15.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.14.1...v1.15.0) (2023-10-17)
 
 
