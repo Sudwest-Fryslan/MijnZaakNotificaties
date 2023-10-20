@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.16.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.15.2...v1.16.0) (2023-10-20)
+
+
+### 🍕 Features
+
+* add whitespace ([9e55ab3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/9e55ab359ae6d495586bae6d9a7d2519accf719d))
+
 ## [1.15.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.15.1...v1.15.2) (2023-10-17)
 
 
