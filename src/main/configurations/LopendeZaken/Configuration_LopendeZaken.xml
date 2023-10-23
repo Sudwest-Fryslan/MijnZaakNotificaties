@@ -236,16 +236,27 @@
             <XsltPipe name="StoreReferentienummer" getInputFromSessionKey="resultDocumentXML"
                 xpathExpression="//*[local-name()='referentienummer']"
                 storeResultInSessionKey="referentienummer">
-                <Forward name="success" path="Store result file" />
+                <Forward name="success" path="storeRejectionDefault" />
             </XsltPipe>
 
-            <PutInSessionPipe name="storeRejectionDefault" sessionKey="rejectionReason"
-                value="-" unlessSessionKey="rejectionReason" />
-
+            <!-- In case of rejection -->
             <PutInSessionPipe name="storeDefaultStatusResponse" sessionKey="storeStatusResponse"
-                value="-" unlessSessionKey="storeStatusResponse">
+                value="-" />
+
+            <PutInSessionPipe name="storeDefaultZaaktype" sessionKey="zaakType"
+                value="-" />
+
+            <PutInSessionPipe name="storeDefaultIdentificatie" sessionKey="identificatie"
+                value="-">
                 <Forward name="success" path="Exit" />
             </PutInSessionPipe>
+
+            <!-- In case of success -->
+            <PutInSessionPipe name="storeRejectionDefault" sessionKey="rejectionReason"
+                value="-" />
+
+            <XsltPipe name="storeZaakType" xpathExpression="//identificatie"
+                storeResultInSessionKey="zaakType" getInputFromSessionKey="storeZaakTypeResponse" />
 
             <LocalFileSystemPipe name="Store result file"
                 action="write"

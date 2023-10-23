@@ -13,13 +13,12 @@
                 <bean class="nl.nn.testtool.metadata.StatusMetadataFieldExtractor" />
                 <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
                     <property name="name" value="Zaaktype" />
-                    <property name="sessionKey" value="storeZaakTypeResponse" />
-                    <property name="regex" value="&lt;identificatie>(.*)&lt;\/identificatie>" />
+                    <property name="sessionKey" value="zaakType" />
+                    <!-- <property name="regex" value="&lt;identificatie>(.*)&lt;\/identificatie>" /> -->
                 </bean>
                 <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
                     <property name="name" value="Identificatie" />
-                    <property name="sessionKey" value="getZaakXml" />
-                    <property name="regex" value="&lt;identificatie>(.*)&lt;\/identificatie>" />
+                    <property name="sessionKey" value="identificatie" />
                 </bean>
                 <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
                     <property name="name" value="Toelichting" />
