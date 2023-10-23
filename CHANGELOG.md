@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.17.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.16.0...v1.17.0) (2023-10-23)
+
+
+### 🍕 Features
+
+* improve ladybug readability ([d1175b4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/d1175b4335f7f94d6bc458e83bdb448b9395edd1))
+
 ## [1.16.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.15.2...v1.16.0) (2023-10-20)
 
 
