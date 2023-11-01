@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.18.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.0...v1.18.1) (2023-11-01)
+
+
+### 🐛 Bug Fixes
+
+* separate zaaktypes.xml file per DTAP stage ([d709840](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/d7098401e814f0ceff339a5aa757f0f160c8f179))
+
 ## [1.18.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.17.0...v1.18.0) (2023-11-01)
 
 
