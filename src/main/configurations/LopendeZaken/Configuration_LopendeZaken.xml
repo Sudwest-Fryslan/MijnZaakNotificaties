@@ -22,7 +22,7 @@
                 value="&lt;Empty/>" />
 
             <FixedResultPipe name="storeZaaktypes" storeResultInSessionKey="active_zaaktypes"
-                filename="Zaaktypes.xml" />
+                filename="${mijnzaaknotificaties.zaaktypes_file}" />
 
             <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss" />
 
@@ -102,7 +102,7 @@
 
             <XmlIfPipe name="Check Zaaktype startdate"
                 xpathExpression="$systemDate > $startDate">
-                <Param name="startDate" xpathExpression="//identificatie"/>
+                <Param name="startDate" xpathExpression="//identificatie" />
                 <Param name="systemDate" sessionKey="systemDate" />
                 <Forward name="then" path="Check resultaat in zaak" />
                 <Forward name="else" path="storeRejectionZaakTypeDate" />
