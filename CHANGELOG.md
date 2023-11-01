@@ -1,5 +1,13 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.18.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.2...v1.18.3) (2023-11-01)
+
+
+### 🐛 Bug Fixes
+
+* date format correction ([f9e7e38](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/f9e7e385ac41181eae51562c18829563b824f113))
+* production startdate correction ([61e4542](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/61e4542589c193b527d5ac45cc94ea0d60fecefb))
+
 ## [1.18.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.1...v1.18.2) (2023-11-01)
 
 
