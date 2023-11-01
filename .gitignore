@@ -5,3 +5,4 @@ target/
 
 # Environment specific properties
 .env
+src/main/configurations/LopendeZaken/Zaaktypes.xml
