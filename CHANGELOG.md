@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.18.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.17.0...v1.18.0) (2023-11-01)
+
+
+### 🍕 Features
+
+* add zaaktype startdatum filter ([001b747](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/001b7476f90b4e5fdbbc9c21733576cd8560c42f))
+
 ## [1.17.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.16.0...v1.17.0) (2023-10-23)
 
 
