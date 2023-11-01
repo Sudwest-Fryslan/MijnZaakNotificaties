@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.18.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.1...v1.18.2) (2023-11-01)
+
+
+### 🧑‍💻 Code Refactoring
+
+* remove excess from gitignore ([e7a87bf](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/e7a87bf6d4e7a0e443f33a4d4e2ccf2904d29c0d))
+
 ## [1.18.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.0...v1.18.1) (2023-11-01)
 
 
