@@ -21,6 +21,9 @@
             <PutInSessionPipe name="fillEndpointVerwijzingKey" sessionKey="endpointVerwijzing"
                 value="&lt;Empty/>" />
 
+            <FixedResultPipe name="storeZaaktypes" storeResultInSessionKey="active_zaaktypes"
+                filename="Zaaktypes.xml" />
+
             <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss" />
 
             <!-- check input format -->
@@ -75,14 +78,15 @@
 
             <!-- only supported zaaktypes -->
             <XsltPipe name="Check zaakType Identificatie"
-                getInputFromSessionKey="storeZaakTypeResponse"
+                getInputFromSessionKey="active_zaaktypes"
                 styleSheetName="xsl/checkZaakType.xsl">
-                <Param name="active_zaaktypes" value="${active_zaaktypes}" />
+                <Param name="storeZaakTypeResponse" sessionKey="storeZaakTypeResponse"
+                    xpathExpression="//identificatie[1]" />
             </XsltPipe>
 
             <XmlIfPipe name="Check if zaakType identificatie is in supported zaakTypes"
                 xpathExpression="string-length(identificatie) &gt; 0">
-                <Forward name="then" path="Check resultaat in zaak" />
+                <Forward name="then" path="dateToday" />
                 <Forward name="else" path="storeRejectionZaakType" />
             </XmlIfPipe>
 
@@ -90,7 +94,25 @@
                 value="ZaakType incorrect" />
 
             <EchoPipe name="exception message for ZaakType"
-                getInputFromFixedValue="verkeerde zaaktype, active zaaktypes ${active_zaaktypes} verwacht">
+                getInputFromFixedValue="verkeerde zaaktype">
+                <Forward name="success" path="storeDefaultStatusResponse" />
+            </EchoPipe>
+
+            <PutSystemDateInSessionPipe name="dateToday" dateFormat="yyyy-MM-dd" />
+
+            <XmlIfPipe name="Check Zaaktype startdate"
+                xpathExpression="$systemDate > $startDate">
+                <Param name="startDate" xpathExpression="//identificatie"/>
+                <Param name="systemDate" sessionKey="systemDate" />
+                <Forward name="then" path="Check resultaat in zaak" />
+                <Forward name="else" path="storeRejectionZaakTypeDate" />
+            </XmlIfPipe>
+
+            <PutInSessionPipe name="storeRejectionZaakTypeDate" sessionKey="rejectionReason"
+                value="Not yet accepted" />
+
+            <EchoPipe name="exception message for ZaakTypeDate"
+                getInputFromFixedValue="Zaaktype nog niet geaccepteerd.">
                 <Forward name="success" path="storeDefaultStatusResponse" />
             </EchoPipe>
 

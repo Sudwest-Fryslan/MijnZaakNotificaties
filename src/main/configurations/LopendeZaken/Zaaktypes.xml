@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Zaaktypes>
+    <Zaaktype startdate='1999-10-31' zaaktype='B1210'/>
+    <Zaaktype startdate='1999-10-31' zaaktype='B1026'/>
+    <Zaaktype startdate='1999-10-31' zaaktype='ANDER-ZAAKTYPE-IDENTIFICATIE'/>
+</Zaaktypes>
