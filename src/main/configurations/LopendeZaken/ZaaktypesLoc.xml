@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Format: YYYY-MM-DD -->
 <Zaaktypes>
     <Zaaktype startdate='1999-10-31' zaaktype='B1210'/>
     <Zaaktype startdate='1999-10-31' zaaktype='B1026'/>
