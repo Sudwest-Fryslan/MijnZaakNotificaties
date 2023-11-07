@@ -72,7 +72,10 @@ jobs:
     -
       name: Update BuildInfo.properties if there is a version
       run: /bin/bash .github/workflows/writeBuildInfo.sh ${{ needs.analyze-commits.outputs.release-version }}
-    - 
+    -
+      name: Make JAR of configuration
+      run: jar cvf /tmp/MijnZaakNotificaties.jar -C configurations LopendeZaken
+    -
       name: "🔧 setup node"
       uses: actions/setup-node@v2.1.5
       with:
