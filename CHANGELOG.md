@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.19.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.19.0...v1.19.1) (2023-11-07)
+
+
+### 🐛 Bug Fixes
+
+* add additional BuildInfo.properties ([2766345](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/27663450e58febe49784b0e008d48365c4dff5e2))
+
 ## [1.19.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.5...v1.19.0) (2023-11-07)
 
 
