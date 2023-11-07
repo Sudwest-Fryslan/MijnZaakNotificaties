@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.19.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.19.1...v1.19.2) (2023-11-07)
+
+
+### 🐛 Bug Fixes
+
+* proper configuration.version ([630db26](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/630db2669f02d17030f2d35d6b0ab5520359cfb8))
+
 ## [1.19.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.19.0...v1.19.1) (2023-11-07)
 
 
