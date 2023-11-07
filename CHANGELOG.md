@@ -1,5 +1,17 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.19.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.5...v1.19.0) (2023-11-07)
+
+
+### 🍕 Features
+
+* add buildInfo.properties ([f84f8dd](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/f84f8ddf8bb14de20badfe121fe6db72de95f9ad))
+
+
+### 🧑‍💻 Code Refactoring
+
+* set ZaakType startdatum to today ([94b7181](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/94b71815093f577706256f6ef68c1013900ff281))
+
 ## [1.18.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.4...v1.18.5) (2023-11-07)
 
 
