@@ -101,7 +101,7 @@
             <PutSystemDateInSessionPipe name="dateToday" dateFormat="yyyy-MM-dd" />
 
             <XmlIfPipe name="Check Zaaktype startdate"
-                xpathExpression="$systemDate > $startDate">
+                xpathExpression="$systemDate >= $startDate">
                 <Param name="startDate" xpathExpression="//identificatie" />
                 <Param name="systemDate" sessionKey="systemDate" />
                 <Forward name="then" path="Check resultaat in zaak" />
