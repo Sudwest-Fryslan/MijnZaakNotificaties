@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.18.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.4...v1.18.5) (2023-11-07)
+
+
+### 🧑‍💻 Code Refactoring
+
+* add new accepted zaaktypes on P ([c600058](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/c6000584cb96e43d1c1ece60125a5951f1440761))
+
 ## [1.18.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.3...v1.18.4) (2023-11-07)
 
 
