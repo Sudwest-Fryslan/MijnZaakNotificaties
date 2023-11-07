@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.19.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.19.4...v1.19.5) (2023-11-07)
+
+
+### 🐛 Bug Fixes
+
+* change date check ([3bb7fff](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/3bb7fffc1b71ad195e45853567c8676469f3aad8))
+
 ## [1.19.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.19.3...v1.19.4) (2023-11-07)
 
 
