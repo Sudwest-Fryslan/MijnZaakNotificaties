@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.18.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.3...v1.18.4) (2023-11-07)
+
+
+### 🧑‍💻 Code Refactoring
+
+* change startdate of accepted zaaktype ([98dac98](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/98dac9899fbbf79b898b3f311e0bb6676d9f3f49))
+
 ## [1.18.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.18.2...v1.18.3) (2023-11-01)
 
 
