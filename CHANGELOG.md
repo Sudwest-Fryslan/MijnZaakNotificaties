@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.20.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.20.0...v1.20.1) (2023-11-08)
+
+
+### 🐛 Bug Fixes
+
+* add StringUtil ([2d83866](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/2d838668224579cdcc19d0aee7bd50f091519d0b))
+
 ## [1.20.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.19.6...v1.20.0) (2023-11-08)
 
 
