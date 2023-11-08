@@ -74,6 +74,7 @@ import nl.nn.adapterframework.util.TransformerPool.OutputType;
 import nl.nn.adapterframework.util.UUIDUtil;
 import nl.nn.adapterframework.util.XmlBuilder;
 import nl.nn.adapterframework.util.XmlUtils;
+import nl.nn.adapterframework.util.StringUtil;
 
 import static java.time.ZonedDateTime.now;
 
