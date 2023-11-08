@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.20.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.19.6...v1.20.0) (2023-11-08)
+
+
+### 🍕 Features
+
+* backport custom code ([e0d332b](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/e0d332baaf771b798f1de82b85b4fbb80e541c44))
+
 ## [1.19.6](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.19.5...v1.19.6) (2023-11-07)
 
 
