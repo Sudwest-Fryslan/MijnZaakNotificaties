@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.20.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.20.2...v1.20.3) (2023-11-10)
+
+
+### 🤖 Build System
+
+* change ff version ([a276e33](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/a276e33f806842a35282eeda9fb923ffc382a2f8))
+
 ## [1.20.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.20.1...v1.20.2) (2023-11-08)
 
 
