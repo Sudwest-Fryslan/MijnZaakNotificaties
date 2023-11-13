@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.20.7](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.20.6...v1.20.7) (2023-11-13)
+
+
+### 🐛 Bug Fixes
+
+* incorrect forward name ([04fa948](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/04fa9488183a40269dce64ead178c4c909beff0e))
+
 ## [1.20.6](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.20.5...v1.20.6) (2023-11-13)
 
 
