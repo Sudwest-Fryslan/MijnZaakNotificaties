@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.20.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.20.4...v1.20.5) (2023-11-13)
+
+
+### 🧑‍💻 Code Refactoring
+
+* clearer date rejection message ([ddf4130](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/ddf4130446bdea6da17d43248d7307ba3086a008))
+
 ## [1.20.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.20.3...v1.20.4) (2023-11-13)
 
 
