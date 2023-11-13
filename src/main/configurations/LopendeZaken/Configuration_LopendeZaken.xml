@@ -107,10 +107,10 @@
             </XmlIfPipe>
 
             <PutInSessionPipe name="storeRejectionZaakTypeDate" sessionKey="rejectionReason"
-                value="Not yet accepted" />
+                value="Too old" />
 
             <EchoPipe name="exception message for ZaakTypeDate"
-                getInputFromFixedValue="Zaaktype nog niet geaccepteerd.">
+                getInputFromFixedValue="Zaak gestart vóór acceptatiedatum.">
                 <Forward name="success" path="storeDefaultStatusResponse" />
             </EchoPipe>
 
