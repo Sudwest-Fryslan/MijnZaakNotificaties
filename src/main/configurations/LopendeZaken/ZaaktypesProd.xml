@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Format: YYYY-MM-DD -->
 <Zaaktypes>
-    <Zaaktype startdate='2023-11-09' zaaktype='B0208'/>
-    <Zaaktype startdate='2023-11-09' zaaktype='B0268'/>
-    <Zaaktype startdate='2023-11-09' zaaktype='B0366'/>
+    <Zaaktype startdate='2023-11-13' zaaktype='B0208'/>
+    <Zaaktype startdate='2023-11-13' zaaktype='B0268'/>
+    <Zaaktype startdate='2023-11-13' zaaktype='B0366'/>
 </Zaaktypes>
