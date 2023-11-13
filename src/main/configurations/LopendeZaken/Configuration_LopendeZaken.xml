@@ -98,10 +98,10 @@
                 <Forward name="success" path="storeDefaultStatusResponse" />
             </EchoPipe>
 
-            <XmlIfPipe name="Check Zaaktype startdate"
-                xpathExpression="$startDate >= $itemStartDate">
-                <Param name="startDate" xpathExpression="//identificatie" />
-                <Param name="itemStartDate" xpathExpression="//startdatum" sessionKey="getZaakXml" />
+            <XmlIfPipe name="Check if Zaak is too old"
+                xpathExpression="$zaakStartDate >= $acceptationDate">
+                <Param name="acceptationDate" xpathExpression="//identificatie" />
+                <Param name="zaakStartDate" xpathExpression="//startdatum" sessionKey="getZaakXml" />
                 <Forward name="then" path="Check resultaat in zaak" />
                 <Forward name="else" path="storeRejectionZaakTypeDate" />
             </XmlIfPipe>
