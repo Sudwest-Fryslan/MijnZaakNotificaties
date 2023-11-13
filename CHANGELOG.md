@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.20.6](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.20.5...v1.20.6) (2023-11-13)
+
+
+### 🧑‍💻 Code Refactoring
+
+* adjust variable naming for clarity ([1745f3a](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/1745f3a16c24aad4ee5b17210b5a321e68905f23))
+
 ## [1.20.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.20.4...v1.20.5) (2023-11-13)
 
 
