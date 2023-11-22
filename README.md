@@ -1,6 +1,6 @@
 # MijnZaakNotificaties
 
-## Conext
+## Context
 Notificaties Lopende Zaken
 
 Als burger wil je graag weten hoe het gaat met je aanvraag, die je bij een gemeente hebt gedaan. Bij de Gemeente Súdwest-Fryslân wordt je daarom, als burger, op de hoogte gehouden van je:
