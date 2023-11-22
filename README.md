@@ -48,7 +48,7 @@ active_zaaktypes = {'B0208', 'B0366', 'B0268'}
 ...
 ```
 
-## Hoe zien de notificaatie berichten eruit?
+## Hoe zien de notificatie berichten er uit?
 Er wordt verwacht dat de notificaties als POST binnenkomen op http://localhost/MijnZaakNotificaties/v1/
 ```
 POST /api/v1/notificaties HTTP/1.0
