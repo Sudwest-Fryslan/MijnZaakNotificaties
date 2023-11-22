@@ -15,9 +15,11 @@ Deze drie soorten aanvragen worden op basis van hun zaaktypenummer geselecteerd.
 In eerste instantie worden de zaken, via de zaaksysteemvuller (https://github.com/EduardWitteveen/ZaaksysteemVuller) gekopieerd uit de Burgerzaken-applicatie en opgeslagen in ons Open Zaak (zaaksysteem). Vanuit Open Zaak worden, bij wijzigingen op de zaak, notificaties verstuurd naar de MijnZaakNotificaties integratie. Wanneer een dergelijke notificatie voldoet aan de juiste zaaktype en het een status-update betreft, wordt de informatie van de betreffende zaak opgehaald en in de vorm van een XML-bestandje verstuurd naar de persoonlijke mail en Mijn Overheid. Deze notificaties, worden op basis van BSN-nummers verstuurd. 
 Het XML-bestandje wordt in een betreffende map geplaatst, die een koppeling heeft met Mijn Overheid en vanuit daar wordt dit bestandje opgepakt en verstuurd naar Mijn Overheid-Lopende Zaken. 
 
-In de toekomst hopen we hier MijnSWF voor in te kunnen zetten, maar zolang dat nog niet in productie is, is MijnZaakNotificaties een mooie manier om de burger te informeren via Mijn Lopende Zaken.
+In de toekomst hopen we hier MijnSWF (MijnZaken) voor in te kunnen zetten, maar zolang dat nog niet in productie is, is MijnZaakNotificaties een mooie manier om de burger te informeren via Mijn Lopende Zaken.
+Ook een combinatie van deze 2 is mogelijk: Lopende Zaken van mijnoverheid heeft de mogelijkheid om een verwijzing mee te geven, deze kan door MijnZaakNotificaties gevuld worden met een verwijzing naar ons MijnSWF. 
+Met deze opzet worden notificaties verstuurd vanuit mijnoverheid en kunnen inwoners in de toekomst via het doorklikken naar MijnSWF de onderliggende documenten bekijken.
 
-Ook is het onze ambitie om de zaaktypes uit te breiden. Op dit moment werkt het voor drie zaaktypes, we hopen dit in de toekomst uit te breiden naar meer. Zodat we bijvoorbeeld ook de burger kunnen informeren over zijn/haar status van de aangevraagde wabo-vergunning of een aanvraag minima. 
+Daarnaast is het onze ambitie om de zaaktypes uit te breiden. Op dit moment werkt het voor drie zaaktypes, we hopen dit in de toekomst uit te breiden naar meer. Zodat we bijvoorbeeld ook de burger kunnen informeren over zijn/haar status van de aangevraagde wabo-vergunning of een aanvraag minima. 
 
 ## Wat doet het?
 Met deze applicatie kunnen statuswijzigingen van zaken worden gesynchronsieerd naar mijn.overheid.nl/lopendezaken.
