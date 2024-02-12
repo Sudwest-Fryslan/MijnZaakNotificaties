@@ -1,6 +1,6 @@
 publiccodeYmlVersion: "0.2"
 # Instructies: https://github.com/OpenCatalogi/OpenCatalogiBundle/blob/main/docs/Publiccode.md
-name: WebformulierenVerwerker
+name: MijnZaakNotificaties
 url: "https://github.com/Sudwest-Fryslan/MijnZaakNotificaties.git"
 softwareVersion: "1.20.9"    # Optional
 releaseDate: 2023-11-21
