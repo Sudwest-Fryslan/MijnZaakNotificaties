@@ -1,5 +1,18 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.24.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.24.0...v1.24.1) (2024-02-12)
+
+
+### 🐛 Bug Fixes
+
+* change license back to original ([4cb3750](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/4cb3750a2085b69b37c22d3babf97f9d8e75902a))
+* correct license ([65d7b83](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/65d7b832e26d85f52d9b59ac048259433cda3a51))
+
+
+### 🔁 Continuous Integration
+
+* update node ([57cc820](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/57cc8208ffde284c03dfbbc8781254a805c0c60b))
+
 ## [1.24.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.23.0...v1.24.0) (2023-11-22)
 
 
