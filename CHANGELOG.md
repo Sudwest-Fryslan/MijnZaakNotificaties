@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.25.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.24.1...v1.25.0) (2024-03-28)
+
+
+### 🍕 Features
+
+* update to 8.1 ([18d127e](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/18d127e397b5d586deb01448e34c074e19925a1d))
+
 ## [1.24.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.24.0...v1.24.1) (2024-02-12)
 
 
