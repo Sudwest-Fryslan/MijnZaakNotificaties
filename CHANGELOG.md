@@ -1,5 +1,23 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.25.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.25.0...v1.25.1) (2024-04-08)
+
+
+### 🐛 Bug Fixes
+
+* overcorrection of dockerfile ([cb72470](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/cb724700ee1800f30cca45e31703e98c743c1f43))
+* restore custom code ([ed87854](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/ed87854ee2f04b4b5cf534549ef6a2d0628c4e17))
+
+
+### 🧑‍💻 Code Refactoring
+
+* remove old custom code ([b1172b1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/b1172b1b54abfdfc56fe3eccfdc8a741c62158ef))
+
+
+### 🤖 Build System
+
+* update f!f to 8.1.0-20240404.042328 ([9981cf9](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/9981cf90039f6b06120764cfb7b6161198f96791))
+
 ## [1.25.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.24.1...v1.25.0) (2024-03-28)
 
 
