@@ -4,7 +4,7 @@
 # that should be the latest release but now it
 # is the latest SNAPSHOT. Because of this confusion
 # we do not put "latest" here.
-FROM frankframework/frankframework:8.1.0-20240328.042324
+FROM frankframework/frankframework:8.1.0-20240404.042328
 
 # TempFix TODO: Move this to the credentialprovider.properties
 ENV credentialFactory.class=nl.nn.credentialprovider.PropertyFileCredentialFactory
