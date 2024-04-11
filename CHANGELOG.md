@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.25.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.25.1...v1.25.2) (2024-04-11)
+
+
+### 🐛 Bug Fixes
+
+* incorrect path ([9a729bf](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/9a729bf385d433e352e82157ff3f4cf282fc7c08))
+
 ## [1.25.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.25.0...v1.25.1) (2024-04-08)
 
 
