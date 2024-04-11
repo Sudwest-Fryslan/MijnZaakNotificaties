@@ -15,7 +15,7 @@
                 <Exit name="Rejected" state="SUCCESS" code="202" />
             </Exits>
 
-            <!-- Preventing null values -->
+            <!-- Preventing null values --> 
             <PutInSessionPipe name="fillResultaatKey" sessionKey="storeResultaat"
                 value="&lt;Empty/>" />
 
