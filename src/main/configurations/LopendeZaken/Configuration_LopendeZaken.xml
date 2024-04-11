@@ -28,7 +28,7 @@
                 <Param name="user_id" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
                 <Param name="user_reresentation" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
                 <Forward name="success" path="fillResultaatKey" />
-                <Forward name="exception" path="EXCEPTION" />
+                <Forward name="exception" path="Error" />
             </JwtPipe>
 
             <!-- Preventing null values -->
