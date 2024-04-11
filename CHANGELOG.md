@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.25.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.25.4...v1.25.5) (2024-04-11)
+
+
+### 🐛 Bug Fixes
+
+* trigger release for no content in prolog error fix ([31e0cf2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/31e0cf200b552b813ae9c00caf71b8c51409dc30))
+
 ## [1.25.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.25.3...v1.25.4) (2024-04-11)
 
 
