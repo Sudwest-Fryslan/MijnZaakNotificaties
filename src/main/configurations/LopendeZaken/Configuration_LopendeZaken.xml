@@ -75,8 +75,7 @@
                 <HttpSender
                     name="getZaak"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization" sessionKey="originalMessage"
-                        xpathExpression="concat('Bearer ', $myToken)">
+                    <Param name="Authorization" xpathExpression="concat('Bearer ', $myToken)">
                         <Param name="myToken" sessionKey="myToken" />
                     </Param>
                     <Param name="url" xpathExpression="/root/hoofdObject" />
@@ -90,8 +89,7 @@
             <SenderPipe name="Call Open Zaak to get the zaakType">
                 <HttpSender name="zaakTypeResponse"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization" sessionKey="originalMessage"
-                        xpathExpression="concat('Bearer ', $myToken)">
+                    <Param name="Authorization" xpathExpression="concat('Bearer ', $myToken)">
                         <Param name="myToken" sessionKey="myToken" />
                     </Param>
                     <Param name="url" xpathExpression="/root/zaaktype" />
@@ -155,8 +153,7 @@
                 getInputFromSessionKey="getZaakXml">
                 <HttpSender name="resultaat"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization" sessionKey="originalMessage"
-                        xpathExpression="concat('Bearer ', $myToken)">
+                    <Param name="Authorization" xpathExpression="concat('Bearer ', $myToken)">
                         <Param name="myToken" sessionKey="myToken" />
                     </Param>
                     <Param name="url" xpathExpression="/root/resultaat" />
@@ -170,8 +167,7 @@
                 getInputFromSessionKey="FirstInput">
                 <HttpSender name="statusResponse"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization" sessionKey="originalMessage"
-                        xpathExpression="concat('Bearer ', $myToken)">
+                    <Param name="Authorization" xpathExpression="concat('Bearer ', $myToken)">
                         <Param name="myToken" sessionKey="myToken" />
                     </Param>
                     <Param name="url" xpathExpression="/root/resourceUrl" />
@@ -198,8 +194,7 @@
             <SenderPipe name="Call Open Zaak to get new status in zaak">
                 <HttpSender name="statusResponse"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization" sessionKey="originalMessage"
-                        xpathExpression="concat('Bearer ', $myToken)">
+                    <Param name="Authorization" xpathExpression="concat('Bearer ', $myToken)">
                         <Param name="myToken" sessionKey="myToken" />
                     </Param>
                     <Param name="url" xpathExpression="/root/resourceUrl" />
@@ -214,8 +209,7 @@
                 <HttpSender name="rollenJson"
                     headersParams="Accept-Crs,Authorization">
                     <Param name="url" xpathExpression="concat('${openzaak_baseurl}','${rollenUrl}')" />
-                    <Param name="Authorization" sessionKey="originalMessage"
-                        xpathExpression="concat('Bearer ', $myToken)">
+                    <Param name="Authorization" xpathExpression="concat('Bearer ', $myToken)">
                         <Param name="myToken" sessionKey="myToken" />
                     </Param>
                     <Param name="Accept-Crs" value="EPSG:4326" />
