@@ -1,5 +1,12 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.25.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.25.3...v1.25.4) (2024-04-11)
+
+
+### 🧑‍💻 Code Refactoring
+
+* trigger release for allowWeakerPasswords ([8e8fa17](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/8e8fa17d6c4d9841a2b1616237cfc23297ad4754))
+
 ## [1.25.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.25.2...v1.25.3) (2024-04-11)
 
 
