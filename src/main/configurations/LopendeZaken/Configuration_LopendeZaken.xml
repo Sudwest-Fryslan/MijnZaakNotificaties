@@ -15,6 +15,15 @@
                 <Exit name="Rejected" state="SUCCESS" code="202" />
             </Exits>
 
+            <!-- Preventing null values -->
+            <PutInSessionPipe name="fillResultaatKey" sessionKey="storeResultaat"
+                value="&lt;Empty/>" />
+
+            <PutInSessionPipe name="fillEndpointVerwijzingKey" sessionKey="endpointVerwijzing"
+                value="&lt;Empty/>">
+                <Forward name="success" path="createJwt" />
+            </PutInSessionPipe>
+
             <!-- Create Jwt token -->
             <JwtPipe name="createJwt"
                 expirationTime="600"
@@ -27,17 +36,12 @@
                 <Param name="client_id" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
                 <Param name="user_id" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
                 <Param name="user_reresentation" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
-                <Forward name="success" path="fillResultaatKey" />
+                <Forward name="success" path="storeZaaktypes" />
                 <Forward name="exception" path="Error" />
             </JwtPipe>
 
-            <!-- Preventing null values -->
-            <PutInSessionPipe name="fillResultaatKey" sessionKey="storeResultaat" getInputFromSessionKey="originalMessage"
-                value="&lt;Empty/>" />
-            <PutInSessionPipe name="fillEndpointVerwijzingKey" sessionKey="endpointVerwijzing"
-                value="&lt;Empty/>" />
-
-            <FixedResultPipe name="storeZaaktypes" storeResultInSessionKey="active_zaaktypes"
+            <FixedResultPipe name="storeZaaktypes" getInputFromSessionKey="originalMessage"
+                storeResultInSessionKey="active_zaaktypes"
                 filename="${mijnzaaknotificaties.zaaktypes_file}" />
 
             <PutSystemDateInSessionPipe name="GetDateTime" dateFormat="yyyyMMdd-HHmmss" />
@@ -71,9 +75,10 @@
                 <HttpSender
                     name="getZaak"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization"  sessionKey="originalMessage" xpathExpression="concat('Bearer ', $myToken)">
-						<Param name="myToken" sessionKey="myToken" defaultValue="@@mijnzaaknotificaties.jwt@@"/>
-					</Param>
+                    <Param name="Authorization" sessionKey="originalMessage"
+                        xpathExpression="concat('Bearer ', $myToken)">
+                        <Param name="myToken" sessionKey="myToken" />
+                    </Param>
                     <Param name="url" xpathExpression="/root/hoofdObject" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                 </HttpSender>
@@ -85,9 +90,10 @@
             <SenderPipe name="Call Open Zaak to get the zaakType">
                 <HttpSender name="zaakTypeResponse"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization"  sessionKey="originalMessage" xpathExpression="concat('Bearer ', $myToken)">
-						<Param name="myToken" sessionKey="myToken" defaultValue="@@mijnzaaknotificaties.jwt@@"/>
-					</Param>
+                    <Param name="Authorization" sessionKey="originalMessage"
+                        xpathExpression="concat('Bearer ', $myToken)">
+                        <Param name="myToken" sessionKey="myToken" />
+                    </Param>
                     <Param name="url" xpathExpression="/root/zaaktype" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                 </HttpSender>
@@ -149,9 +155,10 @@
                 getInputFromSessionKey="getZaakXml">
                 <HttpSender name="resultaat"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization"  sessionKey="originalMessage" xpathExpression="concat('Bearer ', $myToken)">
-						<Param name="myToken" sessionKey="myToken" defaultValue="@@mijnzaaknotificaties.jwt@@"/>
-					</Param>
+                    <Param name="Authorization" sessionKey="originalMessage"
+                        xpathExpression="concat('Bearer ', $myToken)">
+                        <Param name="myToken" sessionKey="myToken" />
+                    </Param>
                     <Param name="url" xpathExpression="/root/resultaat" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                 </HttpSender>
@@ -163,9 +170,10 @@
                 getInputFromSessionKey="FirstInput">
                 <HttpSender name="statusResponse"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization"  sessionKey="originalMessage" xpathExpression="concat('Bearer ', $myToken)">
-						<Param name="myToken" sessionKey="myToken" defaultValue="@@mijnzaaknotificaties.jwt@@"/>
-					</Param>
+                    <Param name="Authorization" sessionKey="originalMessage"
+                        xpathExpression="concat('Bearer ', $myToken)">
+                        <Param name="myToken" sessionKey="myToken" />
+                    </Param>
                     <Param name="url" xpathExpression="/root/resourceUrl" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                 </HttpSender>
@@ -190,9 +198,10 @@
             <SenderPipe name="Call Open Zaak to get new status in zaak">
                 <HttpSender name="statusResponse"
                     headersParams="Accept-Crs,Authorization">
-                    <Param name="Authorization"  sessionKey="originalMessage" xpathExpression="concat('Bearer ', $myToken)">
-						<Param name="myToken" sessionKey="myToken" defaultValue="@@mijnzaaknotificaties.jwt@@"/>
-					</Param>
+                    <Param name="Authorization" sessionKey="originalMessage"
+                        xpathExpression="concat('Bearer ', $myToken)">
+                        <Param name="myToken" sessionKey="myToken" />
+                    </Param>
                     <Param name="url" xpathExpression="/root/resourceUrl" />
                     <Param name="Accept-Crs" value="EPSG:4326" />
                 </HttpSender>
@@ -205,9 +214,10 @@
                 <HttpSender name="rollenJson"
                     headersParams="Accept-Crs,Authorization">
                     <Param name="url" xpathExpression="concat('${openzaak_baseurl}','${rollenUrl}')" />
-                    <Param name="Authorization"  sessionKey="originalMessage" xpathExpression="concat('Bearer ', $myToken)">
-						<Param name="myToken" sessionKey="myToken" defaultValue="@@mijnzaaknotificaties.jwt@@"/>
-					</Param>
+                    <Param name="Authorization" sessionKey="originalMessage"
+                        xpathExpression="concat('Bearer ', $myToken)">
+                        <Param name="myToken" sessionKey="myToken" />
+                    </Param>
                     <Param name="Accept-Crs" value="EPSG:4326" />
                     <Param name="zaak" xpathExpression="root/url" />
                     <Param name="betrokkeneType" value="natuurlijk_persoon" />
