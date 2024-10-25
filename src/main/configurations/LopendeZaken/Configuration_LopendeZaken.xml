@@ -32,10 +32,10 @@
                 ifValue="Jwt"
             >
                 <Param name="valueAuthType" value="${mijnzaaknotificaties.authType}" />
-                <Param name="sharedSecret" pattern="{password}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
-                <Param name="client_id" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
-                <Param name="user_id" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
-                <Param name="user_reresentation" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
+                <Param name="sharedSecret" password="defaultPass" pattern="{password}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
+                <Param name="client_id" username="defaultUser" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
+                <Param name="user_id" username="defaultUser" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
+                <Param name="user_reresentation" username="defaultUser" pattern="{username}" authAlias="${mijnzaaknotificaties.authAlias}" hidden="true"/>
                 <Forward name="success" path="storeZaaktypes" />
                 <Forward name="exception" path="Error" />
             </JwtPipe>
