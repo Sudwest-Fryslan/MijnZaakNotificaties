@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.26.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.0...v1.26.1) (2024-11-22)
+
+### 🐛 Bug Fixes
+
+* gateway error ([8f72f3d](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/8f72f3d5bc6c50611777ffef10cf416d37cba099))
+
 ## [1.26.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.25.6...v1.26.0) (2024-11-22)
 
 ### 🍕 Features
