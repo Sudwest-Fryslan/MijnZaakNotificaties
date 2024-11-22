@@ -1,5 +1,33 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.26.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.25.6...v1.26.0) (2024-11-22)
+
+### 🍕 Features
+
+* Update F!F ([d7ec9b4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/d7ec9b4c621e2ab9a6c8ae1a458a6c0086545c24))
+* update to f!f 8.3.0 ([5aa935c](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/5aa935cca58f5f21e3f8d3697216ef59656f52ac))
+
+### 🐛 Bug Fixes
+
+* prevent error with missing credentials ([c068ad2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/c068ad20daea45596953b1350be52a388d9440be))
+
+### 🧑‍💻 Code Refactoring
+
+* bring structure in line with standard ([20eb163](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/20eb16380942d60255d223f14ce66a275de31958))
+* disable ladybug database storage ([d59d398](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/d59d398295575b29d38e206551d30cb74353fa25))
+* move ladybug.jdbc.datasource property ([fdcc4f4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/fdcc4f48d36979c474505e9036fe4462fce4e75e))
+
+### ✅ Tests
+
+* fix tests ([ca80465](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/ca80465dd77c0e462bd58f9a2bacf7d1fc4bd7c6))
+* update tests ([5eed6a6](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/5eed6a6661cfb5ba87128a0b33eb4d2e187a071a))
+
+### 🔁 Continuous Integration
+
+* remove version spec ([2c43793](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/2c43793cc80f49fae29d1857ea852ea4055e40d7))
+* update artifact from v2 to v4 ([6f7e8fd](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/6f7e8fd2d7ad261526c5de94418ad3a8a637e627))
+* update ci ([405fca7](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/405fca7768e20f19911d2af5b0dee982e6133823))
+
 ## [1.25.6](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.25.5...v1.25.6) (2024-04-23)
 
 
