@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.26.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.1...v1.26.2) (2024-11-22)
+
+### 🐛 Bug Fixes
+
+* prevent cors error ([dc68a86](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/dc68a86c57b4b665af250eae0a6b03bf773fd134))
+
 ## [1.26.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.0...v1.26.1) (2024-11-22)
 
 ### 🐛 Bug Fixes
