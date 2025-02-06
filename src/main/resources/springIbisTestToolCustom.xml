@@ -12,21 +12,25 @@
             <list>
                 <bean class="nl.nn.testtool.metadata.StatusMetadataFieldExtractor" />
                 <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
-                    <property name="name" value="Zaaktype" />
+                    <property name="name" value="zaaktype" />
+                    <property name="label" value="zaaktype" />
                     <property name="sessionKey" value="zaakType" />
                     <!-- <property name="regex" value="&lt;identificatie>(.*)&lt;\/identificatie>" /> -->
                 </bean>
                 <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
-                    <property name="name" value="Identificatie" />
+                    <property name="name" value="identificatie" />
+                    <property name="label" value="identificatie" />
                     <property name="sessionKey" value="identificatie" />
                 </bean>
                 <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
-                    <property name="name" value="Toelichting" />
+                    <property name="name" value="toelichting" />
+                    <property name="label" value="toelichting" />
                     <property name="sessionKey" value="storeStatusResponse" />
                     <property name="regex" value="&lt;toelichting>(.*)&lt;\/toelichting>|&lt;statustoelichting>(.*)&lt;\/statustoelichting>" />
                 </bean>
                 <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
-                    <property name="name" value="Reden Afwijzing" />
+                    <property name="name" value="redenafwijking" />
+                    <property name="label" value="Reden Afwijzing"/>
                     <property name="sessionKey" value="rejectionReason" />
                 </bean>
             </list>
@@ -39,10 +43,10 @@
                 <value>storageId</value>
                 <value>endTime</value>
                 <value>status</value>
-                <value>Zaaktype</value>
-                <value>Identificatie</value>
-                <value>Toelichting</value>
-                <value>Reden Afwijzing</value>
+                <value>zaaktype</value>
+                <value>identificatie</value>
+                <value>toelichting</value>
+                <value>redenafwijking</value>
                 <value>correlationId</value>
                 <value>duration</value>
                 <value>numberOfCheckpoints</value>
