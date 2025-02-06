@@ -1,0 +1,15 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.26.xsd"
+>
+    <changeSet id="LadybugCustom:1" author="Vincent de Gans">
+        <comment>Custom ladybug columns</comment>
+        <addColumn tableName="LADYBUG">
+            <column name="zaaktype" type="java.sql.Types.VARCHAR(1024)"/>
+            <column name="identificatie" type="java.sql.Types.VARCHAR(1024)"/>
+            <column name="toelichting" type="java.sql.Types.VARCHAR(1024)"/>
+            <column name="redenafwijking" type="java.sql.Types.VARCHAR(1024)"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

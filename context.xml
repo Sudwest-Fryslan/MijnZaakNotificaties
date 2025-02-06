@@ -18,4 +18,13 @@
 			password="${jdbc/password}"
 	/>
 
+	<Resource 
+        name="jdbc/ladybug-postgresql" 
+        auth="Container"
+        factory="org.apache.naming.factory.BeanFactory"
+        type="org.postgresql.ds.PGSimpleDataSource"
+        url="jdbc:postgresql://${jdbc.hostname}:${jdbc.port:-5432}/${jdbc.database}"
+        user="${jdbc/username}"
+        password="${jdbc/password}"
+    />
 </Context>
