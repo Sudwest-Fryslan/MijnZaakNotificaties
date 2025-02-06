@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.26.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.2...v1.26.3) (2025-02-06)
+
+### 🐛 Bug Fixes
+
+* add database for local development ([1fa6c1a](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/1fa6c1a7312fc0868d3c8e061a088bc68dc7e059))
+
 ## [1.26.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.1...v1.26.2) (2024-11-22)
 
 ### 🐛 Bug Fixes
