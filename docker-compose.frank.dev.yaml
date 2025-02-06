@@ -1,0 +1,54 @@
+services:
+  frank:
+    extends:
+      file: docker-compose.yaml
+      service: frank
+    build:
+      context: .
+      pull: true
+      args:
+        FF_VERSION: ${FF_VERSION:-latest}
+    image: wearefrank/mijnzaaknotificaties:${VERSION:-latest}
+    environment:
+      configurations.brp-personen-bevragen-client.classLoaderType: ScanningDirectoryClassLoader
+      configurations.brp-personen-bevragen-server.classLoaderType: ScanningDirectoryClassLoader
+      configurations.subscription-management-and-processing.classLoaderType: ScanningDirectoryClassLoader
+      configurations.shadow.classLoaderType: ScanningDirectoryClassLoader
+      configurations.oauth.classLoaderType: ScanningDirectoryClassLoader
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./src/main/configurations/WebformulierenVerwerker/DeploymentSpecifics.properties
+          target: /opt/frank/configurations/WebformulierenVerwerker/DeploymentSpecifics.properties
+        - action: sync
+          path: ./src/main/configurations
+          target: /opt/frank/configurations
+        - action: sync
+          path: ./src/main/resources
+          target: /opt/frank/resources
+        - action: sync
+          path: ./src/test/testtool
+          target: /opt/frank/testtool
+        - action: sync+restart
+          path: ./src/main/secrets
+          target: /opt/frank/secrets
+        - action: sync+restart
+          path: ./src/main/resources/DeploymentSpecifics.properties
+          target: /opt/frank/resources/DeploymentSpecifics.properties
+        - action: sync+restart
+          path: ./src/main/resources/ladybug/DatabaseChangelog_Custom.xml
+          target: /opt/frank/resources/ladybug/DatabaseChangelog_Custom.xml
+        - action: sync+restart
+          path: ./src/main/resources/springIbisTestToolCustom.xml
+          target: /opt/frank/resources/springIbisTestToolCustom.xml
+        - action: rebuild
+          path: ./src/main/java
+        - action: rebuild
+          path: ./src/main/webapp/META-INF/context.xml
+    ports:
+      - "${PORT:-8080}:8080"
+    restart: unless-stopped
+
+volumes:
+  logs:
+  h2-data:
