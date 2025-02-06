@@ -16,6 +16,6 @@ services:
       - .env
     volumes:
       - ${SECRETS_PATH:-./src/main/secrets}:/opt/frank/secrets
-      - ${VOLUME_LOPENDEZAKEN_RESULTATEN:-lopendezaken-resultaten}:/MijnZaakNotificatiesFiles 
+      - ${VOLUME_LOPENDEZAKEN_RESULTATEN:-lopendezaken-resultaten}:/MijnZaakNotificatiesFiles # Comment this out for local development
     restart: unless-stopped
 
