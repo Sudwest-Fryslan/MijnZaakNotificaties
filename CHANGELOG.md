@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.26.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.3...v1.26.4) (2025-02-06)
+
+### 🐛 Bug Fixes
+
+* change version to 9.0 ([dc49186](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/dc491863572a60ffd989aa98a03e10be4d1a3929))
+
 ## [1.26.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.2...v1.26.3) (2025-02-06)
 
 ### 🐛 Bug Fixes
