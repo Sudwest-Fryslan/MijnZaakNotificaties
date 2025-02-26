@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.27.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.27.0...v1.27.1) (2025-02-26)
+
+### 🐛 Bug Fixes
+
+* allow params on apilistener ([f60b274](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/f60b274d355aa1c387aba08b916d121dbbc8a672))
+
 ## [1.27.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.5...v1.27.0) (2025-02-26)
 
 ### 🍕 Features
