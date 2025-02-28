@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.27.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.27.1...v1.27.2) (2025-02-28)
+
+### 🐛 Bug Fixes
+
+* upgrade for new ladybug version ([f4c028b](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/f4c028b2c9cabadd9d14d224d3afce1f3acf9636))
+
 ## [1.27.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.27.0...v1.27.1) (2025-02-26)
 
 ### 🐛 Bug Fixes
