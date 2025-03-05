@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.28.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.27.2...v1.28.0) (2025-03-05)
+
+### 🍕 Features
+
+* Merge pull request [#19](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/issues/19) from Sudwest-Fryslan/oauth ([3c1a835](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/3c1a835cde0f6e086734cf4cabb3f548a581b667))
+
 ## [1.27.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.27.1...v1.27.2) (2025-02-28)
 
 ### 🐛 Bug Fixes
