@@ -1,5 +1,23 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.27.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.27.0...v1.27.1) (2025-02-26)
+
+### 🐛 Bug Fixes
+
+* allow params on apilistener ([f60b274](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/f60b274d355aa1c387aba08b916d121dbbc8a672))
+
+## [1.27.0](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.5...v1.27.0) (2025-02-26)
+
+### 🍕 Features
+
+* update to 9.1 ([accebb9](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/accebb9ea569de717080e6e14311e42a8aad797f))
+
+## [1.26.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.4...v1.26.5) (2025-02-06)
+
+### 🐛 Bug Fixes
+
+* downgrade framework version ([fcc7b3d](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/fcc7b3d4e8a51d4559df39c53ca21321f1443aef))
+
 ## [1.26.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.26.3...v1.26.4) (2025-02-06)
 
 ### 🐛 Bug Fixes
