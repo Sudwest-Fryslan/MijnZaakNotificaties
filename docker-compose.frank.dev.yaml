@@ -18,8 +18,8 @@ services:
     develop:
       watch:
         - action: sync+restart
-          path: ./src/main/configurations/WebformulierenVerwerker/DeploymentSpecifics.properties
-          target: /opt/frank/configurations/WebformulierenVerwerker/DeploymentSpecifics.properties
+          path: ./src/main/configurations/MijnZaakNotificaties/DeploymentSpecifics.properties
+          target: /opt/frank/configurations/MijnZaakNotificaties/DeploymentSpecifics.properties
         - action: sync
           path: ./src/main/configurations
           target: /opt/frank/configurations

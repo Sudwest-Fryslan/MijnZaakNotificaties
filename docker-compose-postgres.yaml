@@ -35,7 +35,7 @@ services:
   frank:
     environment: 
       <<: *frank-postgres-env
-      jdbc.datasource.default: jdbc/lopendezaken-postgresql
+      jdbc.datasource.default: jdbc/mijnzaaknotificaties-postgresql
       jdbc.hostname: frank-postgres
       jdbc.port: 5432
       jdbc.tcpKeepAlive: true
