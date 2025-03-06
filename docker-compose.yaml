@@ -17,6 +17,6 @@ services:
     volumes:
       - ${SECRETS_PATH:-./src/main/secrets}:/opt/frank/secrets
       - ./src/main/resources/oauth-role-mapping.properties:/opt/frank/resources/oauth-role-mapping.properties
-      # - ${VOLUME_LOPENDEZAKEN_RESULTATEN:-lopendezaken-resultaten}:/MijnZaakNotificatiesFiles # Comment this out for local development
+      - ${VOLUME_LOPENDEZAKEN_RESULTATEN:-lopendezaken-resultaten}:/MijnZaakNotificatiesFiles # Comment this out for local development
     restart: unless-stopped
 
