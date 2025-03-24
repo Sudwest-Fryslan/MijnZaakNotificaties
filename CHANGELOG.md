@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.28.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.28.1...v1.28.2) (2025-03-24)
+
+### 🐛 Bug Fixes
+
+* bump ff version to fix health endpoint ([d91038e](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/d91038efc11d5e8035ed7ab90c025a282835506e))
+
 ## [1.28.1](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.28.0...v1.28.1) (2025-03-06)
 
 ### 🐛 Bug Fixes
