@@ -1,5 +1,4 @@
 # This should be a fixed version, not a SNAPSHOT
-# but we need features from the 7.9 release.
 # It would be nice to set this to "latest" -
 # that should be the latest release but now it
 # is the latest SNAPSHOT. Because of this confusion
