@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.28.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.28.2...v1.28.3) (2025-06-13)
+
+### 🐛 Bug Fixes
+
+* bump ([4c2817a](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/4c2817adf6790a03c7983aa73b6abf441d8dc4fb))
+
 ## [1.28.2](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.28.1...v1.28.2) (2025-03-24)
 
 ### 🐛 Bug Fixes
