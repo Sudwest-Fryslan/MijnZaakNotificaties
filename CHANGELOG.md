@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.28.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.28.3...v1.28.4) (2025-06-19)
+
+### 🐛 Bug Fixes
+
+* Merge pull request [#20](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/issues/20) from Sudwest-Fryslan/update-ff ([7dfbaed](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/7dfbaed3ff2ac24615103057228ee8a27639dbdb))
+
 ## [1.28.3](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.28.2...v1.28.3) (2025-06-13)
 
 ### 🐛 Bug Fixes
