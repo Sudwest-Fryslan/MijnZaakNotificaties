@@ -1,5 +1,11 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.28.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.28.4...v1.28.5) (2025-11-10)
+
+### 🐛 Bug Fixes
+
+* Update framework to 9.1.1 ([60e07bf](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/60e07bfa3dad51edaa4010cfd3f4c3e964aa41b9))
+
 ## [1.28.4](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.28.3...v1.28.4) (2025-06-19)
 
 ### 🐛 Bug Fixes
