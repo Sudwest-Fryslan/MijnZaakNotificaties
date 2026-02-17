@@ -7,7 +7,7 @@ services:
       context: .
       pull: true
       args:
-        FF_VERSION: ${FF_VERSION:-9.1.1-20251108.110041}
+        FF_VERSION: ${FF_VERSION:-10.0.0}
     image: wearefrank/mijnzaaknotificaties:${VERSION:-latest}
     environment:
       configurations.brp-personen-bevragen-client.classLoaderType: ScanningDirectoryClassLoader
@@ -43,8 +43,6 @@ services:
           target: /opt/frank/resources/springIbisTestToolCustom.xml
         - action: rebuild
           path: ./src/main/java
-        - action: rebuild
-          path: ./src/main/webapp/META-INF/context.xml
     ports:
       - "${PORT:-8080}:8080"
     restart: unless-stopped

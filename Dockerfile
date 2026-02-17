@@ -3,17 +3,18 @@
 # that should be the latest release but now it
 # is the latest SNAPSHOT. Because of this confusion
 # we do not put "latest" here.
-FROM frankframework/frankframework:9.1.1-20251108.110041
+FROM frankframework/frankframework:10.0.0
 
 # TempFix TODO: Move this to the credentialprovider.properties
-ENV credentialFactory.class=nl.nn.credentialprovider.PropertyFileCredentialFactory
+ENV credentialFactory.class=org.frankframework.credentialprovider.PropertyFileCredentialFactory
 ENV credentialFactory.map.properties=/opt/frank/secrets/credentials.properties
 ENV TZ=Europe/Amsterdam
 
-COPY --chown=tomcat context.xml /usr/local/tomcat/conf/Catalina/localhost/ROOT.xml
+# COPY --chown=tomcat context.xml /usr/local/tomcat/conf/Catalina/localhost/ROOT.xml
 COPY --chown=tomcat src/test/testtool/ /opt/frank/testtool/
 COPY --chown=tomcat src/main/configurations/ /opt/frank/configurations/
 COPY --chown=tomcat src/main/resources/ /opt/frank/resources/
+COPY --chown=tomcat src/main/drivers/ /opt/frank/drivers/
 COPY --chown=tomcat src/main/secrets/ /opt/frank/secrets/
 
 # # Copy dependencies

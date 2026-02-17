@@ -3,13 +3,13 @@ services:
     build:
       context: .
       args:
-        FF_VERSION: ${FF_VERSION:-9.1.1-20251108.110041}
+        FF_VERSION: ${FF_VERSION:-10.0.0}
     image: wearefrank/mijnzaaknotificaties:${VERSION:-latest}
     ports:
       - "${PORT:-8080}:8080"
     environment:
       application.server.type.custom: ${TRANSACTION_MANAGER:-NARAYANA}
-      credentialFactory.class: nl.nn.credentialprovider.PropertyFileCredentialFactory
+      credentialFactory.class: org.frankframework.credentialprovider.PropertyFileCredentialFactory
       credentialFactory.map.properties: /opt/frank/secrets/credentials.properties
       TZ: ${TIME_ZONE:-Europe/Amsterdam}
     env_file:
@@ -19,4 +19,3 @@ services:
       - ./src/main/resources/oauth-role-mapping.properties:/opt/frank/resources/oauth-role-mapping.properties
       - ${VOLUME_LOPENDEZAKEN_RESULTATEN:-lopendezaken-resultaten}:/MijnZaakNotificatiesFiles # Comment this out for local development
     restart: unless-stopped
-
