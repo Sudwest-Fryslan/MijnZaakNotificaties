@@ -7,28 +7,28 @@
 
     <import resource="springIbisTestTool.xml" />
 
-    <bean name="metadataExtractor" class="nl.nn.testtool.MetadataExtractor">
+    <bean name="metadataExtractor" class="org.wearefrank.ladybug.MetadataExtractor">
         <property name="extraMetadataFieldExtractors">
             <list>
-                <bean class="nl.nn.testtool.metadata.StatusMetadataFieldExtractor" />
-                <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
+                <bean class="org.wearefrank.ladybug.metadata.StatusMetadataFieldExtractor" />
+                <bean class="org.wearefrank.ladybug.metadata.SessionKeyMetadataFieldExtractor">
                     <property name="name" value="zaaktype" />
                     <property name="label" value="zaaktype" />
                     <property name="sessionKey" value="zaakType" />
                     <!-- <property name="regex" value="&lt;identificatie>(.*)&lt;\/identificatie>" /> -->
                 </bean>
-                <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
+                <bean class="org.wearefrank.ladybug.metadata.SessionKeyMetadataFieldExtractor">
                     <property name="name" value="identificatie" />
                     <property name="label" value="identificatie" />
                     <property name="sessionKey" value="identificatie" />
                 </bean>
-                <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
+                <bean class="org.wearefrank.ladybug.metadata.SessionKeyMetadataFieldExtractor">
                     <property name="name" value="toelichting" />
                     <property name="label" value="toelichting" />
                     <property name="sessionKey" value="storeStatusResponse" />
                     <property name="regex" value="&lt;toelichting>(.*)&lt;\/toelichting>|&lt;statustoelichting>(.*)&lt;\/statustoelichting>" />
                 </bean>
-                <bean class="nl.nn.testtool.metadata.SessionKeyMetadataFieldExtractor">
+                <bean class="org.wearefrank.ladybug.metadata.SessionKeyMetadataFieldExtractor">
                     <property name="name" value="redenafwijking" />
                     <property name="label" value="Reden Afwijzing"/>
                     <property name="sessionKey" value="rejectionReason" />
