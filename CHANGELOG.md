@@ -1,5 +1,15 @@
 [![conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 
+## [1.28.6](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.28.5...v1.28.6) (2026-03-02)
+
+### ✅ Tests
+
+* update larva scenario's ([6d76994](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/6d769948fa9073e6614532ee81da2ffb402adcc5))
+
+### 🤖 Build System
+
+* Upgrade Frank!Framework to 10.0.0 ([b38b60d](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/commit/b38b60da3ebb073ebf230b537e6b055f082f651a))
+
 ## [1.28.5](https://github.com/Sudwest-Fryslan/MijnZaakNotificaties/compare/v1.28.4...v1.28.5) (2025-11-10)
 
 ### 🐛 Bug Fixes
